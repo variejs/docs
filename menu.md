@@ -1,1 +1,4 @@
-some menu
+- #### Getting Started
+    - [Overview](/{{version}}/getting-started#overview)
+    - [Installation](/{{version}}/getting-started#installation)
+    - [Configuration](/{{version}}/getting-started#configuration)
