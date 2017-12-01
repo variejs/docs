@@ -1,4 +1,4 @@
-#### Getting Started
+- #### Getting Started
     - [Overview](/docs/{{version}}/getting-started#overview)
     - [Installation](/docs/{{version}}/getting-started#installation)
     - [Configuration](/docs/{{version}}/getting-started#configuration)
