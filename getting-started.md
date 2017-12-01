@@ -23,7 +23,7 @@
   
   ```yarn add -g varie-cli```
    
-   After installation the `varie new` command will be avilalbe to create a fresh Varie instance in the folder specified.
+   After installation the `varie new` command will be available to create a fresh Varie instance in the folder specified.
    
    ```varie new blog```
    
