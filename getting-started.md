@@ -1,4 +1,4 @@
-# # Getting Started
+  ## Getting Started
    
   <a name="overview"></a>
   ## Overview
