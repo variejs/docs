@@ -27,7 +27,7 @@ Houses all your [components](/docs/{{version}}/components)
 ##### Directives Directory
 Houses all your [directives](/docs/{{version}}/directives)
 
-#####Filters Directory
+##### Filters Directory
 Houses all your [filters](/docs/{{version}}/filters)
 
 ##### Mixins Directory
