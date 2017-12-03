@@ -9,7 +9,6 @@ Directives are auto loaded into the application as long as your using the `autoL
         +-- directives
             +-- Focus.ts
 
-
 ```js
 Vue.directive("focus", {
   // When the bound element is inserted into the DOM...

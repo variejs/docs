@@ -9,7 +9,6 @@ Filters are auto loaded into the application as long as your using the `autoLoad
         +-- filters
             +-- LowercaseText.ts
 
-
 ```js
 export default value => {
   return value.toLowerCase()
