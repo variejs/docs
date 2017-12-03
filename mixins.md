@@ -9,11 +9,10 @@ Mixins are auto loaded into the application as long as your using the `autoLoadM
         +-- mixins
             +-- Helpers.ts
 
-
 ```js
 Vue.mixin({
   // your mixin component
-})
+});
 ```
 
     > To learn more about mixins go to [Vue's Documentation](https://vuejs.org/v2/guide/mixins.html).

@@ -11,7 +11,7 @@ Luckily Varie has it built in with dot-env. In your root directory you will find
 Your apps enviroment is determined by the `APP_ENV` value inside your `.env` file. It is also bound to your app container :
 
 ```js
-$app.environment // local
+$app.environment; // local
 ```
 
 ## Accessing Configuration Values
@@ -19,11 +19,11 @@ $app.environment // local
 You can easily access the configuraiton values by using our help `$config`
 
 ```js
-let value = $config.get("app.name")
+let value = $config.get("app.name");
 ```
 
 You can also easily set the value
 
 ```js
-$config.set("app.name", "My New App Name!")
+$config.set("app.name", "My New App Name!");
 ```

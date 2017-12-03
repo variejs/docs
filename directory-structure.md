@@ -18,7 +18,6 @@
      +-- routes
         +-- middleware
 
-
 ### App Directory
 
 The app directory is how your application is put together and any complex logic should live. Varie tries to help you get organized with some preset folders.

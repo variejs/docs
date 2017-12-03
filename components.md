@@ -9,7 +9,6 @@ Components are auto loaded with kebab casing into the application as long as you
         +-- components
             +-- Notifications.vue
 
-
 Will auto load the component `<notifications><notifications>`.
 
     .
@@ -18,8 +17,6 @@ Will auto load the component `<notifications><notifications>`.
             +-- Notifications.vue
             +-- notification_components
                 +-- NotificationItem.vue
-
-
 
 Will not auto load `<notification-item></notification-item>`
 

@@ -9,11 +9,10 @@ Filters are auto loaded into the application as long as your using the `autoLoad
         +-- filters
             +-- LowercaseText.ts
 
-
 ```js
 export default value => {
-  return value.toLowerCase()
-}
+  return value.toLowerCase();
+};
 ```
 
     > To learn more about filters go to [Vue's Documentation](https://vuejs.org/v2/guide/filters.html).
