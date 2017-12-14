@@ -17,7 +17,7 @@ understand how the app can be used. An example below :
         
  This couples with our router system which you can use `$router.layout('App').group(....`
  
- ### Views
+ ### Component Structure
  We suggest making areas folders for your site, which allows you to keep a tidy folder structure and also can keep component folders inside of those. Example :
   
   
