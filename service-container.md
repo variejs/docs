@@ -1,7 +1,5 @@
 ## Service Container
 
-## Introduction
-
 The service container is a way to manage dependencies and performing dependency injection. We have wrapped [inversify]: http://inversify.io for our container. It is important to understnad this concept as Varies core its built with the injection system.
 
 ## Bindings
