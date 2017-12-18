@@ -1,4 +1,4 @@
-## Developing
+# Developing
 
 Varie uses a elegant wrapper (<a href="https://github.com/JeffreyWay/laravel-mix">Laravel Mix</a>) around webpack to make bundling quick and appealing.
 

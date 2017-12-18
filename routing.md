@@ -1,3 +1,5 @@
+# Routing
+
 ## Basic Routing
 
 All routes created must contain a view. FOr instance :

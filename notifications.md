@@ -1,4 +1,4 @@
-## Notifications
+# Notifications
 
 Varie comes with built in notification system that you can customize.
 

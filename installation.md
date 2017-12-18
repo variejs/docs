@@ -1,4 +1,4 @@
-## Installing Varie
+# Installing Varie
 
 `npm install -g varie-cli`
 

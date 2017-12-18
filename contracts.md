@@ -1,4 +1,4 @@
-## Contracts
+# Contracts
 
 Varie's contracts are a set of interfaces that define the services of the framework. Each contract has a implementation which is set in the service providers of the framework.
 

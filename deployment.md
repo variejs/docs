@@ -1,4 +1,4 @@
-## List of NPM Commands for building
+# List of NPM Commands for building
 
 | Command     |                                 Description                                  |
 | ----------- | :--------------------------------------------------------------------------: |

@@ -1,4 +1,4 @@
-## Directives
+# Directives
 
 Directives are auto loaded into the application as long as your using the `autoLoadDirectives` provider in your config.
 

@@ -1,4 +1,4 @@
-## Views
+# Views
 
 Your views are just `.vue` files that contain your html / javascript / css as normal. But we make a suggestion on how to organize your views.
 

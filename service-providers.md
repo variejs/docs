@@ -1,4 +1,4 @@
-## Service Providers
+# Service Providers
 
 Service providers allow to us to bind things to our application. In fact Varie it self uses service providers to boot all the necessary components to create the actual application.
 

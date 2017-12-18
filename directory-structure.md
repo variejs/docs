@@ -1,4 +1,4 @@
-## Directory Stucture
+# Directory Structure
 
 // TODO - get them to link to below
 

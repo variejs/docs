@@ -1,4 +1,4 @@
-## Filters
+# Filters
 
 Filters are auto loaded into the application as long as your using the `autoLoadFilters` provider in your config.
 

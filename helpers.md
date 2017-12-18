@@ -1,4 +1,4 @@
-## Helpers
+# Helpers
 
 #### `app()`
 

@@ -1,4 +1,4 @@
-## About
+# About
 
 Varie was built to jump start your development with a bit of elegance.
 

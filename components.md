@@ -1,4 +1,4 @@
-## Components
+# Components
 
 Components are auto loaded with kebab casing into the application as long as your using the `autoLoadComponents` provider in your config. Only components in the main directory are auto loaded, to allow you to create sub components of your components without auto loading them in.
 
