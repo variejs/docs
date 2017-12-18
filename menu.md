@@ -24,6 +24,5 @@
   * [Path Aliases](/docs/{{version}}/path-aliases)
 * #### Further Investigation
   * [Helpers](/docs/{{version}}/helpers)
-  * [Handling Forms](/docs/{{version}}/forms)
   * [Notifications](/docs/{{version}}/notifications)
   * [Package Development](/docs/{{version}}/package-development)
