@@ -4,8 +4,7 @@ Your views are just `.vue` files that contain your html / javascript / css as no
 
 ### Layouts
 
-We suggest using the layouts folder to use with our router. This allows you to easily understand how the app can be used.
-An example below : . +-- resources +-- assets +-- views +-- layouts ./Public.vue ./App.vue This couples with our router system which you can use `$router.layout('App').group(....`
+We suggest using the layouts folder to use with our router. This allows you to easily understand how the app can be used. An example below : . +-- resources +-- assets +-- views +-- layouts ./Public.vue ./App.vue This couples with our router system which you can use `$router.layout('App').group(....`
 
 ### Component Structure
 

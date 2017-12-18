@@ -7,4 +7,3 @@ It is suggested to make a module with the Varie-Cli as it contains all the basic
 `varie make:store <store-name>`
 
 -- TODO - there is a ton to write about , also a ton of work ot extract vuex to make it easier to use.
-
