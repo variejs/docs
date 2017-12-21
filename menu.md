@@ -1,9 +1,8 @@
 * #### Getting Started
   * [Installation](/docs/{{version}}/installation)
   * [Configuration](/docs/{{version}}/configuration)
-  * [Developing](/docs/{{version}}/developing)
+  * [Bundling](/docs/{{version}}/bundling)
   * [Directory Structure](/docs/{{version}}/directory-structure)
-  * [Deployment](/docs/{{version}}/deployment)
 * #### Architecture Concepts
   * [Service Container](/docs/{{version}}/service-container)
   * [Service Providers](/docs/{{version}}/service-providers)

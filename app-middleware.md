@@ -1,3 +1,10 @@
 # App Middleware
 
-TODO - has not be completed in Varie framework
+- [Defining Middleware](#defining-middleware)
+- [Registering Middleware](#registering-middleware)
+
+<a name="defining-middleware"></a>
+## Defining Middleware
+
+<a name="registering-middleware"></a>
+## Registering Middleware

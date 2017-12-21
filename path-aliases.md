@@ -1,6 +1,14 @@
 # Path Aliases
 
+- [Standard Paths](#standard-paths)
+- [Custom Paths](#custom-paths)
+
+
 Varie comes with some path aliases to help out with development. These are customizable but cannot be removed as packages, and internal providers may use these.
+
+
+<a name="standard-paths"></a>
+## Standard Paths
 
 ```js
  "@app": path.join(__dirname, "app"),
@@ -12,3 +20,6 @@ Varie comes with some path aliases to help out with development. These are custo
  "@views": path.join(__dirname, "resources/views"),
  "@components": path.join(__dirname, "app/components")
 ```
+
+<a name="custom-paths"></a>
+## Custom Paths

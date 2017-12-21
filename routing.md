@@ -1,26 +1,76 @@
 # Routing
 
+- [Basic Routing](#basic-routing)
+    - [Views](#views)
+    - [Meta](#meta)
+    - [Aliaes](#aliases)
+    - [Redirects](#redirects)
+    - [Catch All](#catch-alls)
+- [Named Routes](#named-routes)
+- [Route Groups](#route-groups)
+    - [Prefixing](#prefixing)
+    - [Templates](#templates)
+- [Route Middleware](#middleware)
+    - [Defining Middleware](#defining-middleware)
+    - [Registering Middleware](#registering-middleware)
+
+<a name="basic-routing"></a>
 ## Basic Routing
 
-All routes created must contain a view. FOr instance :
+All routes created must contain a view
 
 ```js
 $router.route("/", "welcome");
 ```
 
-Maps to the view `resources/views/welcome.vue`. Also you can map to directories as well with an `index.vue` :
+Maps to the view `resources/views/welcome.vue`. Also you can map to directories as well with an `index.vue`
 
 `resources/views/Welcome/index.vue`
 
 ```js
 $router.route("/", "Welcome");
 ```
+<a name="views"></a>
+### Views
+// show how we can use multiple components / single component , setting meta and name here too
 
-## Routing Groups / Nesting
+<a name="meta"></a>
+### Meta
+
+<a name="aliases"></a>
+### Aliases
+
+```js
+$router.route("/", "welcome").alias("home");
+```
+
+<a name="redirects"></a>
+### Redirects
+
+```js
+$router.redirect("/", "/welcome");
+```
+
+
+<a name="catch-alls"></a>
+### Catch Alls
+
+```js
+$router.route("*", "404");
+```
+
+<a name="named-routes"></a>
+## Named Routes
+
+<a name="route-groups"></a>
+## Route Groups
 
 Router groups allow you to nest your routes with prefixes, middleware , and templates.
 
-##3 Prefix You can easily prefix a group by using the prefix
+<a name="prefixing"></a>
+### Prefixing
+ 
+ You can easily prefix a group by using the prefix
 
 ```js
 $router.prefix("/docs").group(() => {
@@ -28,7 +78,10 @@ $router.prefix("/docs").group(() => {
 });
 ```
 
-##3 Template Areas Template areas are useful to use the same layout for a specific area of the application. For instance each of Varie's documentation pages have the same layout, but the rest of the site has a different layout.
+<a name="templates"></a>
+### Templates 
+
+Template areas are useful to use the same layout for a specific area of the application. For instance each of Varie's documentation pages have the same layout, but the rest of the site has a different layout.
 
 ```js
 $router.template("/docs", "documentationArea").group(() => {
@@ -36,9 +89,10 @@ $router.template("/docs", "documentationArea").group(() => {
 });
 ```
 
-### Middleware
+<a name="middleware"></a>
+## Middleware
 
-You can easily attach middleware to speific routes by attaching them on the group by writing
+You can easily attach middleware to specific routes by attaching them on the group
 
 ```js
 $router
@@ -49,16 +103,9 @@ $router
   });
 ```
 
-## Redirect / Aliases
+<a name="defining-middleware"></a>
+### Defining Middleware
 
-$router.redirect('/', '/welcome)
 
-```js
-$router.route("/", "welcome").alias("home");
-```
-
-## Catch All Routes
-
-```js
-$router.route("*", "404");
-```
+<a name="registering-middleware"></a>
+### Registering Middleware

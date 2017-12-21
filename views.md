@@ -1,18 +1,34 @@
 # Views
 
-Your views are just `.vue` files that contain your html / javascript / css as normal. But we make a suggestion on how to organize your views.
+- [Layouts](#layouts)
+- [Directory Structure](#directory-structure)
+- [Component Dependency Injection](#component-dependency-injection)
 
-### Layouts
+Your views are just vue components. But we do make a suggestion on how to organize your components with layouts and 
+directory structures.
 
-We suggest using the layouts folder to use with our router. This allows you to easily understand how the app can be used. An example below : . +-- resources +-- assets +-- views +-- layouts ./Public.vue ./App.vue This couples with our router system which you can use `$router.layout('App').group(....`
+> To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).
 
-### Component Structure
+<a name="layouts"></a>
+## Layouts
 
-We suggest making areas folders for your site, which allows you to keep a tidy folder structure and also can keep component folders inside of those. Example :
+We suggest using the layouts folder to use with our router. This allows you to easily understand how the app can be used. An example below : 
+
+    . 
+    +-- resources
+        +-- views
+            +-- layouts 
+                ./Public.vue
+                 ./App.vue 
+
+
+<a name="directory-structure"></a>
+### Directory Structure
+
+We suggest making areas folders for your site, which allows you to keep a tidy folder structure and also can keep component folders inside of those.
 
       .
        +-- resources
-          +-- assets
           +-- views
               +-- Profile
                 ./index.vue
@@ -21,3 +37,16 @@ We suggest making areas folders for your site, which allows you to keep a tidy f
                     ./ProfileImageUploader.vue
 
 As you can see your can create sub component's in this manner that are not necessarily reusable components but components to keep your code tidy.
+
+<a name="component-dependency-injection"></a>
+### Component Dependency Injection
+
+It is also easy to inject dependencies into your components by using the `inject` syntax in your `data` properties 
+
+```js
+    data() {
+	  return {
+	  	'$inject' : 'YourInjectionAbstract'
+	  }
+    }
+```
