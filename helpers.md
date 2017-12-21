@@ -1,8 +1,9 @@
-# Helpers 
+# Helpers
 
-- [Available Helpers](#available-helpers)
+* [Available Helpers](#available-helpers)
 
 <a name="available-helpers"></a>
+
 #### `app()` {#helper-method}
 
 The `app` function returns the [service container](/docs/{{version}}/container) instance:
