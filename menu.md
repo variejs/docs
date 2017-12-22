@@ -10,11 +10,12 @@
 * #### The Basics
   * [Views](/docs/{{version}}/views)
   * [Routing](/docs/{{version}}/routing)
+  * [Models](/docs/{{version}}/Models)
   * [State Management](/docs/{{version}}/state)
 * #### Security
   * [App Middleware](/docs/{{version}}/app-middleware)
-  * Validation - COMING SOON
-  * Authorization - COMING SOON
+  * [Validation](/docs/{{version}}/validation)
+  * [Authorization COMING SOON](#)
 * #### Common Elements
   * [Components](/docs/{{version}}/components)
   * [Mixins](/docs/{{version}}/mixins)
