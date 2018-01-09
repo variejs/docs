@@ -24,7 +24,7 @@ let user = new User({
   name : 'luke',
   email : 'luke@lukepolo.com',
   address : {
-    line_1 : '6111 norwaldo ave'
+    line_1 : '5121 Main Street'
   },
 });
 
@@ -43,7 +43,7 @@ user.errors() // gets all the errors
 Models set / get 
 ```js
   $userModel.set('email', 'luke@lukepolo.com');
-  $userModel.set('address.first_line', '6111 Norwaldo Ave');
+  $userModel.set('address.first_line', '5121 Main Street');
   
   $userModel.get('email');
   $userModel.get('address.first_line');
