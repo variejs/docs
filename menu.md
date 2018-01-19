@@ -18,6 +18,7 @@
   * [Filters](/docs/{{version}}/filters)
   * [Directives](/docs/{{version}}/directives)
   * [Path Aliases](/docs/{{version}}/path-aliases)
-* #### Further Investigation
-  * [Helpers](/docs/{{version}}/helpers)
+* #### Plugins
   * [Notifications](/docs/{{version}}/notifications)
+* #### Digging Deeper
+  * [Helpers](/docs/{{version}}/helpers)
