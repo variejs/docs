@@ -17,8 +17,8 @@
   * [Mixins](/docs/{{version}}/mixins)
   * [Filters](/docs/{{version}}/filters)
   * [Directives](/docs/{{version}}/directives)
-  * [Path Aliases](/docs/{{version}}/path-aliases)
 * #### Plugins
   * [Notifications](/docs/{{version}}/notifications)
 * #### Digging Deeper
   * [Helpers](/docs/{{version}}/helpers)
+  * [Path Aliases](/docs/{{version}}/path-aliases)
