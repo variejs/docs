@@ -1,4 +1,4 @@
-# Filers
+# Filters
 
 * [Creating a Filter](#creating-a-filter)
 
