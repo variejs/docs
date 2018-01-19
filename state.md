@@ -1,6 +1,7 @@
 # State Management
 
 * [Creating Stores](#creating-stores)
+  * [Using Models](#using-models)
   * [Creating Sub Modules](#creating-submodules)
 * [Directory Structure](#directory-structure)
 * [Using Stores](#using-stores)
@@ -14,6 +15,33 @@ Varie makes it easy to interact with state, with the power of Vuex. Automatic mo
 To create a new store use the Varie Cli to create it in the dictory you wish to create it in
 
 `varie make:store <store-name>`
+
+<a name="using-models"></a>
+
+### Using Models
+
+Models help to orgnaize and let our IDE how these models will look like and can be useful for displaying , validating,
+resuabliity of the data.
+
+To create models by using
+
+`varie make:model <model-name>`
+
+And can be used by importing the model wherever you would like :
+
+```js
+import UserModel from "@models/UserModel";
+let user = new UserModel(data);
+```
+
+Using the model inside of the store you should be place it in your `stateInterface` file :
+
+```js
+import UserModel from "@models/UserModel";
+export interface UsersState {
+  users: Array<UserModel>;
+}
+```
 
 <a name="creating-submodules"></a>
 
