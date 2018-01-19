@@ -9,7 +9,7 @@
 * #### The Basics
   * [Views](/docs/{{version}}/views)
   * [Routing](/docs/{{version}}/routing)
-  * [Models](/docs/{{version}}/Models)
+  * [Models](/docs/{{version}}/models)
   * [State Management](/docs/{{version}}/state)
   * [Forms &Validation](/docs/{{version}}/forms-&-validation)
 * #### Common Elements
