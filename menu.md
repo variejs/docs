@@ -6,7 +6,6 @@
 * #### Architecture Concepts
   * [Service Container](/docs/{{version}}/service-container)
   * [Service Providers](/docs/{{version}}/service-providers)
-  * [Contracts](/docs/{{version}}/contracts)
 * #### The Basics
   * [Views](/docs/{{version}}/views)
   * [Routing](/docs/{{version}}/routing)
