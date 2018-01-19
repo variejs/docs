@@ -20,6 +20,4 @@ Varie comes with some path aliases to help out with development. These are custo
  "@components": path.join(__dirname, "app/components")
 ```
 
-<a name="custom-paths"></a>
-
-## Custom Paths
+To customize change the locations in your `webpack.mix.js` and `tsconfig.json` files.

@@ -12,10 +12,7 @@
   * [Routing](/docs/{{version}}/routing)
   * [Models](/docs/{{version}}/Models)
   * [State Management](/docs/{{version}}/state)
-* #### Security
-  * [App Middleware](/docs/{{version}}/app-middleware)
-  * [Validation](/docs/{{version}}/validation)
-  * [Authorization COMING SOON](#)
+  * [Forms &Validation](/docs/{{version}}/forms-&-validation)
 * #### Common Elements
   * [Components](/docs/{{version}}/components)
   * [Mixins](/docs/{{version}}/mixins)
@@ -25,4 +22,3 @@
 * #### Further Investigation
   * [Helpers](/docs/{{version}}/helpers)
   * [Notifications](/docs/{{version}}/notifications)
-  * [Package Development](/docs/{{version}}/package-development)

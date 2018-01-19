@@ -13,7 +13,6 @@ Only components in the main directory are auto loaded, to allow you to create su
             +-- notification_components
                 +-- NotificationItem.vue
 
-
 Above structure will auto load the components `<left-nav><left-nav>` and `<notifications><notifications>`.
 
 <a name="creating-a-component"></a>

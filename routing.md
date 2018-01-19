@@ -34,13 +34,28 @@ $router.route("/", "Welcome");
 
 <a name="views"></a>
 
-### Views
+### Named Views
 
-// show how we can use multiple components / single component , setting meta and name here too
+We can also setup named views
+
+```js
+$router.route("/", {
+  default: "Welcome",
+  sideNav: "SideNavOption2"
+});
+```
 
 <a name="meta"></a>
 
 ### Meta
+
+Sometimes its needed to add addtional functionality to our routes, we can add metadata
+
+```js
+$router.route("/admin/dashboard", "AdminDashboard").setMeta({
+  requiresAuth: true
+});
+```
 
 <a name="aliases"></a>
 
@@ -69,6 +84,10 @@ $router.route("*", "404");
 <a name="named-routes"></a>
 
 ## Named Routes
+
+```js
+$router.route("*", "404").setName("error");
+```
 
 <a name="route-groups"></a>
 
@@ -119,6 +138,10 @@ $router
 
 ### Defining Middleware
 
+Run `varie make route-middleware`, which will create a new file for you to use
+
 <a name="registering-middleware"></a>
 
 ### Registering Middleware
+
+You should register your middleware inside the `router/middleware/index.ts` file so its available to use.

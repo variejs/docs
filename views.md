@@ -46,9 +46,7 @@ As you can see your can create sub component's in this manner that are not neces
 It is also easy to inject dependencies into your components by using the `inject` syntax in your `data` properties
 
 ```js
-    data() {
-	  return {
-	  	'$inject' : 'YourInjectionAbstract'
-	  }
-    }
+export default Vue.extend({
+  $inject: ["$documentationService"]
+});
 ```

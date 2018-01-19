@@ -45,8 +45,6 @@ Above the provider is binding a implementation of a `$documentationService` to t
 
 The boot method occurs after ALL service providers have been registered and have availability to them through the service container.
 
-TODO - look to see if we can do method injection
-
 <a name="registering-providers"></a>
 
 ### Registering Providers

@@ -4,9 +4,6 @@
   * [Creating Sub Modules](#creating-submodules)
 * [Directory Structure](#directory-structure)
 * [Using Stores](#using-stores)
-  * [Actions](#actions) - probably will rename
-  * [Mutations](#actions) - probably will rename
-  * [Getters](#actions) - probably will rename
 
 Varie makes it easy to interact with state, with the power of Vuex. Automatic module registration makes it really easy to setup your application quickly.
 
@@ -22,22 +19,28 @@ To create a new store use the Varie Cli to create it in the dictory you wish to 
 
 ### Creating Submodules
 
+Varie handles making submodules for you as long as you use slashes in the name
+
+`varie make:store auth/submodule-name`
+
 <a name="createing-stores"></a>
 
 ## Directory Structure
 
-<a name="using-stores"></a>
+Each store will contain 6 files to setup your store :
+
+```
+actions.ts
+getters.ts
+index.ts
+mutations.ts
+state.ts
+stateInterface.ts
+```
 
 ## Using Stores
 
-<a name="actions"></a>
+### Actions / Getters / Mutations / State
 
-### Actions
-
-<a name="mutations"></a>
-
-### Mutations
-
-<a name="getters"></a>
-
-### Getters
+These are directly correlated with vuex and you should first learn more about on the vuex resources page. You can
+view an example here : (src to notifications plugin store)
