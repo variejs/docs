@@ -8,6 +8,7 @@
   * [Service Providers](/docs/{{version}}/service-providers)
 * #### The Basics
   * [Views](/docs/{{version}}/views)
+  * [Http Requests](/docs/{{version}}/http-requests)
   * [Routing](/docs/{{version}}/routing)
   * [State Management](/docs/{{version}}/state)
   * [Forms & Validation](/docs/{{version}}/forms-&-validation)
