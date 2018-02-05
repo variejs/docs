@@ -14,6 +14,7 @@
 ## Usage
 
 // TODO - write out sections for this
+
 ```text
     new                    run remote setup commands
     make:component         makes a Vue directive in the component directory
