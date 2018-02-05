@@ -172,14 +172,14 @@ To use custom error messages add a messages object :
 
 ## Custom Validation Rules
 
-TODO
+To cretae custom validation rules use the varie cli tool which will place the new rule inside the `app/rules` folder :
+
+`varie make:rule NewRule`
+
+You then can define how the validation passes, and the message that it will display to the user.
 
 <a name="validation-language-files"></a>
 
 ### Validation Language Files
 
-If you would like the :attribute portion of your validation message to be replaced with a custom attribute name, you may specify the custom name in the attributes array of your resources/lang/xx/validation.php language file:
-
-'attributes' => [
-'email' => 'email address',
-],
+If you would like change your phrasing of the errors you can change that inside your resources/lang/xx/validation.php language file.

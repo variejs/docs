@@ -1,7 +1,6 @@
 # Notifications
 
 * [Creating a Notification](#creating-a-notification)
-  * [Notification Types](#notification-types)
 
 Varie comes with built in notification system that you can customize.
 
@@ -11,6 +10,18 @@ Varie comes with built in notification system that you can customize.
 
 ## Creating a Notification
 
-<a name="notification-types"></a>
+You can create notifications by injecting the notification service
 
-### Notification Types
+```js
+    export default Vue.extend({
+      $inject: ["$notifications"]
+    },
+    methods : {
+    	showNotifications() {
+    		this.$notifications.showError('error', 'This is an Error Notification');
+            this.$notifications.showInfo('info', 'This is an Info Notification')
+            this.$notifications.showSuccess('sucess', 'This is an Success Notification, that never goes away', 0)
+            this.$notifications.showWarning('warning', 'This is an Warning Notification with 10 second delay before it goes away', 10000)
+    	}
+    });
+```

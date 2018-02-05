@@ -51,8 +51,9 @@ The boot method occurs after ALL service providers have been registered and have
 ### Registering Providers
 
 All service providers are registered in `config/app.ts`. This file contains other service providers already added to application. Just add your provider by adding it to the array.
- 
- <a name="learn-more"></a>
+
+<a name="learn-more"></a>
+
 ### Learn More
+
 > TO learn more checkout [InversifyJS wiki](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md)
- 

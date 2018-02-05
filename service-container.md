@@ -67,12 +67,9 @@ let $httpClient = this.app.make("$httpClient");
 Its also important to note that you can do automatic injection within components :
 
 ```js
-    data() {
-	  return {
-	  	$inject : ['$httpClient'],
-	  	...
-	  }
-    }
+export default Vue.extend({
+  $inject: ["$httpClient"]
+});
 ```
 
 This will bind `$httpClient` to the component just like any other method.

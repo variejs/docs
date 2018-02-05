@@ -10,6 +10,6 @@ The `app` function returns the [service container](/docs/{{version}}/container) 
 
     let container = app;
 
-You may contract name to resolve it from the container:
+Which you may use a contract name to resolve the service from the container:
 
     $api = app.make("$documentationService")
