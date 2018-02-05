@@ -2,6 +2,7 @@
   * [Installation](/docs/{{version}}/installation)
   * [Configuration](/docs/{{version}}/configuration)
   * [Bundling](/docs/{{version}}/bundling)
+  * [Varie CLI](/docs/{{version}}/varie-cli)
   * [Directory Structure](/docs/{{version}}/directory-structure)
 * #### Architecture Concepts
   * [Service Container](/docs/{{version}}/service-container)
