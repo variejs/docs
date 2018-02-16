@@ -9,7 +9,7 @@
 * [Named Routes](#named-routes)
 * [Route Groups](#route-groups)
   * [Prefixing](#prefixing)
-  * [Templates](#templates)
+  * [layouts](#layouts)
 * [Route Middleware](#middleware)
   * [Defining Middleware](#defining-middleware)
   * [Registering Middleware](#registering-middleware)
@@ -93,7 +93,7 @@ $router.route("*", "404").setName("error");
 
 ## Route Groups
 
-Router groups allow you to nest your routes with prefixes, middleware , and templates.
+Router groups allow you to nest your routes with prefixes, middleware, and layouts.
 
 <a name="prefixing"></a>
 
@@ -107,16 +107,19 @@ $router.prefix("/docs").group(() => {
 });
 ```
 
-<a name="templates"></a>
+<a name="layouts"></a>
 
-### Templates
+### Layouts
 
-Template areas are useful to use the same layout for a specific area of the application. For instance each of Varie's documentation pages have the same layout, but the rest of the site has a different layout.
+Layouts are useful to use the same layout for a specific area of the application. For instance each of Varie's documentation pages have the same layout, but the rest of the site has a different layout.
 
 ```js
-$router.template("/docs", "documentationArea").group(() => {
-  $router.route(":version?/:page?", "docs").setName("docs");
-});
+$router
+  .prefix("/docs")
+  .layout("layouts/documentationArea")
+  .group(() => {
+    $router.route(":version?/:page?", "docs").setName("docs");
+  });
 ```
 
 <a name="middleware"></a>
@@ -127,7 +130,8 @@ You can easily attach middleware to specific routes by attaching them on the gro
 
 ```js
 $router
-  .template("/docs", "documentationArea")
+  .layout("layouts/documentationArea")
+  .prefix("/docs")
   .middleware("authed")
   .group(() => {
     $router.route(":version?/:page?", "docs").setName("docs");
