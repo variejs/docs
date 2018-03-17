@@ -57,7 +57,7 @@ Setting the original data is useful after requests were made and you dont want y
 their previous values.
 
 ```js
-form.setAsOriginalData();
+form.setOriginaldata();
 ```
 
 <a name="validating-your-forms"></a>
