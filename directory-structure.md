@@ -1,18 +1,18 @@
 # Directory Structure
 
-* [The Root Directory](#the-root-directory)
-  * [The `app` Directory](#the-root-app-directory)
-  * [The `config` Directory](#the-root-config-directory)
-  * [The `public` Directory](#the-root-public-directory)
-  * [The `resources` Directory](#the-root-resources-directory)
-  * [The `routes` Directory](#the-root-routes-directory)
-* [The App Directory](#the-app-directory)
-  * [The `components` Directory](#the-app-components-directory)
-  * [The `directives` Directory](#the-app-directives-directory)
-  * [The `filters` Directory](#the-app-filters-directory)
-  * [The `mixins` Directory](#the-app-mixins-directory)
-  * [The `providers` Directory](#the-app-providers-directory)
-  * [The `store` Directory](#the-app-store-directory)
+- [The Root Directory](#the-root-directory)
+  - [The `app` Directory](#the-root-app-directory)
+  - [The `config` Directory](#the-root-config-directory)
+  - [The `public` Directory](#the-root-public-directory)
+  - [The `resources` Directory](#the-root-resources-directory)
+  - [The `routes` Directory](#the-root-routes-directory)
+- [The App Directory](#the-app-directory)
+  - [The `components` Directory](#the-app-components-directory)
+  - [The `directives` Directory](#the-app-directives-directory)
+  - [The `filters` Directory](#the-app-filters-directory)
+  - [The `mixins` Directory](#the-app-mixins-directory)
+  - [The `providers` Directory](#the-app-providers-directory)
+  - [The `store` Directory](#the-app-store-directory)
 
 <a name="the-root-directory"></a>
 

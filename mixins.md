@@ -1,6 +1,6 @@
 # Mixins
 
-* [Creating a Mixin](#creating-a-mixin)
+- [Creating a Mixin](#creating-a-mixin)
 
 Mixins are auto loaded into the application as long as your using the `autoLoadMixins` provider in your config.
 

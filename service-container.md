@@ -1,10 +1,10 @@
 # Service Container
 
-* [Bindings](#bindings)
-  * [Basic Binding](#basic-binding)
-  * [Singleton Binding](#singleton-binding)
-  * [Binding Interfaces to Implementations](#binding-interfaces-to-implementations)
-* [Resolving Dependencies](#resolving-dependencies) -[Automatic Component Injection](#automatic-component-injection)
+- [Bindings](#bindings)
+  - [Basic Binding](#basic-binding)
+  - [Singleton Binding](#singleton-binding)
+  - [Binding Interfaces to Implementations](#binding-interfaces-to-implementations)
+- [Resolving Dependencies](#resolving-dependencies) -[Automatic Component Injection](#automatic-component-injection)
 
 The service container is a way to manage dependencies and performing dependency injection. We have wrapped [inversify]: http://inversify.io for our container. It is important to understnad this concept as Varies core its built with the injection system.
 

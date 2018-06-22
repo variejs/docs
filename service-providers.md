@@ -1,10 +1,10 @@
 # Service Providers
 
-* [Creating Service Providers](#createing-service-providers)
-  * [The Register Method](#the-register-method)
-  * [The Boot Method](#the-boot-method)
-* [Registering Service Providers](#registering-providers)
-* [Learn More](#learn-more)
+- [Creating Service Providers](#createing-service-providers)
+  - [The Register Method](#the-register-method)
+  - [The Boot Method](#the-boot-method)
+- [Registering Service Providers](#registering-providers)
+- [Learn More](#learn-more)
 
 Service providers allow to us to bind things to our application. In fact Varie it self uses service providers to boot all the necessary components to create the actual application.
 These providers are meant for registering things, such as services, middleware , constants, routes and more. Most of the application providers are deferred and are only loaded when actually called from the container.

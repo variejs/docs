@@ -1,10 +1,10 @@
 # State Management
 
-* [Creating Stores](#creating-stores)
-  * [Using Models](#using-models)
-  * [Creating Sub Modules](#creating-submodules)
-* [Directory Structure](#directory-structure)
-* [Using Stores](#using-stores)
+- [Creating Stores](#creating-stores)
+  - [Using Models](#using-models)
+  - [Creating Sub Modules](#creating-submodules)
+- [Directory Structure](#directory-structure)
+- [Using Stores](#using-stores)
 
 Varie makes it easy to interact with state, with the power of Vuex. Automatic module registration makes it really easy to setup your application quickly.
 

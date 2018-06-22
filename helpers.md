@@ -1,6 +1,6 @@
 # Helpers
 
-* [Available Helpers](#available-helpers)
+- [Available Helpers](#available-helpers)
 
 <a name="available-helpers"></a>
 

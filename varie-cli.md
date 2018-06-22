@@ -1,7 +1,7 @@
 # Varie CLI
 
-* [Installation](#installation)
-* [Usage](#usage)
+- [Installation](#installation)
+- [Usage](#usage)
 
 <a name="installation"></a>
 

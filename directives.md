@@ -1,6 +1,6 @@
 # Directives
 
-* [Creating a Directive](#creating-a-directive)
+- [Creating a Directive](#creating-a-directive)
 
 Directives are auto loaded into the application as long as your using the `autoLoadDirectives` provider in your config.
 

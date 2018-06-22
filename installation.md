@@ -1,7 +1,7 @@
 # Installation
 
-* [Installation](#installation)
-* [Configuration](#configuration)
+- [Installation](#installation)
+- [Configuration](#configuration)
 
 <a name="installation"></a>
 

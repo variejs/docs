@@ -1,7 +1,7 @@
 # Environment Configuration
 
-* [Accessing the Configuration](#accessing-the-configuration)
-* [Determining Current Environment](#determining-current-environment)
+- [Accessing the Configuration](#accessing-the-configuration)
+- [Determining Current Environment](#determining-current-environment)
 
 Most likely you will have multiple environments for the application `dev`, `qa`, `prod`. You may want to change some of configuration based on what type of environment your running in.
 

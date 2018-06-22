@@ -1,18 +1,18 @@
 # Routing
 
-* [Basic Routing](#basic-routing)
-  * [Views](#views)
-  * [Meta](#meta)
-  * [Aliaes](#aliases)
-  * [Redirects](#redirects)
-  * [Catch All](#catch-alls)
-* [Named Routes](#named-routes)
-* [Route Groups](#route-groups)
-  * [Prefixing](#prefixing)
-  * [layouts](#layouts)
-* [Route Middleware](#middleware)
-  * [Defining Middleware](#defining-middleware)
-  * [Registering Middleware](#registering-middleware)
+- [Basic Routing](#basic-routing)
+  - [Views](#views)
+  - [Meta](#meta)
+  - [Aliaes](#aliases)
+  - [Redirects](#redirects)
+  - [Catch All](#catch-alls)
+- [Named Routes](#named-routes)
+- [Route Groups](#route-groups)
+  - [Prefixing](#prefixing)
+  - [layouts](#layouts)
+- [Route Middleware](#middleware)
+  - [Defining Middleware](#defining-middleware)
+  - [Registering Middleware](#registering-middleware)
 
 <a name="basic-routing"></a>
 
