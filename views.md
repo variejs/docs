@@ -13,14 +13,18 @@ directory structures.
 
 ## Layouts
 
-We suggest using the layouts folder to use with our router. This allows you to easily understand how the app can be used. An example below :
+By default we provide a public layout, by adding more you are able to use different layouts.
+
 
     .
     +-- resources
         +-- views
             +-- layouts
                 ./Public.vue
-                 ./App.vue
+                
+      
+> To learn more about layouts read the [routing](/routing#layouts) documentation.
+              
 
 <a name="directory-structure"></a>
 

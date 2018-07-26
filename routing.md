@@ -62,7 +62,7 @@ $router.route("/admin/dashboard", "AdminDashboard").setMeta({
 ### Aliases
 
 ```js
-$router.route("/", "welcome").alias("home");
+$router.route("/", "welcome").setAlias("home");
 ```
 
 <a name="redirects"></a>
@@ -93,7 +93,7 @@ $router.route("*", "404").setName("error");
 
 ## Route Groups
 
-Router groups allow you to nest your routes with prefixes, middleware, and layouts.
+Router groups allow you to nest your routes with prefixes, middleware, layouts, and areas.
 
 <a name="prefixing"></a>
 
@@ -116,7 +116,29 @@ Layouts are useful to use the same layout for a specific area of the application
 ```js
 $router
   .prefix("/docs")
-  .layout("layouts/documentationArea")
+  .layout("admin")
+  .group(() => {
+    $router.route(":version?/:page?", "docs").setName("docs");
+  });
+
+// Or you can set it per route!
+$router
+  .prefix("/docs")
+  .group(() => {
+    $router.route(":version?/:page?", "docs");
+    $router.route("admin", "adminDocs").setLayout("admin");
+  });
+```
+
+### Areas
+
+Areas make it so components can be grouped under a parent. 
+
+```js
+$router
+  .prefix("/docs")
+  .layout("public")
+  .area('documentationArea')
   .group(() => {
     $router.route(":version?/:page?", "docs").setName("docs");
   });
@@ -130,7 +152,6 @@ You can easily attach middleware to specific routes by attaching them on the gro
 
 ```js
 $router
-  .layout("layouts/documentationArea")
   .prefix("/docs")
   .middleware("authed")
   .group(() => {
