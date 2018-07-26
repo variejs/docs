@@ -13,8 +13,6 @@
   - [Custom Validation Rules](#custom-validation-rules)
   - [Validation Language Files](#validation-language-files)
 
-<a name="forms"></a>
-
 ## Forms
 
 Forms allow us to organize our data into submittable and validatable methods.
@@ -35,21 +33,15 @@ To create a form in your component you just need to call `createForm` inside you
     }
 ```
 
-<a name="checking-for-dirty-forms"></a>
-
 ### Checking for Dirty Forms
 
 You can check to see if the form is dirty by `form.isDirty()`
-
-<a name="reset-form-data"></a>
 
 ### Reset Form Data
 
 To reset the data to its orignal form just use the reset function
 
 <button @click="form.reset()">Reset</button>
-
-<a name="setting-original-data"></a>
 
 ### Setting Original Data
 
@@ -59,8 +51,6 @@ their previous values.
 ```js
 form.setOriginaldata();
 ```
-
-<a name="validating-your-forms"></a>
 
 ## Validating Your Forms
 
@@ -95,8 +85,6 @@ You can then use `form.isValid()` and `form.errors()` to add additional function
     <button :disabled="!form.isValid()">Submit</button>
 ```
 
-<a name="attaching-errors-to-inputs"></a>
-
 ### Attaching Errors to inputs
 
 To attach errors to your inputs we can use the varie form directive along with what fields you wish to validate
@@ -110,8 +98,6 @@ To attach errors to your inputs we can use the varie form directive along with w
 ```
 
 > Important : you must map to your values location in the form by using the name attribute
-
-<a name="available-validation-rules"></a>
 
 ## Available Validation Rules
 
@@ -136,8 +122,6 @@ To attach errors to your inputs we can use the varie form directive along with w
 [required](#rule-required)
 [size](#rule-size)
 [url](#rule-url)
-
-<a name="custom-error-messages"></a>
 
 ### Custom Error Messages
 
@@ -167,8 +151,6 @@ To use custom error messages add a messages object :
     };
   }
 ```
-
-<a name="custom-validation-rules"></a>
 
 ## Custom Validation Rules
 

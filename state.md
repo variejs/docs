@@ -8,7 +8,6 @@
 
 Varie makes it easy to interact with state, with the power of Vuex. Automatic module registration makes it really easy to setup your application quickly.
 
-<a name="createing-stores"></a>
 
 ## Creating Stores
 
@@ -16,7 +15,6 @@ To create a new store use the Varie Cli to create it in the dictory you wish to 
 
 `varie make:store <store-name>`
 
-<a name="using-models"></a>
 
 ### Using Models
 
@@ -43,7 +41,6 @@ export interface UsersState {
 }
 ```
 
-<a name="creating-submodules"></a>
 
 ### Creating Submodules
 
@@ -51,7 +48,6 @@ Varie handles making submodules for you as long as you use slashes in the name
 
 `varie make:store auth/submodule-name`
 
-<a name="createing-stores"></a>
 
 ## Directory Structure
 

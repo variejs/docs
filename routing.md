@@ -15,7 +15,6 @@
   - [Defining Middleware](#defining-middleware)
   - [Registering Middleware](#registering-middleware)
 
-<a name="basic-routing"></a>
 
 ## Basic Routing
 
@@ -33,7 +32,6 @@ Maps to the view `resources/views/welcome.vue`. Also you can map to directories 
 $router.route("/", "Welcome");
 ```
 
-<a name="views"></a>
 
 ### Named Views
 
@@ -46,7 +44,6 @@ $router.route("/", {
 });
 ```
 
-<a name="meta"></a>
 
 ### Meta
 
@@ -58,7 +55,6 @@ $router.route("/admin/dashboard", "AdminDashboard").setMeta({
 });
 ```
 
-<a name="aliases"></a>
 
 ### Aliases
 
@@ -66,7 +62,6 @@ $router.route("/admin/dashboard", "AdminDashboard").setMeta({
 $router.route("/", "welcome").setAlias("home");
 ```
 
-<a name="redirects"></a>
 
 ### Redirects
 
@@ -74,7 +69,6 @@ $router.route("/", "welcome").setAlias("home");
 $router.redirect("/", "/welcome");
 ```
 
-<a name="catch-alls"></a>
 
 ### Catch Alls
 
@@ -82,21 +76,15 @@ $router.redirect("/", "/welcome");
 $router.route("*", "404");
 ```
 
-<a name="named-routes"></a>
-
 ## Named Routes
 
 ```js
 $router.route("*", "404").setName("error");
 ```
 
-<a name="route-groups"></a>
-
 ## Route Groups
 
 Router groups allow you to nest your routes with prefixes, middleware, layouts, and areas.
-
-<a name="prefixing"></a>
 
 ### Prefixing
 
@@ -107,8 +95,6 @@ $router.prefix("/docs").group(() => {
   $router.route(":version?/:page?", "docs").setName("docs"); // `/docs/master/routing`
 });
 ```
-
-<a name="layouts"></a>
 
 ### Layouts
 
@@ -145,8 +131,6 @@ $router
   });
 ```
 
-<a name="middleware"></a>
-
 ## Middleware
 
 You can easily attach middleware to specific routes by attaching them on the group
@@ -160,13 +144,9 @@ $router
   });
 ```
 
-<a name="defining-middleware"></a>
-
 ### Defining Middleware
 
 Run `varie make route-middleware`, which will create a new file for you to use
-
-<a name="registering-middleware"></a>
 
 ### Registering Middleware
 

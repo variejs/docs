@@ -15,8 +15,6 @@ Only components in the main directory are auto loaded, to allow you to create su
 
 Above structure will auto load the components `<left-nav><left-nav>` and `<notifications><notifications>`.
 
-<a name="creating-a-component"></a>
-
 ## Creating a component
 
 > To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).

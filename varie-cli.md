@@ -3,13 +3,11 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
-<a name="installation"></a>
 
 ## Installation
 
 `npm install -g varie-cli`
 
-<a name="usage"></a>
 
 ## Usage
 

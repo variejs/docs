@@ -2,8 +2,6 @@
 
 - [Requests](#requests) \*[Unregister App Middleware for a route](#unregister-app-middleware-for-a-route)
 
-<a name="requests"></a>
-
 ## Requests
 
 To make a request you will need to inject the `$http` service.
@@ -25,8 +23,6 @@ $http.get("url").then(response => {
   this.data = response.data;
 });
 ```
-
-<a name="unregister-app-middleware-for-a-route"></a>
 
 ### Unregister App Middleware for a route
 

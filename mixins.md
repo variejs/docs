@@ -4,7 +4,6 @@
 
 Mixins are auto loaded into the application as long as your using the `autoLoadMixins` provider in your config.
 
-<a name="creating-a-mixin"></a>
 
 ## Creating a Mixin
 

@@ -3,8 +3,6 @@
 - [Defining Middleware](#defining-middleware)
 - [Registering Middleware](#registering-middleware)
 
-<a name="defining-middleware"></a>
-
 ## Defining Middleware
 
 Start by using the Varie CLI
@@ -29,8 +27,6 @@ You will have three functions
 
 You have availability to customize how you want the request / response and what the responseError should do if it does indeed fail.
 You can take a look at the included middleware `app/middleware/LoadingScreen.ts` for a example of what you might do.
-
-<a name="registering-middleware"></a>
 
 ## Registering Middleware
 
