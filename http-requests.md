@@ -32,7 +32,7 @@ $http.get("url").then(response => {
 
 To disable a app middleware for a particular route you can use the unregistere method
 
-```js
+```js line-numbers 
 import MiddlewareClass from "app/middleware/MiddlewareClass";
 
 $http
