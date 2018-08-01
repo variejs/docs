@@ -15,7 +15,6 @@
   - [Defining Middleware](#defining-middleware)
   - [Registering Middleware](#registering-middleware)
 
-
 ## Basic Routing
 
 All routes created must contain a view
@@ -32,7 +31,6 @@ Maps to the view `resources/views/welcome.vue`. Also you can map to directories 
 $router.route("/", "Welcome");
 ```
 
-
 ### Named Views
 
 We can also setup named views
@@ -44,7 +42,6 @@ $router.route("/", {
 });
 ```
 
-
 ### Meta
 
 Sometimes its needed to add addtional functionality to our routes, we can add metadata
@@ -55,20 +52,17 @@ $router.route("/admin/dashboard", "AdminDashboard").setMeta({
 });
 ```
 
-
 ### Aliases
 
 ```js
 $router.route("/", "welcome").setAlias("home");
 ```
 
-
 ### Redirects
 
 ```js
 $router.redirect("/", "/welcome");
 ```
-
 
 ### Catch Alls
 
@@ -109,23 +103,21 @@ $router
   });
 
 // Or you can set it per route!
-$router
-  .prefix("/docs")
-  .group(() => {
-    $router.route(":version?/:page?", "docs");
-    $router.route("admin", "adminDocs").setLayout("admin");
-  });
+$router.prefix("/docs").group(() => {
+  $router.route(":version?/:page?", "docs");
+  $router.route("admin", "adminDocs").setLayout("admin");
+});
 ```
 
 ### Areas
 
-Areas make it so components can be grouped under a parent. 
+Areas make it so components can be grouped under a parent.
 
 ```js
 $router
   .prefix("/docs")
   .layout("public")
-  .area('documentationArea')
+  .area("documentationArea")
   .group(() => {
     $router.route(":version?/:page?", "docs").setName("docs");
   });

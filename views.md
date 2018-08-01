@@ -9,22 +9,19 @@ directory structures.
 
 > To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).
 
-
 ## Layouts
 
 By default we provide a public layout, by adding more you are able to use different layouts.
-
 
     .
     +-- resources
         +-- views
             +-- layouts
                 ./Public.vue
-                
-      
-> To learn more about layouts read the [routing](/routing#layouts) documentation.
-              
 
+
+
+> To learn more about layouts read the [routing](/routing#layouts) documentation.
 
 ### Directory Structure
 
@@ -40,7 +37,6 @@ We suggest making areas folders for your site, which allows you to keep a tidy f
                     ./ProfileImageUploader.vue
 
 As you can see your can create sub component's in this manner that are not necessarily reusable components but components to keep your code tidy.
-
 
 ### Component Dependency Injection
 

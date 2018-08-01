@@ -5,7 +5,6 @@
 
 Varie comes with some path aliases to help out with development. These are customizable but cannot be removed as packages, and internal providers may use these.
 
-
 ## Standard Paths
 
 ```js

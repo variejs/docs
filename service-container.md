@@ -8,11 +8,9 @@
 
 The service container is a way to manage dependencies and performing dependency injection. We have wrapped [Inversify](http://inversify.io) for our container. It is important to understnad this concept as Varies core its built with the injection system.
 
-
 ## Bindings
 
 You should for the most part always bind in a service provider, and we have provided one for you to get started in `app/providers`.
-
 
 ### Basic Binding
 
@@ -24,7 +22,6 @@ this.app.value("$searchService", () => {
 });
 ```
 
-
 ### Singleton Binding
 
 We also can bind a singleton instance so we may only want to resolve once.
@@ -34,7 +31,6 @@ this.app.singleton("$searchService", () => {
   return new SearchService(this.app.make("$httpClient"));
 });
 ```
-
 
 ### Binding Interfaces to Implementations
 
@@ -46,7 +42,6 @@ this.app.bind < HttpInterface > ("$httpClient", Axios);
 
 By doing this it allows us switch out implementations quickly without changing the rest of our application!
 
-
 ## Resolving Dependencies
 
 To resolve from the container, we just need to make a simple call from the app
@@ -54,7 +49,6 @@ To resolve from the container, we just need to make a simple call from the app
 ```js
 let $httpClient = this.app.make("$httpClient");
 ```
-
 
 ### Automatic Component Injection
 
