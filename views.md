@@ -19,8 +19,6 @@ By default we provide a public layout, by adding more you are able to use differ
             +-- layouts
                 ./Public.vue
 
-
-
 > To learn more about layouts read the [routing](/routing#layouts) documentation.
 
 ### Directory Structure

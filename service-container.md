@@ -4,7 +4,8 @@
   - [Basic Binding](#basic-binding)
   - [Singleton Binding](#singleton-binding)
   - [Binding Interfaces to Implementations](#binding-interfaces-to-implementations)
-- [Resolving Dependencies](#resolving-dependencies) -[Automatic Component Injection](#automatic-component-injection)
+- [Resolving Dependencies](#resolving-dependencies)
+- [Component Injection](#component-injection)
 
 The service container is a way to manage dependencies and performing dependency injection. We have wrapped [Inversify](http://inversify.io) for our container. It is important to understnad this concept as Varies core its built with the injection system.
 
@@ -50,7 +51,7 @@ To resolve from the container, we just need to make a simple call from the app
 let $httpClient = this.app.make("$httpClient");
 ```
 
-### Automatic Component Injection
+### Component Injection
 
 Its also important to note that you can do automatic injection within components :
 
