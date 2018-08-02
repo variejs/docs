@@ -1,11 +1,12 @@
 # Forms & Validation
 
 - [Forms](#forms)
+
   - [Creating Forms](#creating-forms)
   - [Checking Dirty](#checking-for-dirty-forms)
   - [Reset The Form](#reset-form-data)
   - [Set Original Data](#setting-original-data)
-  
+
 - [Validating Forms](#validating-your-forms)
   - [Attaching Errors To Inputs](#attaching-errors-to-inputs)
   - [Available Validation Rules](#available-validation-rules)
