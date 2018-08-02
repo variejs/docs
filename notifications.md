@@ -1,10 +1,8 @@
 # Notifications
 
 - [Creating a Notification](#creating-a-notification)
-
-Varie comes with built in notification system that you can customize.
-
-[{.info} Feel free to rip this out entirely as its just a service provider]
+- [Customizations](#customizations) - [HTML](#html) - [CSSS](#css)
+  Varie comes with built in notification system that you can customize.
 
 ## Creating a Notification
 
@@ -23,3 +21,13 @@ You can create notifications by injecting the notification service
     	}
     });
 ```
+
+## Customizations
+
+### HTML
+
+// TODO - how to modify html
+
+### CSS
+
+// TODO - how to modify css

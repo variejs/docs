@@ -1,6 +1,6 @@
-TODO - explain how and why we autoload
+# Auto Loading
 
-# Components
+## Components
 
 - [Creating a component](#creating-a-component)
 
@@ -18,36 +18,36 @@ Only components in the main directory are auto loaded, to allow you to create su
 
 Above structure will auto load the components `<left-nav><left-nav>` and `<notifications><notifications>`.
 
-## Creating a component
+### Creating a component
 
 [{.info} To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).]
 
-# Mixins
+## Mixins
 
 - [Creating a Mixin](#creating-a-mixin)
 
 Mixins are auto loaded into the application as long as your using the `autoLoadMixins` provider in your config.
 
-## Creating a Mixin
+### Creating a Mixin
 
 [{.info} To learn more about mixins go to [Vue's Documentation](https://vuejs.org/v2/guide/mixins.html).]
 
-# Filters
+## Filters
 
 - [Creating a Filter](#creating-a-filter)
 
 Filters are auto loaded into the application as long as your using the `autoLoadFilters` provider in your config.
 
-## Creating a Filter
+### Creating a Filter
 
 [{.info} To learn more about filters go to [Vue's Documentation](https://vuejs.org/v2/guide/filters.html).]
 
-# Directives
+## Directives
 
 - [Creating a Directive](#creating-a-directive)
 
 Directives are auto loaded into the application as long as your using the `autoLoadDirectives` provider in your config.
 
-## Creating a Directive
+### Creating a Directive
 
 [{.info} To learn more about directives go to [Vue's Documentation](https://vuejs.org/v2/guide/custom-directive.html).]
