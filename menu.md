@@ -1,24 +1,24 @@
-- #### Getting Started
+- ### Getting Started
   - [Installation](/docs/{{version}}/installation)
   - [Configuration](/docs/{{version}}/configuration)
   - [Varie CLI](/docs/{{version}}/varie-cli)
   - [Directory Structure](/docs/{{version}}/directory-structure)
-- #### Architecture Concepts
+- ### Architecture Concepts
   - [Service Container](/docs/{{version}}/service-container)
   - [Service Providers](/docs/{{version}}/service-providers)
-- #### The Basics
+- ### The Basics
   - [Views](/docs/{{version}}/views)
   - [Http Requests](/docs/{{version}}/http-requests)
   - [Routing](/docs/{{version}}/routing)
   - [State Management](/docs/{{version}}/state)
   - [Forms & Validation](/docs/{{version}}/forms-&-validation)
-- #### Common Elements
+- ### Common Elements
   - [Components](/docs/{{version}}/components)
   - [Mixins](/docs/{{version}}/mixins)
   - [Filters](/docs/{{version}}/filters)
   - [Directives](/docs/{{version}}/directives)
-- #### Plugins
+- ### Plugins
   - [Notifications](/docs/{{version}}/notifications)
-- #### Digging Deeper
+- ### Digging Deeper
   - [Helpers](/docs/{{version}}/helpers)
   - [Path Aliases](/docs/{{version}}/path-aliases)
