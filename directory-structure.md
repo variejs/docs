@@ -16,46 +16,44 @@
 
 ## The Root Directory
 
-#### App Directory
+#### The App Directory
 
 The app directory is how your application is put together and any complex logic should live. Varie tries to help you get organized with some preset folders.
 
-### Config Directory
+### The Config Directory
 
 This directory contains your apps configuratinos that are custmmizeable per application. This makes it easy to know what services are capable of.
 
-### Public Directory
+### The Public Directory
 
 This directory will exist after building your application, and should be used to display the application. It will container a mix file that allows your backend to read if your using a MVC.
 
-### Resources Directory
+### The Resources Directory
 
 This directory should contain all you resources, from views, to images.
 
-### Routes Directory
+### The Routes Directory
 
 THis directory contains multiple route files that define how your application should work.
-
-## The App Directory
 
 ##### Components Directory
 
 Houses all your [components](/docs/{{version}}/components)
 
-##### Directives Directory
+##### The Directives Directory
 
 Houses all your [directives](/docs/{{version}}/directives)
 
-##### Filters Directory
+##### The Filters Directory
 
 Houses all your [filters](/docs/{{version}}/filters)
 
-##### Mixins Directory
+##### The Mixins Directory
 
 Houses all your [mixins](/docs/{{version}}/mixins)
 
-##### Providers Directory
+##### The Providers Directory
 
 This directory should contain all your [service providers](/docs/{{version}}/service-providers) for your application. These providers bootstrap your application by binding them to the service container.
 
-##### Store Directory
+##### The Store Directory
