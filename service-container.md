@@ -55,7 +55,7 @@ let $httpClient = this.app.make("$httpClient");
 
 Its also important to note that you can do automatic injection within components :
 
-```vuejs
+```js
 export default Vue.extend({
   $inject: ["$httpClient"]
 });
