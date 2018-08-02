@@ -1,6 +1,6 @@
 # Release Notes
 
-### 0.1.0 (Beta)
+## 0.1.0 (Beta)
 
 We are releasing Varie as a beta to start out. The reason is, we want
 more opinions to come in and change before we start solidifying the API.

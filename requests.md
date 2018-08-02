@@ -25,7 +25,7 @@ $http.get("url").then(response => {
 });
 ```
 
-### Unregister App Middleware for a route
+## Unregister App Middleware for a route
 
 To disable a app middleware for a particular route you can use the unregistere method
 

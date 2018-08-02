@@ -1,4 +1,4 @@
-## Deployment
+# Deployment
 
 - [Server Configuration](#server-configuration)
 - [Environment Variables](#environment-variables)
@@ -6,17 +6,17 @@
 
 When deploying Varie there are a few steps you must do before building the application.
 
-### Server Configuration
+## Server Configuration
 
-#### Nginx
-
-// TODO
-
-#### Apache
+### Nginx
 
 // TODO
 
-### Environment Variables
+### Apache
+
+// TODO
+
+## Environment Variables
 
 There are a couple of ways to manage the environment variables on your server :
 
@@ -25,7 +25,7 @@ There are a couple of ways to manage the environment variables on your server :
 
 [{.alert} This is required before you build your application, it will otherwise fail to build!]
 
-### Deploying with CodePier
+## Deploying with CodePier
 
 If you aren't quite comfortable managing your own server with the proper
 configurations, [CodePier](https://codepier.io) is a alternative that
