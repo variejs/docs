@@ -2,17 +2,19 @@
 
 Varie has a few helpers that can help speed up your development.
 
-## Application Helpers
-
 ### `app()`
 
 The `app` function returns the [service container](/docs/{{version}}/container) instance:
 
-    let container = app;
+```js
+let container = app;
+```
 
 Which you may use a contract name to resolve the service from the container:
 
-    $api = app.make("$documentationService")
+```js
+$api = app.make("$documentationService");
+```
 
 [{.alert} While this is possible, you should try to use the Depenceny Injection where possible. ]
 

@@ -36,4 +36,7 @@ in `config` directory, to help understand your applications behavior.
 
 You can add additional environment variables such as public api keys,
 these will be passed to the application and can be retrieved with
-`$app.env.SOME_API_KEY`.
+
+```js
+$app.env.SOME_API_KEY;
+```

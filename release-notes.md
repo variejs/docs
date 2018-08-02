@@ -8,3 +8,5 @@ While we don't expect things to change drastically, the API may change.
 All breaking changes will be posted here as well as how to upgrade.
 
 Please head over to our (github)[https://github.com/variejs/framework] page to submit suggestions / bugs / ideas.
+
+---

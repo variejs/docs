@@ -1,14 +1,11 @@
-# Forms & Validation
+# Forms
 
-- [Forms](#forms)
-  - [Creating Forms](#creating-forms)
-  - [Checking Dirty](#checking-for-dirty-forms)
-  - [Reset The Form](#reset-form-data)
-  - [Set Original Data](#setting-original-data)
+- [Creating Forms](#creating-forms)
+- [Checking Dirty](#checking-for-dirty-forms)
+- [Reset The Form](#reset-form-data)
+- [Set Original Data](#setting-original-data)
 
-## Forms
-
-Forms allow us to organize our data into submittable and validatable methods.
+Forms allow us to organize our data so we can submit and validate easily.
 
 ### Creating Forms
 
@@ -28,13 +25,19 @@ To create a form in your component you just need to call `createForm` inside you
 
 ### Checking for Dirty Forms
 
-You can check to see if the form is dirty by `form.isDirty()`
+You can check to see if the form is dirty by
+
+```js
+form.isDirty();
+```
 
 ### Reset Form Data
 
 To reset the data to its orignal form just use the reset function
 
+```html
 <button @click="form.reset()">Reset</button>
+```
 
 ### Set Original Data
 

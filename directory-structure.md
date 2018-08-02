@@ -14,6 +14,9 @@
   - [The `providers` Directory](#the-app-providers-directory)
   - [The `store` Directory](#the-app-store-directory)
 
+Varie ships with starting point for your application, feel free to change
+the structure to meet your needs.
+
 ## The Root Directory
 
 #### The App Directory

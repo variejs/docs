@@ -1,5 +1,6 @@
 # Environment Configuration
 
+- [Accessing the Environment Variables](#accessing-the-environment-variables)
 - [Accessing the Configuration](#accessing-the-configuration)
 - [Determining Current Environment](#determining-current-environment)
 - [Path Aliases](#path-aliases)
@@ -13,7 +14,7 @@ you are able to customize per environment.
 
 ## Accessing the Environment Variables
 
-// COMING SOON
+TODO
 
 ## Accessing the Configuration
 
@@ -29,7 +30,7 @@ You can also easily set the value
 $config.set("app.name", "My New App Name!");
 ```
 
-# Path Aliases
+## Path Aliases
 
 Varie comes with some path aliases to help out with development.
 These are customizable but cannot be removed as internal and plugin providers may use these.

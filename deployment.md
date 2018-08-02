@@ -8,13 +8,31 @@ When deploying Varie there are a few steps you must do before building the appli
 
 ## Server Configuration
 
+There are many types of web servers, here are the most popular two, with their configurations.
+
 ### Nginx
 
-// TODO
+```shell
+root /var/www/your_site/public;
+
+location / {
+	try_files $uri /index.html;
+}
+```
 
 ### Apache
 
-// TODO
+```shell
+# To be inside the /public Directory
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+ </IfModule>
+```
 
 ## Environment Variables
 

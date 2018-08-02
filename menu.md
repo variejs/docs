@@ -15,14 +15,13 @@
 - ### The Basics
   - [Views](/docs/{{version}}/views)
   - [Routing](/docs/{{version}}/routing)
-  - [Middleware](/docs/{{version}}/middleware)
-  - [Requests](/docs/{{version}}/requests)
   - [Forms](/docs/{{version}}/forms)
+  - [Requests](/docs/{{version}}/requests)
   - [Validation](/docs/{{version}}/validation)
   - [State Management](/docs/{{version}}/state)
 - ### Official Plugins
-  - [Auto Loading](/docs/{{version}}/auto-loading)
+  - [Auto Registration](/docs/{{version}}/auto-registration)
   - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
-  - [Plugin Development](/docs/{{version}}/plugin-development)
+  <!-- - [Plugin Development](/docs/{{version}}/plugin-development) -->
   - [Helpers](/docs/{{version}}/helpers)

@@ -14,6 +14,7 @@
 - [Route Middleware](#middleware)
   - [Defining Middleware](#defining-middleware)
   - [Registering Middleware](#registering-middleware)
+  - [Global Middleware](#global-middleware)
 
 ## Basic Routing
 
@@ -143,3 +144,11 @@ Run `$ varie make route-middleware`, which will create a new file for you to use
 ### Registering Middleware
 
 You should register your middleware inside the `router/middleware/index.ts` file so its available to use.
+
+## Global Route Middleware
+
+// TODO
+
+### Global Terminal Route Middleware
+
+// TODO

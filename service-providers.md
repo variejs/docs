@@ -19,7 +19,7 @@ The Varie CLI tool can generate a new service provider for you
 
 ### The Register Method
 
-The register method is meant to bind things to the service container. You can review how to bind things to the container in the service container documentation(TODO - make a link to the service container page).
+The register method is meant to bind things to the service container. You can review how to bind things to the container in the [service container](/docs/{{version}}/container) documentation.
 
 ```js
     import { injectable } from "inversify";
@@ -40,10 +40,10 @@ Above the provider is binding a implementation of a `$documentationService` to t
 
 The boot method occurs after ALL service providers have been registered and have availability to them through the service container.
 
-### Registering Providers
+## Registering Service Providers
 
 All service providers are registered in `config/app.ts`. This file contains other service providers already added to application. Just add your provider by adding it to the array.
 
-### Learn More
+## Learn More
 
 [{.info} To learn more checkout [InversifyJS wiki](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md)]
