@@ -43,19 +43,19 @@ THis directory contains multiple route files that define how your application sh
 
 #### Components Directory
 
-Houses all your [components](/docs/{{version}}/components)
+Houses all your components.
 
 #### The Directives Directory
 
-Houses all your [directives](/docs/{{version}}/directives)
+Houses all your directives.
 
 #### The Filters Directory
 
-Houses all your [filters](/docs/{{version}}/filters)
+Houses all your filters.
 
 #### The Mixins Directory
 
-Houses all your [mixins](/docs/{{version}}/mixins)
+Houses all your mixins.
 
 #### The Providers Directory
 
@@ -63,4 +63,4 @@ This directory should contain all your [service providers](/docs/{{version}}/ser
 
 #### The Store Directory
 
-This directory contains all the Vuex stores , you should use the `$ varie make:store StoreName` to create these stores.
+This directory contains all the Vuex stores , you should use the `$ varie make:store {StoreName}` to create these stores.

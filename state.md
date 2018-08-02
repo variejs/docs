@@ -49,7 +49,7 @@ Varie handles making submodules for you as long as you use slashes in the name
 
 Each store will contain 6 files to setup your store :
 
-```
+```tree
 actions.ts
 getters.ts
 index.ts

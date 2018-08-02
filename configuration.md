@@ -2,7 +2,6 @@
 
 - [Accessing the Environment Variables](#accessing-the-environment-variables)
 - [Accessing the Configuration](#accessing-the-configuration)
-- [Determining Current Environment](#determining-current-environment)
 - [Path Aliases](#path-aliases)
 
 Most likely you will have multiple environments for the application `dev`, `qa`, `prod`.

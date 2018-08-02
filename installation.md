@@ -17,7 +17,7 @@ Then to start development, you will run :
 
 `$ npm run watch`
 
-This will open your application into (http://localhost:3000)[http://localhost:3000].
+This will open your application into [http://localhost:3000](http://localhost:3000).
 
 [{.info} The watch command runs in Hot Module Replacement (HMR) mode, and will pickup all changes and load them into your browser without refreshing]
 

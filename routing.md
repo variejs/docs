@@ -24,9 +24,7 @@ All routes created must contain a view
 $router.route("/", "welcome");
 ```
 
-Maps to the view `resources/views/welcome.vue`. Also you can map to directories as well with an `index.vue`
-
-`resources/views/Welcome/index.vue`
+Maps to the view `resources/views/welcome.vue` or `resources/views/welcome/index.vue`.
 
 ```js
 $router.route("/", "Welcome");

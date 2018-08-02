@@ -1,8 +1,8 @@
 # Lifecycle
 
 - [Entry](#entry)
-    - [Register Phase](#register-phase)
-    - [Boot Phase](#boot-phase)
+  - [Register Phase](#register-phase)
+  - [Boot Phase](#boot-phase)
 - [Finally Vue Takes Over](#finally-vue-takes-over)
 - [Its All About them Service Providers](#its-all-about-them-service-providers)
 
