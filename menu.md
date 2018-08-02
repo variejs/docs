@@ -24,4 +24,5 @@
   - [Auto Loading](/docs/{{version}}/auto-loading)
   - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
+  - [Plugin Development](/docs/{{version}}/plugin-development)
   - [Helpers](/docs/{{version}}/helpers)
