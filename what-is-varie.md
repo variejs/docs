@@ -1,18 +1,50 @@
 # What is Varie?
 
 - [Whats In it](#whats-in-it)
-- [Features](#features)
+- [Notable Features](#features)
 
-Varie was built to jump start your VueJS development with a bit of elegance. Some of the features are :
+Varie is a Typescript framework for building Vue.js applications rapidly. Bringing
+in concepts from other languages to speed up your development. Whether working in
+a small / large teams, Varie elevates your starting point to ramp into
+development.
 
-- A simple routing Engine built on top of Vue Router
-- App and Route Middleware
-- State management using Vuex with a bit of magic
-- Dependency injection container using InversifyJS
-- Form Validation
-
-While it may see there are a ton of extras, you are able to rip these out easily with service providers.
+You get to build apps your way, you can change almost anything about how
+varie works, but keeping the core intact to give you features to start
+building right away.
 
 ## Whats In It
 
-## Features
+Varie bootstraps some defaults for you such as :
+
+- Vuex
+- Axios
+- Inversify
+- Vue Router
+
+While we setup some of the defaults , these can be changed by the use
+of (service providers)[].
+
+Whats the one of the greatest thing about Varie ? You can strip almost everything out
+making your bundle size even smaller. You have a variety ways of building
+your applications, your way.
+
+## Notable Features
+
+- Validation
+- CLI Plugin
+- Fluent Router
+- Request Middleware
+- Customizable Bundler
+- Auto Loading Store System
+- Dependency Injection (DI)
+
+## Why Use Varie ?
+
+Things change over time, with javascript's ecosystem changing daily so should
+the way you write things. With Varie your able to focus on developing
+skills that transfer across any project.
+
+Or maybe you don't like how a framework made a certain choice for you and
+your unable to change it. Varie tries to make the developer let them choose
+their choices. You don't like our validation system? Throw it out, and
+put in your own validation system with a simple Service Provider!
