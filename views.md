@@ -26,14 +26,15 @@ By default we provide a public layout, by adding more you are able to use differ
 
 We suggest making areas folders for your site, which allows you to keep a tidy folder structure and also can keep component folders inside of those.
 
-      .
-       +-- resources
-          +-- views
-              +-- Profile
-                ./index.vue
-                +-- Components
-                    ./NewPasswordForm.vue
-                    ./ProfileImageUploader.vue
+```tree 
+   +-- resources
+      +-- views
+          +-- Profile
+            ./index.vue
+            +-- Components
+                ./NewPasswordForm.vue
+                ./ProfileImageUploader.vue
+```
 
 As you can see your can create sub component's in this manner that are not necessarily reusable components but components to keep your code tidy.
 
