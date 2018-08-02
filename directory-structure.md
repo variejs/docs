@@ -36,7 +36,7 @@ This directory should contain all you resources, from views, to images.
 
 THis directory contains multiple route files that define how your application should work.
 
-## The Root Directory
+## The App Directory
 
 #### Components Directory
 
