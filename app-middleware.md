@@ -7,7 +7,7 @@
 
 Start by using the Varie CLI
 
-`varie make:app-middleware your-middleware-name`
+`$ varie make:app-middleware your-middleware-name`
 
 You will have three functions
 

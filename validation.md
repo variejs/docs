@@ -113,7 +113,7 @@ To use custom error messages add a messages object :
 
 To cretae custom validation rules use the varie cli tool which will place the new rule inside the `app/rules` folder :
 
-`varie make:rule NewRule`
+`$varie make:rule NewRule`
 
 You then can define how the validation passes, and the message that it will display to the user.
 

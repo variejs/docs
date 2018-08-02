@@ -12,7 +12,7 @@ Varie makes it easy to interact with state, with the power of Vuex. Automatic mo
 
 To create a new store use the Varie Cli to create it in the dictory you wish to create it in
 
-`varie make:store <store-name>`
+`$ varie make:store <store-name>`
 
 ### Using Models
 
@@ -21,7 +21,7 @@ resuabliity of the data.
 
 To create models by using
 
-`varie make:model <model-name>`
+`$ varie make:model <model-name>`
 
 And can be used by importing the model wherever you would like :
 
@@ -43,7 +43,7 @@ export interface UsersState {
 
 Varie handles making submodules for you as long as you use slashes in the name
 
-`varie make:store auth/submodule-name`
+`$ varie make:store auth/submodule-name`
 
 ## Directory Structure
 

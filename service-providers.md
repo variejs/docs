@@ -15,7 +15,7 @@ Each provider extends the `varie/lib/support/ServiceProvider` class. The service
 
 The Varie CLI tool can generate a new service provider for you
 
-`varie make:provider <provider-name>`
+`$ varie make:provider <provider-name>`
 
 ### The Register Method
 

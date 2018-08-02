@@ -64,7 +64,7 @@ $router.route("/", "welcome").setAlias("home");
 $router.redirect("/", "/welcome");
 ```
 
-### Catch Alls
+### Catch All
 
 ```js
 $router.route("*", "404");
@@ -138,7 +138,7 @@ $router
 
 ### Defining Middleware
 
-Run `varie make route-middleware`, which will create a new file for you to use
+Run `$ varie make route-middleware`, which will create a new file for you to use
 
 ### Registering Middleware
 
