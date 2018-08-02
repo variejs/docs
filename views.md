@@ -13,11 +13,12 @@ directory structures.
 
 By default we provide a public layout, by adding more you are able to use different layouts.
 
-    .
-    +-- resources
+```
+  +-- resources
         +-- views
             +-- layouts
                 ./Public.vue
+```
 
 [{.info} To learn more about layouts read the [routing](/routing#layouts) documentation.]
 
