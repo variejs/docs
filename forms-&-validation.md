@@ -1,11 +1,11 @@
 # Forms & Validation
 
 - [Forms](#forms)
-
   - [Creating Forms](#creating-forms)
   - [Checking Dirty](#checking-for-dirty-forms)
   - [Reset The Form](#reset-form-data)
   - [Set Original Data](#setting-original-data)
+  - [Models](#models)
 
 - [Validating Forms](#validating-your-forms)
   - [Attaching Errors To Inputs](#attaching-errors-to-inputs)
@@ -44,7 +44,7 @@ To reset the data to its orignal form just use the reset function
 
 <button @click="form.reset()">Reset</button>
 
-### Setting Original Data
+### Set Original Data
 
 Setting the original data is useful after requests were made and you dont want your users to be able to reset the data to
 their previous values.
@@ -52,6 +52,10 @@ their previous values.
 ```js
 form.setOriginaldata();
 ```
+
+### Models
+
+TODO
 
 ## Validating Your Forms
 
