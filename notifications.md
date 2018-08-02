@@ -1,7 +1,9 @@
 # Notifications
 
 - [Creating a Notification](#creating-a-notification)
-- [Customizations](#customizations) - [HTML](#html) - [CSSS](#css)
+- [Customizations](#customizations)
+  - [HTML](#html)
+  - [CSSS](#css)
 
 Varie comes with built in notification system that you can customize.
 

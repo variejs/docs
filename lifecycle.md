@@ -1,5 +1,11 @@
 # Lifecycle
 
+- [Entry](#entry)
+- [Register Phase](#register-phase)
+- [Boot Phase](#boot-phase)
+- [Finally Vue Takes Over](#finally-vue-takes-over)
+- [Its All About them Service Providers](#its-all-about-them-service-providers)
+
 By explaining the lifecycle we hope that it gives you a foundation on how
 Varie builds things together. This will help to conceptually understand
 when things load.
@@ -23,7 +29,7 @@ Once all service providers have been registerd, each provider is given a
 chance to set setup the application based on that provider needs. During this
 phase since we have registered all the provider, we have access to those providers and their functions.
 
-## Finally Vue takes over
+## Finally Vue Takes Over
 
 Once those phases are completed, Vue finally gets to take over and act like any other VueJS application.
 
