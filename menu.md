@@ -1,7 +1,11 @@
+- ### Prologue
+  - [What is Varie?](/docs/{{version}}/what-is-varie)
+  - [Release Notes](/docs/{{version}}/release-notes)
 - ### Getting Started
   - [Installation](/docs/{{version}}/installation)
   - [Configuration](/docs/{{version}}/configuration)
   - [Varie CLI](/docs/{{version}}/varie-cli)
+  - [Varie Bundler](/docs/{{version}}/varie-bundler)
   - [Directory Structure](/docs/{{version}}/directory-structure)
 - ### Architecture Concepts
   - [Service Container](/docs/{{version}}/service-container)

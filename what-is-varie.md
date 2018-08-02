@@ -1,4 +1,7 @@
-# About Varie
+# What is Varie?
+
+- [Whats In it](#whats-in-it)
+- [Features](#features)
 
 Varie was built to jump start your VueJS development with a bit of elegance. Some of the features are :
 
@@ -9,3 +12,7 @@ Varie was built to jump start your VueJS development with a bit of elegance. Som
 - Form Validation
 
 While it may see there are a ton of extras, you are able to rip these out easily with service providers.
+
+## Whats In It
+
+## Features
