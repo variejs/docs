@@ -1,6 +1,6 @@
 # Http Requests
 
-- [Requests](#requests) 
+- [Requests](#requests)
 - [Unregister App Middleware for a route](#unregister-app-middleware-for-a-route)
 
 ## Requests
