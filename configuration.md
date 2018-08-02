@@ -2,6 +2,7 @@
 
 - [Accessing the Configuration](#accessing-the-configuration)
 - [Determining Current Environment](#determining-current-environment)
+- [Path Aliases](#path-aliases)
 
 Most likely you will have multiple environments for the application `dev`, `qa`, `prod`.
 You may want to change some of configuration based on what type of environment your running in.
@@ -12,7 +13,7 @@ you are able to customize per environment.
 
 ## Accessing the Environment Variables
 
-// TODO
+// COMING SOON
 
 ## Accessing the Configuration
 
@@ -32,8 +33,6 @@ $config.set("app.name", "My New App Name!");
 
 Varie comes with some path aliases to help out with development.
 These are customizable but cannot be removed as internal and plugin providers may use these.
-
-## Standard Paths
 
 ```js
  "@app": path.join(__dirname, "app"),
