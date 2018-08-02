@@ -15,8 +15,9 @@
   - [Views](/docs/{{version}}/views)
   - [Routing](/docs/{{version}}/routing)
   - [Requests](/docs/{{version}}/requests)
+  - [Forms](/docs/{{version}}/forms)
+  - [Validation](/docs/{{version}}/validation)
   - [State Management](/docs/{{version}}/state)
-  - [Forms & Validation](/docs/{{version}}/forms-&-validation)
 - ### Plugins
   - [Auto Loading](/docs/{{version}}/auto-loading)
   - [Notifications](/docs/{{version}}/notifications)
