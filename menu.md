@@ -1,6 +1,7 @@
 - ### Prologue
   - [What is Varie?](/docs/{{version}}/what-is-varie)
   - [Release Notes](/docs/{{version}}/release-notes)
+  - [Contribution Guide](/docs/{{version}}/contribution-guide)
 - ### Getting Started
   - [Installation](/docs/{{version}}/installation)
   - [Configuration](/docs/{{version}}/configuration)
