@@ -4,9 +4,10 @@
 - ### Getting Started
   - [Installation](/docs/{{version}}/installation)
   - [Configuration](/docs/{{version}}/configuration)
+  - [Directory Structure](/docs/{{version}}/directory-structure)
   - [Varie CLI](/docs/{{version}}/varie-cli)
   - [Varie Bundler](/docs/{{version}}/varie-bundler)
-  - [Directory Structure](/docs/{{version}}/directory-structure)
+  - [Deployment](/docs/{{version}}/deployment)
 - ### Architecture Concepts
   - [Lifecycle](/docs/{{version}}/lifecycle)
   - [Service Container](/docs/{{version}}/service-container)
@@ -14,13 +15,13 @@
 - ### The Basics
   - [Views](/docs/{{version}}/views)
   - [Routing](/docs/{{version}}/routing)
+  - [Middleware](/docs/{{version}}/middleware)
   - [Requests](/docs/{{version}}/requests)
   - [Forms](/docs/{{version}}/forms)
   - [Validation](/docs/{{version}}/validation)
   - [State Management](/docs/{{version}}/state)
-- ### Plugins
+- ### Official Plugins
   - [Auto Loading](/docs/{{version}}/auto-loading)
   - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
   - [Helpers](/docs/{{version}}/helpers)
-  - [Path Aliases](/docs/{{version}}/path-aliases)
