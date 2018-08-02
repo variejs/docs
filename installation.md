@@ -18,5 +18,3 @@ Then to start development run :
 ## Configuration
 
 Although there is no other setup needed, you may wish to review `.env`, `config/app.ts` and configure it to your liking.
-
-:)
