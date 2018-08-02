@@ -97,7 +97,7 @@ To attach errors to your inputs we can use the varie form directive along with w
     </form>
 ```
 
-> Important : you must map to your values location in the form by using the name attribute
+[{.alert} Important : you must map to your values location in the form by using the name attribute]
 
 ## Available Validation Rules
 

@@ -6,4 +6,4 @@ Mixins are auto loaded into the application as long as your using the `autoLoadM
 
 ## Creating a Mixin
 
-    > To learn more about mixins go to [Vue's Documentation](https://vuejs.org/v2/guide/mixins.html).
+[{.info} To learn more about mixins go to [Vue's Documentation](https://vuejs.org/v2/guide/mixins.html).]

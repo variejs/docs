@@ -7,7 +7,7 @@
 Your views are just vue components. But we do make a suggestion on how to organize your components with layouts and
 directory structures.
 
-> To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).
+[{.info} To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).]
 
 ## Layouts
 
@@ -19,7 +19,7 @@ By default we provide a public layout, by adding more you are able to use differ
             +-- layouts
                 ./Public.vue
 
-> To learn more about layouts read the [routing](/routing#layouts) documentation.
+[{.info} To learn more about layouts read the [routing](/routing#layouts) documentation.]
 
 ### Directory Structure
 

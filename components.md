@@ -17,4 +17,4 @@ Above structure will auto load the components `<left-nav><left-nav>` and `<notif
 
 ## Creating a component
 
-> To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).
+[{.info} To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).]

@@ -4,7 +4,7 @@
 
 Varie comes with built in notification system that you can customize.
 
-> Feel free to rip this out entirely as its just a service provider `NotificationsServiceProvider`.
+[{.info} Feel free to rip this out entirely as its just a service provider `NotificationsServiceProvider`.]
 
 ## Creating a Notification
 

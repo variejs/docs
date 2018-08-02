@@ -46,4 +46,4 @@ All service providers are registered in `config/app.ts`. This file contains othe
 
 ### Learn More
 
-> TO learn more checkout [InversifyJS wiki](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md)
+[{.info} To learn more checkout [InversifyJS wiki](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md)]
