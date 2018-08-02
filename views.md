@@ -13,7 +13,7 @@ directory structures.
 
 By default we provide a public layout, by adding more you are able to use different layouts.
 
-```
+```tree
   +-- resources
         +-- views
             +-- layouts
