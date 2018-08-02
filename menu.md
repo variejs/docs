@@ -8,20 +8,17 @@
   - [Varie Bundler](/docs/{{version}}/varie-bundler)
   - [Directory Structure](/docs/{{version}}/directory-structure)
 - ### Architecture Concepts
+  - [Lifecycle](/docs/{{version}}/lifecycle)
   - [Service Container](/docs/{{version}}/service-container)
   - [Service Providers](/docs/{{version}}/service-providers)
 - ### The Basics
   - [Views](/docs/{{version}}/views)
-  - [Http Requests](/docs/{{version}}/http-requests)
   - [Routing](/docs/{{version}}/routing)
+  - [Requests](/docs/{{version}}/requests)
   - [State Management](/docs/{{version}}/state)
   - [Forms & Validation](/docs/{{version}}/forms-&-validation)
-- ### Common Elements
-  - [Components](/docs/{{version}}/components)
-  - [Mixins](/docs/{{version}}/mixins)
-  - [Filters](/docs/{{version}}/filters)
-  - [Directives](/docs/{{version}}/directives)
 - ### Plugins
+  - [Auto Loading](/docs/{{version}}/auto-loading)
   - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
   - [Helpers](/docs/{{version}}/helpers)
