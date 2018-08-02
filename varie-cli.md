@@ -3,24 +3,65 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
+The Varie CLI helps you create repetitive tasks and templates to help
+radpily develop your applications.
+
 ## Installation
 
-`npm install -g varie-cli`
+To install the Varie CLI you should install it globally `$ npm install -g varie-cli`.
 
 ## Usage
 
-// TODO - write out sections for this
+### `new {ProjectName}`
 
-```text
-    new                    run remote setup commands
-    make:component         makes a Vue directive in the component directory
-    make:directive         Makes a Vue directive in the directive directory
-    make:filter            Makes a Vue filter in the filters directory
-    make:mixin             Makes a Vue mixin in the mixins directory
-    make:model             Makes a model in the model directory
-    make:provider          Creates a new provider in the providers directory
-    make:store             Crates a Vuex store / submodule in the store directory based on the path provided
-    make:app-middleware    Creates a new app middleware
-    make:route-middleware  Creates a new route middleware
-    make:rule              Crates a rule in the rule directory
-```
+Creates a new project in the current folder with the given name.
+
+#### `make:component`
+
+Creates a Global Vue component in the `app/components` directory.
+
+#### `make:directive`
+
+Creates a Global Vue directive in the `app/directives` directory.
+
+#### `make:filter`
+
+Creates a Global Vue filter in the `app/filters` directory.
+
+#### `make:mixin`
+
+Creates a Global Vue mixin in the `app/mixins` directory.
+
+#### `make:model`
+
+Creates a model in the `app/models` directory
+
+#### `make:provider`
+
+Creates a new provider in the `app/providers` directory.
+
+#### `make:store`
+
+Creates a Vuex store / submodule in the store directory based on the path provided.
+
+Running `$ varie make:store user` creates a store in :
+`app/stores/user`
+
+Running `$ varie make:store user/notifications` creates a store in :
+`app/stores/user/notification`
+
+#### `make:request-middleware`
+
+Creates a new request middleware in the `app/request-middleware` directory.
+
+#### `make:route-middleware`
+
+Creates a new route middleware in the `routes/middleware` directory.
+
+#### `make:rule`
+
+Creates a rule in the `app/rules` directory.
+
+#### `make:validator`
+
+Creates a validator in the `app/validators` directory.

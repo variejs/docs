@@ -59,3 +59,5 @@ Houses all your [mixins](/docs/{{version}}/mixins)
 This directory should contain all your [service providers](/docs/{{version}}/service-providers) for your application. These providers bootstrap your application by binding them to the service container.
 
 #### The Store Directory
+
+This directory contains all the Vuex stores , you should use the `$ varie make:store StoreName` to create these stores.

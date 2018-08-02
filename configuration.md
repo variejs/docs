@@ -3,10 +3,16 @@
 - [Accessing the Configuration](#accessing-the-configuration)
 - [Determining Current Environment](#determining-current-environment)
 
-Most likely you will have multiple environments for the application `dev`, `qa`, `prod`. You may want to change some of configuration based on what type of environment your running in.
+Most likely you will have multiple environments for the application `dev`, `qa`, `prod`.
+You may want to change some of configuration based on what type of environment your running in.
 
-Luckily Varie has it built in with dot-env. In your root directory you will find a `.env-example`. This file should be copied over into `.env` if not already created.
-In that file you are able to customize per environment.
+In your root directory you will find a `.env-example`. This file
+should be copied over into `.env` if not already created. In that file
+you are able to customize per environment.
+
+## Accessing the Environment Variables
+
+// TODO
 
 ## Accessing the Configuration
 
@@ -22,20 +28,10 @@ You can also easily set the value
 $config.set("app.name", "My New App Name!");
 ```
 
-## Determining Current Environment
-
-Your apps environment is determined by the `APP_ENV` value inside your `.env` file. It is also bound to your app container :
-
-```js
-$app.environment; // local
-```
-
 # Path Aliases
 
-- [Standard Paths](#standard-paths)
-- [Custom Paths](#custom-paths)
-
-Varie comes with some path aliases to help out with development. These are customizable but cannot be removed as packages, and internal providers may use these.
+Varie comes with some path aliases to help out with development.
+These are customizable but cannot be removed as internal and plugin providers may use these.
 
 ## Standard Paths
 
@@ -50,4 +46,4 @@ Varie comes with some path aliases to help out with development. These are custo
  "@components": path.join(__dirname, "app/components")
 ```
 
-To customize change the locations in your `webpack.mix.js` and `tsconfig.json` files.
+To customize the aliases, change the values in the `webpack.config.js` and `tsconfig.json` files.
