@@ -12,35 +12,35 @@ To install the Varie CLI you should install it globally `$ npm install -g varie-
 
 ## Usage
 
-### `new {ProjectName}`
+### `new {name}`
 
 Creates a new project in the current folder with the given name.
 
-#### `make:component`
+### `make:component {name}`
 
 Creates a Global Vue component in the `app/components` directory.
 
-#### `make:directive`
+### `make:directive {name}`
 
 Creates a Global Vue directive in the `app/directives` directory.
 
-#### `make:filter`
+### `make:filter {name}`
 
 Creates a Global Vue filter in the `app/filters` directory.
 
-#### `make:mixin`
+### `make:mixin {name}`
 
 Creates a Global Vue mixin in the `app/mixins` directory.
 
-#### `make:model`
+### `make:model {name}`
 
 Creates a model in the `app/models` directory
 
-#### `make:provider`
+### `make:provider {name}`
 
 Creates a new provider in the `app/providers` directory.
 
-#### `make:store`
+### `make:store {name}`
 
 Creates a Vuex store / submodule in the store directory based on the path provided.
 
@@ -50,18 +50,18 @@ Running `$ varie make:store user` creates a store in :
 Running `$ varie make:store user/notifications` creates a store in :
 `app/stores/user/notification`
 
-#### `make:request-middleware`
+### `make:request-middleware {name}`
 
 Creates a new request middleware in the `app/request-middleware` directory.
 
-#### `make:route-middleware`
+### `make:route-middleware {name}`
 
 Creates a new route middleware in the `routes/middleware` directory.
 
-#### `make:rule`
+### `make:rule {name}`
 
 Creates a rule in the `app/rules` directory.
 
-#### `make:validator`
+### `make:validator {name}`
 
 Creates a validator in the `app/validators` directory.
