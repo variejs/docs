@@ -19,7 +19,7 @@ core intact to give you features to start building right away.
 - Request Middleware
 - Customizable Bundler
 - Auto Loading Store System
-- Dependency Injection (DI)
+- Dependency Injection System (DI)
 
 ## Whats In It
 
