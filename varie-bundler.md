@@ -6,6 +6,8 @@
 - [Adding Plugins](#adding-plugins)
 - [Adding Entries](#adding-entries)
 - [Environment Variables](#environment-variables)
+- [Analyzing Configuration](#analyzing-configuration)
+- [Inspecting Configuration](#inspecting-configuration)
 
 Varie comes with a bundler so you don't have to worry about configuration.
 It also comes with a fluent interface to help modify the webpack config,
@@ -35,46 +37,64 @@ to however you like
 
 [{.alert} The Varie-CLI does not know that these have been changed, and will not correctly put files in the correct locations!]
 
-## Adding Loaders
+## Webpack Chaining
 
-Adding a loader is just as easy as using webpack it self, just give us
-the rule you want to add and it will inject into the config.
+The bundler is using [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain), which allows a fluent interface to
+add / modify the webpack configuration file.
 
-Here is an example of adding markdown loader :
+This allows you to modify the bundler without having to change the bundler itself.
 
-```js
- .addLoader({
-      test: /\.md$/,
-      use: [
-        {
-          loader: "html-loader",
-        },
-        {
-          loader: "markdown-loader",
-        },
-      ],
-    })
-```
-
-## Adding Plugins
-
-Adding a plugin is just as easy as using webpack it self, just give us
-the rule you want to add and it will inject into the config.
-
-Here is an example of adding plugin :
+### Adding a Loader
 
 ```js
-    .addPlugin(
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        })
-    )
+    .chainWebpack((config) => {
+        config.module
+          .rule('markdown')
+          .test(/\.md$/)
+          .use('html')
+            loader('html-loader')
+            .end()
+          .use('markdown')
+            .loader('markdown-loader')
+            .options({
+                //
+            })
+            .end()
+    });
 ```
+
+### Adding a Plugin
+
+```js
+    .chainWebpack((config) => {
+        config.plugin('webpack-notifier')
+            .use(WebpackNotifierPlugin, [argument1, argument2])
+            .end()
+    });
+```
+
+### Modifying The Config
+
+You should get yourself familar with the [webpack-chain API](https://github.com/mozilla-neutrino/webpack-chain#getting-started)
+as well as the source for [varie-bundler](https://github.com/variejs/varie-bundler)
+
+```js
+module.exports = {
+  chainWebpack: config => {
+    config.plugin("webpack-notifier").tap(args => {
+      return [
+        /* new args to pass to webpack-notifier's constructor */
+      ];
+    });
+  }
+};
+```
+
+[{.info} Add in the inspect flag, `$ npm run dev -- --inspect`, should help diagnos how to modify the webpack config with webpack-chain.]
 
 ## Adding Entries
 
-Adding a new entry consists of the name for the entry (the files output name) ,
+Adding a new entry consists of the name for the entry (the files output name),
 and an array of the entry.
 
 ```js
@@ -93,3 +113,15 @@ need variables from the bundler it self.
 ```
 
 [{.alert} You may need to use JSON.stringify so that your application can correctly parse the information]
+
+## Analyzing Configuration
+
+To analyze your bundle with [webpack analyse](https://github.com/webpack/analyse), just add the `analyze` flag to your npm build command.
+
+`$ npm run prod -- --analyze"
+
+## Inspecting Configuration
+
+To inspect your configuration just add the `inspect` flag to your npm build command.
+
+`$ npm run prod -- --inspect"
