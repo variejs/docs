@@ -47,7 +47,7 @@ This allows you to modify the bundler without having to change the bundler itsel
 ### Adding a Loader
 
 ```js
-    .chainWebpack((config) => {
+    .chainWebpack((config, env) => {
         config.module
           .rule('markdown')
           .test(/\.md$/)
@@ -66,7 +66,7 @@ This allows you to modify the bundler without having to change the bundler itsel
 ### Adding a Plugin
 
 ```js
-    .chainWebpack((config) => {
+    .chainWebpack((config, env) => {
         config.plugin('webpack-notifier')
             .use(WebpackNotifierPlugin, [argument1, argument2])
             .end()
@@ -79,15 +79,15 @@ You should get yourself familar with the [webpack-chain API](https://github.com/
 as well as the source for [varie-bundler](https://github.com/variejs/varie-bundler)
 
 ```js
-module.exports = {
-  chainWebpack: config => {
-    config.plugin("webpack-notifier").tap(args => {
-      return [
-        /* new args to pass to webpack-notifier's constructor */
-      ];
+   .chainWebpack((config, env) => {
+       config.when((!env.isProduction) => {
+             config.plugin("webpack-notifier").tap(args => {
+             return [
+               /* new args to pass to webpack-notifier's constructor */
+             ];
+           });
+       });
     });
-  }
-};
 ```
 
 [{.info} Add in the inspect flag, `$ npm run dev -- --inspect`, should help diagnos how to modify the webpack config with webpack-chain.]

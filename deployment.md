@@ -38,8 +38,8 @@ location / {
 
 There are a couple of ways to manage the environment variables on your server :
 
-1. Use the .env file , this should `NOT` be committed into your codebase
-2. Use [environment variables](https://help.ubuntu.com/community/EnvironmentVariables) stored on your server
+1.  Use the .env file , this should `NOT` be committed into your codebase
+2.  Use [environment variables](https://help.ubuntu.com/community/EnvironmentVariables) stored on your server
 
 [{.alert} This is required before you build your application, it will otherwise fail to build!]
 
