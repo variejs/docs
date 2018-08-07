@@ -80,7 +80,7 @@ as well as the source for [varie-bundler](https://github.com/variejs/varie-bundl
 
 ```js
    .chainWebpack((config, env) => {
-       config.when((!env.isProduction) => {
+        config.when(!env.isProduction, () => {
              config.plugin("webpack-notifier").tap(args => {
              return [
                /* new args to pass to webpack-notifier's constructor */
