@@ -45,7 +45,7 @@ There are a couple of ways to manage the environment variables on your server :
 
 ## Deploying with CodePier
 
-If you aren't quite comfortable managing your own server with the proper
+If you are not quite comfortable managing your own server with the proper
 configurations, [CodePier](https://codepier.io) is a alternative that
 helps you build and deploy applications with zero-downtime and
 automated deployments.

@@ -1,5 +1,14 @@
 # Release Notes
 
+## 0.2.0 (Beta)
+
+Contains breaking changes for app / route middleware :
+
+- Added DI for Middleware
+- Updated folder structure to emphasize the Store, Views
+
+---
+
 ## 0.1.0 (Beta)
 
 We are releasing Varie as a beta to start out. The reason is, we want
