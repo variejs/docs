@@ -18,7 +18,7 @@
 
 ## Basic Routing
 
-All routes created must contain a view
+To define a route you just need to define a path and a component
 
 ```js
 $router.route("/", Welcome);
