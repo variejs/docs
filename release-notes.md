@@ -1,5 +1,17 @@
 # Release Notes
 
+[{.alert} Assume each minor version contains breaking versions until stable release!]
+
+## 0.3.0 (Beta)
+
+Contains breaking changes for routes / state (store) management :
+
+- We no longer allow strings to be passed into the router
+- We no longer auto register stores (caused lots of headaches with development, having to restart webpack etc.)
+
+Also these changes allow us to do better code splitting by areas and can dynamically
+register services, stores, components.
+
 ## 0.2.0 (Beta)
 
 Contains breaking changes for app / route middleware :
