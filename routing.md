@@ -48,7 +48,7 @@ $router.route("/admin/dashboard", AdminDashboard).setMeta({
 ### Aliases
 
 ```js
-$router.route("/", "welcome").setAlias("home");
+$router.route("/", Welcome).setAlias("home");
 ```
 
 ### Redirects
@@ -66,7 +66,7 @@ $router.route("*", ErrorPages.Error404);
 ## Named Routes
 
 ```js
-$router.route("*", "404").setName("error");
+$router.route("*", ErrorPages.Error404).setName("error");
 ```
 
 ## Route Groups
@@ -135,12 +135,4 @@ Run `$ varie make route-middleware`, which will create a new file for you to use
 
 ### Registering Middleware
 
-You should register your middleware inside the `router/middleware/index.ts` file so its available to use.
-
-## Global Route Middleware
-
-// TODO
-
-### Global Terminal Route Middleware
-
-// TODO
+You should register your middleware inside the `router/middleware/index.ts` file so its available to use.pu
