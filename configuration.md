@@ -19,8 +19,6 @@ You can pass environment variables through webpack and can access them easily wi
 let version = $config.get("app.version");
 ```
 
-> > > > > > > fcefcc28c74e0b42922109b1bcb0093ab902fa26
-
 ## Accessing the Configuration
 
 You can easily access the configuration values by using our help `$config`
