@@ -103,16 +103,21 @@ and an array of the entry.
 
 ## Environment Variables
 
-Adding environment variables to the process can be handy when you
-need variables from the bundler it self.
+You may need to setup some variables that are needed per environment within your application.
 
 ```js
-    .variables({
-        mode : JSON.stringify(args.mode)
+    .config({
+        app : {
+            someKey : "someValue"
+        }
     })
 ```
 
-[{.alert} You may need to use JSON.stringify so that your application can correctly parse the information]
+You then can access them with the `$config` helper
+
+```js
+$config.get("app.someKey");
+```
 
 ## Analyzing Configuration
 

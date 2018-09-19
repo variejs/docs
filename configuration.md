@@ -1,6 +1,5 @@
 # Environment Configuration
 
-- [Accessing the Environment Variables](#accessing-the-environment-variables)
 - [Accessing the Configuration](#accessing-the-configuration)
 - [Path Aliases](#path-aliases)
 
@@ -10,10 +9,6 @@ You may want to change some of configuration based on what type of environment y
 In your root directory you will find a `.env-example`. This file
 should be copied over into `.env` if not already created. In that file
 you are able to customize per environment.
-
-## Accessing the Environment Variables
-
-TODO
 
 ## Accessing the Configuration
 
