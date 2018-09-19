@@ -123,10 +123,14 @@ $config.get("app.someKey");
 
 To analyze your bundle with [webpack analyse](https://github.com/webpack/analyse), just add the `analyze` flag to your npm build command.
 
-`$ npm run prod -- --analyze"
+```
+$ npm run dev -- --analyze
+```
 
 ## Inspecting Configuration
 
 To inspect your configuration just add the `inspect` flag to your npm build command.
 
-`$ npm run prod -- --inspect"
+```
+$ npm run dev -- --inspect`
+```
