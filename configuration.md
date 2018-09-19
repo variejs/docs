@@ -1,5 +1,6 @@
 # Environment Configuration
 
+- [Environment Variables](#environment-variables)
 - [Accessing the Configuration](#accessing-the-configuration)
 - [Path Aliases](#path-aliases)
 
@@ -9,6 +10,16 @@ You may want to change some of configuration based on what type of environment y
 In your root directory you will find a `.env-example`. This file
 should be copied over into `.env` if not already created. In that file
 you are able to customize per environment.
+
+## Environment Variables
+
+You can pass environment variables through webpack and can access them easily with :
+
+```js
+let version = $config.get("app.version");
+```
+
+> > > > > > > fcefcc28c74e0b42922109b1bcb0093ab902fa26
 
 ## Accessing the Configuration
 

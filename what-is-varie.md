@@ -16,9 +16,9 @@ core intact to give you features to start building right away.
 - Validation
 - CLI Plugin
 - Fluent Router
+- State Management
 - Request Middleware
 - Customizable Bundler
-- Auto Loading Store System
 - Dependency Injection System (DI)
 
 ## Whats In It
@@ -30,7 +30,7 @@ Varie bootstraps some defaults for you such as :
 - Inversify
 - Vue Router
 
-While we setup some of the defaults , these can be changed by the use
+While we setup some of the defaults, these can be changed by the use
 of [service providers](/docs/{{version}}/service-providers).
 
 Whats the one of the greatest thing about Varie ? You can strip almost everything out

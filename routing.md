@@ -18,16 +18,10 @@
 
 ## Basic Routing
 
-All routes created must contain a view
+To define a route you just need to define a path and a component
 
 ```js
-$router.route("/", "welcome");
-```
-
-Maps to the view `resources/views/welcome.vue` or `resources/views/welcome/index.vue`.
-
-```js
-$router.route("/", "Welcome");
+$router.route("/", Welcome);
 ```
 
 ### Named Views
@@ -36,8 +30,8 @@ We can also setup named views
 
 ```js
 $router.route("/", {
-  default: "Welcome",
-  sideNav: "SideNavOption2"
+  default: Welcome,
+  sideNav: SideNav
 });
 ```
 
@@ -46,7 +40,7 @@ $router.route("/", {
 Sometimes its needed to add addtional functionality to our routes, we can add metadata
 
 ```js
-$router.route("/admin/dashboard", "AdminDashboard").setMeta({
+$router.route("/admin/dashboard", AdminDashboard).setMeta({
   requiresAuth: true
 });
 ```
@@ -54,7 +48,7 @@ $router.route("/admin/dashboard", "AdminDashboard").setMeta({
 ### Aliases
 
 ```js
-$router.route("/", "welcome").setAlias("home");
+$router.route("/", Welcome).setAlias("home");
 ```
 
 ### Redirects
@@ -66,13 +60,13 @@ $router.redirect("/", "/welcome");
 ### Catch All
 
 ```js
-$router.route("*", "404");
+$router.route("*", ErrorPages.Error404);
 ```
 
 ## Named Routes
 
 ```js
-$router.route("*", "404").setName("error");
+$router.route("*", ErrorPages.Error404).setName("error");
 ```
 
 ## Route Groups
@@ -85,7 +79,7 @@ You can easily prefix a group by using the prefix
 
 ```js
 $router.prefix("/docs").group(() => {
-  $router.route(":version?/:page?", "docs").setName("docs"); // `/docs/master/routing`
+  $router.route(":version?/:page?", Docs).setName("docs");
 });
 ```
 
@@ -98,13 +92,13 @@ $router
   .prefix("/docs")
   .layout("admin")
   .group(() => {
-    $router.route(":version?/:page?", "docs").setName("docs");
+    $router.route(":version?/:page?", Docs).setName("docs");
   });
 
 // Or you can set it per route!
 $router.prefix("/docs").group(() => {
-  $router.route(":version?/:page?", "docs");
-  $router.route("admin", "adminDocs").setLayout("admin");
+  $router.route(":version?/:page?", Docs);
+  $router.route("admin", AdminDocs).setLayout("admin");
 });
 ```
 
@@ -116,9 +110,9 @@ Areas make it so components can be grouped under a parent.
 $router
   .prefix("/docs")
   .layout("public")
-  .area("documentationArea")
+  .area(DocumentationArea)
   .group(() => {
-    $router.route(":version?/:page?", "docs").setName("docs");
+    $router.route(":version?/:page?", Docs).setName("docs");
   });
 ```
 
@@ -131,7 +125,7 @@ $router
   .prefix("/docs")
   .middleware("authed")
   .group(() => {
-    $router.route(":version?/:page?", "docs").setName("docs");
+    $router.route(":version?/:page?", Docs).setName("docs");
   });
 ```
 
@@ -141,12 +135,4 @@ Run `$ varie make route-middleware`, which will create a new file for you to use
 
 ### Registering Middleware
 
-You should register your middleware inside the `router/middleware/index.ts` file so its available to use.
-
-## Global Route Middleware
-
-// TODO
-
-### Global Terminal Route Middleware
-
-// TODO
+You should register your middleware inside the `router/middleware/index.ts` file so its available to use.pu

@@ -41,22 +41,6 @@ Start by using the Varie CLI
 
 `$ varie make:request-middleware your-middleware-name`
 
-You will have three functions
-
-```js
-    public request(config: object) {
-      return config;
-    }
-
-    public response(response: object) {
-      return response;
-    }
-
-    public responseError(error) {
-      return Promise.reject(error);
-    }
-```
-
 You have availability to customize how you want the request / response and what the responseError should do if it does indeed fail.
 You can take a look at the included middleware `app/request-middleware/LoadingScreen.ts` for a example of what you might do.
 

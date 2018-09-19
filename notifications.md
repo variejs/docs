@@ -1,11 +1,9 @@
 # Notifications
 
 - [Creating a Notification](#creating-a-notification)
-- [Customizations](#customizations)
-  - [HTML](#html)
-  - [CSSS](#css)
 
 Varie comes with built in notification system that you can customize.
+We have included the component already in the base install, but feel free to customize it.
 
 ## Creating a Notification
 
@@ -24,15 +22,3 @@ You can create notifications by injecting the notification service
     	}
     });
 ```
-
-## Customizations
-
-// TODO
-
-### HTML
-
-// TODO - how to modify html
-
-### CSS
-
-// TODO - how to modify css
