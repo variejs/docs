@@ -14,10 +14,9 @@ directory structures.
 By default we provide a public layout, by adding more you are able to use different layouts.
 
 ```tree
-  +-- resources
-        +-- views
-            +-- layouts
-                ./Public.vue
+  +-- views
+      +-- layouts
+          ./Public.vue
 ```
 
 [{.info} To learn more about layouts read the [routing](/routing#layouts) documentation.]
@@ -27,12 +26,11 @@ By default we provide a public layout, by adding more you are able to use differ
 We suggest making areas folders for your site, which allows you to keep a tidy folder structure and also can keep component folders inside of those.
 
 ```tree
-   +-- resources
-      +-- views
-          +-- Profile
-            ./index.vue
-            +-- Components
-                ./NewPasswordForm.vue
+  +-- views
+      +-- Profile
+        ./index.vue
+        +-- Components
+            ./NewPasswordForm.vue
                 ./ProfileImageUploader.vue
 ```
 
