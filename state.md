@@ -55,7 +55,7 @@ After creating you can then add the module by navigating the store that you want
 ```js
 this.setName("auth")
   .addState(state)
-  .addActions(actions($http))
+  .addActions(actions(httpService))
   .addMutations(mutations)
   .addGetters(getters)
   .addModule(ModuleName);

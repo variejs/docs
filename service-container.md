@@ -19,7 +19,7 @@ Within your service provider you have access to `this.app` which is your app ins
 
 ```js
 this.app.value("$searchService", () => {
-  return new SearchService(this.app.make("$http"));
+  return new SearchService(new SomeSearchClass());
 });
 ```
 
@@ -29,16 +29,19 @@ We also can bind a singleton instance so we may only want to resolve once.
 
 ```js
 this.app.singleton("$searchService", () => {
-  return new SearchService(this.app.make("$http"));
+  return new SearchService(new SomeSearchClass());
 });
 ```
 
 ### Binding Interfaces to Implementations
 
-Binding a interafce to an implemenation allows us to inject its implementation just based on the interface we want to use. For instance, we have a `HttpInterface`. Then we have a implementation of that interface, lets say `Axios`. Now we can resolve `$http` to Axios.
+Binding a interface to an implementation allows us to inject its implementation just based on the interface we want to use.
+For instance, we have a `DocumentationInterface`. Then we have a implementation of that interface, lets say `VarieDocumentationService`. Now we can resolve `DocumentationService` to VarieDocumentationService.
 
 ```js
-this.app.bind < HttpInterface > ("$http", Axios);
+this.app.bind <
+  DocumentationInterface >
+  ("DocumentationService", VarieDocumentationService);
 ```
 
 By doing this it allows us switch out implementations quickly without changing the rest of our application!
@@ -48,7 +51,7 @@ By doing this it allows us switch out implementations quickly without changing t
 To resolve from the container, we just need to make a simple call from the app
 
 ```js
-let $http = this.app.make("$http");
+let documentationService = this.app.make("DocumentationService");
 ```
 
 ### Component Injection
@@ -57,7 +60,17 @@ Its also important to note that you can do automatic injection within components
 
 ```js
 export default Vue.extend({
-  $inject: ["$http"]
+  $inject: ["DocumentationService"],
+  computed {
+    menu() {
+        return {
+            template: this.documentationService.menu(this.version),
+        }
+    },
+     version() {
+          return this.$route.params.version ? this.$route.params.version : "latest";
+        },
+  }
 });
 ```
 
@@ -68,10 +81,10 @@ This will bind `$http` to the component just like any other method.
 Varie registers some services that help boot the application. And are available to you
 to help development.
 
-- `$app`
-- `$http`
-- `$config`
+- `app`
+- `httpService`
 - `storeService`
+- `configService`
 - `routerService`
 - `validationService`
 - `notificationService`

@@ -9,22 +9,22 @@ and can be easily configured to meet your needs in the config.
 
 ## Requests
 
-To make a request you will need to inject the `$http` service.
+To make a request you will need to inject the `HttpService` service.
 
 ```js
-$http.get("url", config);
-$http.head("url", config);
-$http.options("url", config);
-$http.put("url", data, config);
-$http.patch("url", data, config);
-$http.post("url", data, config);
-$http.delete("url", config);
+httpService.get("url", config);
+httpService.head("url", config);
+httpService.options("url", config);
+httpService.put("url", data, config);
+httpService.patch("url", data, config);
+httpService.post("url", data, config);
+httpService.delete("url", config);
 ```
 
 Each returns a promise so you can get the response :
 
 ```js
-$http.get("url").then(response => {
+httpService.get("url").then(response => {
   this.data = response.data;
 });
 ```
@@ -56,7 +56,7 @@ To disable a app middleware for a particular route you can use the unregistere m
 ```js
 import MiddlewareClass from "app/middleware/MiddlewareClass";
 
-$http
+httpService
   .unregisterMiddleware(MiddlewareClass)
   .get("url")
   .then(response => {
