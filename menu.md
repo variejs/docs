@@ -25,5 +25,5 @@
   - [Auto Registration](/docs/{{version}}/auto-registration)
   - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
-  <!-- - [Plugin Development](/docs/{{version}}/plugin-development) -->
+  - [Plugin Development](/docs/{{version}}/plugin-development)
   - [Helpers](/docs/{{version}}/helpers)
