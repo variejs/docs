@@ -2,7 +2,12 @@
 
 ## 0.4.0 - 0.9.0 (Beta)
 
-// TODO
+- The injection for `routerService` was renamed to `RouterService`
+- The injection for `storeService` was renamed to `StateService` across the entire application
+- Route middleware now expects the actual middleware class instead of the string
+- [Provider Import names were updated](https://github.com/variejs/varie/blob/75a772221171c86b3f4198e902c149e7fc6b46ce/config/app.ts)
+- Notifications was renamed to Alerts
+- The injection for `notificationService` was renamed to `AlertService`
 
 ## 0.3.0 (Beta)
 
