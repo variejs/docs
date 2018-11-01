@@ -20,9 +20,9 @@ core intact to give you features to start building right away.
 Varie bootstraps some defaults for you such as :
 
 - Vuex
-- Axios
-- Inversify
 - Vue Router
+- HTTP Request Services
+- Inversify (IoC Container)
 
 While we setup some of the defaults, these can be changed by the use
 of [service providers](/docs/{{version}}/service-providers).
