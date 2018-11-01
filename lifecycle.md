@@ -8,11 +8,11 @@
 
 By explaining the lifecycle we hope that it gives you a foundation on how
 Varie builds things together. This will help to conceptually understand
-when things load.
+when things load and how you can effectively build upon Varie.
 
 ## Entry
 
-We first hit the `app/app.ts` file which imports the varie framework it self.
+First, the browser hits the `app/app.ts` file which imports the varie framework it self.
 When then start to boot the application up, and register the application to
 one of its few global handlers `$app`.
 
@@ -25,9 +25,9 @@ to the application to make them available for $app to use.
 
 ### Boot Phase
 
-Once all service providers have been registerd, each provider is given a
-chance to set setup the application based on that provider needs. During this
-phase since we have registered all the provider, we have access to those providers and their functions.
+Once all service providers have been register, each provider is given a
+chance to set setup the application based on that provider needs.
+During this phase you have access all all services as they have been registered already.
 
 ## Finally Vue Takes Over
 

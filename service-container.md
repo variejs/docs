@@ -48,7 +48,7 @@ By doing this it allows us switch out implementations quickly without changing t
 
 ## Resolving Dependencies
 
-To resolve from the container, we just need to make a simple call from the app
+To resolve from the container, we just need to make a call from the app
 
 ```js
 let documentationService = this.app.make("DocumentationService");
@@ -56,22 +56,15 @@ let documentationService = this.app.make("DocumentationService");
 
 ### Component Injection
 
-Its also important to note that you can do automatic injection within components :
+Its also important to note that you can do dependency injection within components :
 
 ```js
-export default Vue.extend({
-  $inject: ["DocumentationService"],
-  computed {
+ $inject: ["DocumentationService"]
+  computed : {
     menu() {
-        return {
-            template: this.documentationService.menu(this.version),
-        }
-    },
-     version() {
-          return this.$route.params.version ? this.$route.params.version : "latest";
-        },
+        return this.documentationService.getMenu();
+    }
   }
-});
 ```
 
 This will bind `$http` to the component just like any other method.
@@ -82,9 +75,14 @@ Varie registers some services that help boot the application. And are available 
 to help development.
 
 - `app`
+- `formService`
 - `httpService`
-- `storeService`
+- `stateService`
+- `alertService`
 - `configService`
-- `routerService`
+- `cookieService`
+- `storageService`
+- `routingService`
 - `validationService`
-- `notificationService`
+
+// TODO - links to the docs of each service instead of showing the service themselves

@@ -4,8 +4,9 @@
 - [Checking Dirty](#checking-for-dirty-forms)
 - [Reset The Form](#reset-form-data)
 - [Set Original Data](#setting-original-data)
+  // TODO - update links
 
-Forms allow us to organize our data so we can submit and validate easily.
+Forms allow you to organize your data, so that you can submit and validate to your backend.
 
 ### Creating Forms
 
@@ -31,12 +32,30 @@ You can check to see if the form is dirty by
 form.isDirty();
 ```
 
+### Filling Data
+
+// TODO
+
+### Merging Data
+
+// TODO
+
+### Removing Data
+
+// TODO
+
 ### Reset Form Data
 
-To reset the data to its orignal form just use the reset function
+To reset the data to its original form just use the reset function
 
 ```html
 <button @click="form.reset()">Reset</button>
+```
+
+Or you can use intial() to go back to the intial state when newing up the form
+
+```html
+<button @click="form.intial()">Reset</button>
 ```
 
 ### Set Original Data
@@ -47,3 +66,7 @@ their previous values.
 ```js
 form.setOriginaldata();
 ```
+
+## Validation
+
+// TODO - go to validation docs

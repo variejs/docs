@@ -13,7 +13,18 @@ you are able to customize per environment.
 
 ## Environment Variables
 
-You can pass environment variables through webpack and can access them easily with :
+You can pass environment variables through webpack
+
+```js
+    // webpack.config.js
+    .config({
+        app : {
+            someKey : "someValue"
+        }
+    })
+```
+
+and can access them with :
 
 ```js
 let version = $config.get("app.version");
@@ -21,7 +32,7 @@ let version = $config.get("app.version");
 
 ## Accessing the Configuration
 
-You can easily access the configuration values by using our help `$config`
+You can access the configuration values by using our helper `$config`
 
 ```js
 let value = $config.get("app.name");
@@ -50,3 +61,5 @@ These are customizable but cannot be removed as internal and plugin providers ma
 ```
 
 To customize the aliases, change the values in the `webpack.config.js` and `tsconfig.json` files.
+
+[{.alert} Currently our CLI cannot determine what paths you have set, if your using the CLI please do not change these values]

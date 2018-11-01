@@ -1,6 +1,6 @@
 # Deployment
 
-- [Server Configuration](#server-configuration)
+- [Server Configuration](#server-configuration) -[Nginx](#nginx) -[Apache](#apache)
 - [Environment Variables](#environment-variables)
 - [Deploying with CodePier](#deploying-with-codepier)
 
@@ -8,7 +8,7 @@ When deploying Varie there are a few steps you must do before building the appli
 
 ## Server Configuration
 
-There are many types of web servers, here are the most popular two, with their configurations.
+Depending on which HTTP server your using requires a different type of config.
 
 ### Nginx
 
@@ -39,9 +39,9 @@ location / {
 There are a couple of ways to manage the environment variables on your server :
 
 1.  Use the .env file , this should `NOT` be committed into your codebase
-2.  Use [environment variables](https://help.ubuntu.com/community/EnvironmentVariables) stored on your server
+2.  Use [server environment variables](https://help.ubuntu.com/community/EnvironmentVariables) stored on your server
 
-[{.alert} This is required before you build your application, it will otherwise fail to build!]
+[{.alert} This is required before you build your application, it will otherwise it may fail to build!]
 
 ## Deploying with CodePier
 

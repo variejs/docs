@@ -11,7 +11,7 @@ To get started quickly, install the Varie CLI tool globally `$ npm install -g va
 
 This will fetch the latest version of Varie and install its dependencies for you.
 
-[{.info} If your using NVM make sure to install it globally under the version of node you wish to use. By default Varie uses Node.js Version 8.11.3]
+[{.info} If your using NVM make sure to install it globally under the version of node you wish to use. By default Varie uses Node.js Version 8.12.0]
 
 Then to start development, you will run :
 

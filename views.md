@@ -29,19 +29,24 @@ We suggest making areas folders for your site, which allows you to keep a tidy f
   +-- views
       +-- Profile
         ./index.vue
-        +-- Components
+        +-- components
             ./NewPasswordForm.vue
-                ./ProfileImageUploader.vue
+            ./ProfileImageUploader.vue
 ```
 
 As you can see your can create sub component's in this manner that are not necessarily reusable components but components to keep your code tidy.
 
 ### Component Dependency Injection
 
-It is also easy to inject dependencies into your components by using the `inject` syntax in your `data` properties
+To inject dependencies into your components by using the `$inject` property in your Vue Component.
 
 ```js
 export default Vue.extend({
-  $inject: ["$documentationService"]
+  $inject: ["DocumentationService"]
+  computed : {
+    menu() {
+        return this.documentationService.getMenu();
+    }
+  }
 });
 ```

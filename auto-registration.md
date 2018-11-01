@@ -6,7 +6,7 @@
 - [Directives](#directives)
 
 Vue offers ways to have globals for multiple different types of files.
-We take advantage of this to allow auto registration of these for you.
+Varie takes advantage of this to allow auto registration of these for you.
 
 ## Components
 
@@ -17,14 +17,14 @@ Only components in the main directory are auto loaded, to allow you to create su
      +-- app
         +-- components
             +-- LeftNav.vue
-            +-- Notifications.vue
-            +-- notification_components
-                +-- NotificationItem.vue
+            +-- Alerts.vue
+            +-- alert-components
+                +-- Alert.vue
 ```
 
-Above structure will auto load the components `<left-nav><left-nav>` and `<notifications><notifications>`.
+Above structure will auto load the components `<left-nav></left-nav>` and `<alerts></alerts>`.
 
-[{.alert} While globals are handy, but they can cause issues. We suggest not to abuse this feature and use were only really is helpful]
+[{.alert} While global components are handy, they can decrease the developer expierence and suggest to use it sparingly]
 
 ## Mixins
 

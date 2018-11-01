@@ -5,7 +5,7 @@
   - [Creating Sub Modules](#creating-submodules)
 - [Directory Structure](#directory-structure)
 
-Varie makes it easy to interact with state, with the power of Vuex.
+Varie makes use of the Vuex system the only difference is the registration of the stores.
 
 ## Creating Stores
 
@@ -48,17 +48,18 @@ export interface UsersState {
 
 Varie handles making submodules for you as long as you use slashes in the name
 
-`$ varie make:store auth/moduleName`
+`$ varie make:store user/cats`
 
-After creating you can then add the module by navigating the store that you want to attach it to
+After creating you can then add the submodule module
 
 ```js
-this.setName("auth")
+this.setName("user")
   .addState(state)
   .addActions(actions(httpService))
   .addMutations(mutations)
   .addGetters(getters)
-  .addModule(ModuleName);
+  ...
+  .addModule(UserCatStore);
 ```
 
 ## Directory Structure
@@ -68,7 +69,7 @@ Each store will contain 6 files to setup your store :
 ```tree
 actions.ts
 getters.ts
-ModuleName.ts
+StoreName.ts
 mutations.ts
 state.ts
 stateInterface.ts

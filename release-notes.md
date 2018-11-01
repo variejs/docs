@@ -2,6 +2,10 @@
 
 [{.alert} Assume each minor version contains breaking versions until stable release!]
 
+## 0.4.0 - 0.9.0 (Beta)
+
+// TODO
+
 ## 0.3.0 (Beta)
 
 Contains breaking changes for routes / state (store) management :

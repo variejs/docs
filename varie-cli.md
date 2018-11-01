@@ -47,8 +47,8 @@ Creates a Vuex store / submodule in the store directory based on the path provid
 Running `$ varie make:store user` creates a store in :
 `app/stores/user`
 
-Running `$ varie make:store user/notifications` creates a store in :
-`app/stores/user/notification`
+Running `$ varie make:store user/alerts` creates a store in :
+`app/stores/user/modules/alerts`
 
 ### `make:request-middleware {name}`
 
@@ -65,3 +65,7 @@ Creates a rule in the `app/rules` directory.
 ### `make:validator {name}`
 
 Creates a validator in the `app/validators` directory.
+
+### `publish`
+
+Publishes assets from Varie plugins

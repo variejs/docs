@@ -1,8 +1,7 @@
 # Contribution Guide
 
 - [Features / Bug Reports](#features--bug-reports)
-- [Core Development](#core-development)
-  - [Setup](#setup)
+- [Setup](#setup)
 - [Coding Style](#coding-style)
 
 ## Features / Bug Reports
@@ -13,6 +12,7 @@ Varie's sorce code is managed on GitHub and there are repositories for each of i
 - [Varie CLI](https://github.com/variejs/varie-cli)
 - [Varie Bundler](https://github.com/variejs/varie-bundler)
 - [Varie Framework](https://github.com/variejs/framework)
+- [Varie Auth Plugin](https://github.com/variejs/varie-auth-plugin)
 
 ### Setup
 

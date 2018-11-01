@@ -11,6 +11,8 @@ and can be easily configured to meet your needs in the config.
 
 To make a request you will need to inject the `HttpService` service.
 
+// TODO - show example of a store and how injection looks like
+
 ```js
 httpService.get("url", config);
 httpService.head("url", config);
@@ -19,6 +21,7 @@ httpService.put("url", data, config);
 httpService.patch("url", data, config);
 httpService.post("url", data, config);
 httpService.delete("url", config);
+httpService.request(config);
 ```
 
 Each returns a promise so you can get the response :
@@ -35,7 +38,7 @@ Request middleware help to intercept requests going out of your application
 to provide additional features. It could be adding API tokens, or having
 a localized loader.
 
-### Request Middleware
+### Making A Request Middleware
 
 Start by using the Varie CLI
 

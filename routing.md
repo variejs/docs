@@ -65,8 +65,24 @@ $router.route("*", ErrorPages.Error404);
 
 ## Named Routes
 
+Routes are given a default name based on their path.
+
 ```js
-$router.route("*", ErrorPages.Error404).setName("error");
+$route.prefix("admin").group(() => {
+  $router.route("/", Dashboard);
+  $router.route("/users", Users);
+});
+```
+
+The Dashboard route would have its route be `admin` and the Users route would be `admin.users`.
+
+You can override them :
+
+```js
+$route.prefix("admin").group(() => {
+  $router.route("/", Dashboard).setName("admin.dashboard");
+  $router.route("/users", Users);
+});
 ```
 
 ## Route Groups
@@ -123,7 +139,7 @@ You can easily attach middleware to specific routes by attaching them on the gro
 ```js
 $router
   .prefix("/docs")
-  .middleware("authed")
+  .middleware(middleware.Auth)
   .group(() => {
     $router.route(":version?/:page?", Docs).setName("docs");
   });
@@ -135,4 +151,5 @@ Run `$ varie make route-middleware`, which will create a new file for you to use
 
 ### Registering Middleware
 
-You should register your middleware inside the `router/middleware/index.ts` file so its available to use.pu
+You should register your middleware inside the `router/middleware/index.ts` file so you can use
+them inside your routes file.

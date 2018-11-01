@@ -21,9 +21,9 @@
   - [Validation](/docs/{{version}}/validation)
   - [State Management](/docs/{{version}}/state)
 - ### Official Plugins
+  - [Alerts](/docs/{{version}}/alerts)
   - [Authentication](/docs/{{version}}/authentication)
   - [Auto Registration](/docs/{{version}}/auto-registration)
-  - [Notifications](/docs/{{version}}/notifications)
 - ### Digging Deeper
-  - [Plugin Development](/docs/{{version}}/plugin-development)
   - [Helpers](/docs/{{version}}/helpers)
+  - [Plugin Development](/docs/{{version}}/plugin-development)
