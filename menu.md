@@ -17,13 +17,15 @@
   - [Views](/docs/{{version}}/views)
   - [Routing](/docs/{{version}}/routing)
   - [Forms](/docs/{{version}}/forms)
-  - [Requests](/docs/{{version}}/requests)
+  - [HTTP Requests](/docs/{{version}}/requests)
   - [Validation](/docs/{{version}}/validation)
   - [State Management](/docs/{{version}}/state)
-- ### Official Plugins
+- ### Plugins
   - [Alerts](/docs/{{version}}/alerts)
   - [Authentication](/docs/{{version}}/authentication)
   - [Auto Registration](/docs/{{version}}/auto-registration)
-- ### Digging Deeper
-  - [Helpers](/docs/{{version}}/helpers)
   - [Plugin Development](/docs/{{version}}/plugin-development)
+- ### Digging Deeper
+  - [Cookies](/docs/{{version}}/cookies)
+  - [Storage](/docs/{{version}}/storage)
+  - [Helpers](/docs/{{version}}/helpers)

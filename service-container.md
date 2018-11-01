@@ -65,15 +65,12 @@ This will bind `$http` to the component just like any other method.
 Varie registers some services that help boot the application. And are available to you
 to help development.
 
-- `app`
-- `formService`
-- `httpService`
-- `stateService`
-- `alertService`
-- `configService`
-- `cookieService`
-- `storageService`
-- `routingService`
-- `validationService`
-
-// TODO - links to the docs of each service instead of showing the service themselves
+- `formService` : [Forms](/docs/{{version}}/forms)
+- `httpService` : [Http Requests](/docs/{{version}}/requests)
+- `stateService` : [State Management](/docs/{{version}}/state)
+- `alertService` : [Alerts](/docs/{{version}}/alerts)
+- `configService` : [Configuration](/docs/{{version}}/configuration)
+- `cookieService` : [Cookies](/docs/{{version}}/cookies)
+- `storageService` : [Storage](/docs/{{version}}/storage)
+- `routingService` : [Routing](/docs/{{version}}/routing)
+- `validationService` : [Validation](/docs/{{version}}/container)
