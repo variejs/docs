@@ -1,24 +1,32 @@
 # Alerts
 
 - [Creating a Alert](#creating-a-alert)
+- [Alert Types](#alert-types)
 
-Varie comes with built in alert system that you can customize.
-There as been have included the component already in the base install, but feel free to customize it.
+Varie comes with built in alert system that includes base components that are ready to be customized.
+Alerts are useful for notifying HTTP errors, validation messages, and other events.
 
 ## Creating a Alert
 
-You can create alerts by injecting the alert service
+The alert system includes a mixin that allows you to access the alert service anytime inside your components.
 
 ```js
-    export default Vue.extend({
-      $inject: ["AlertService"]
-    },
     methods : {
     	shotAlerts() {
     	    this.alertService.showInfo('info message', 'This is an Info Alert')
-    		this.alertService.showError('error message', 'This is an Error Alert');
-            this.alertService.showSuccess('success message', 'This is an Success Alert, that never goes away', 0)
-            this.alertService.showWarning('warning message', 'This is an Warning Alert with 10 second delay before it goes away', 10000)
     	}
     });
+```
+
+## Alert Types
+
+    - showInfo
+    - showError
+    - showSuccess
+    - showWarning
+
+Each alert can be customized with a message, title, and a delay.
+
+```js
+this.alertService.showWarning('Message', 'Title', 10000)
 ```
