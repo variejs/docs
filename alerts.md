@@ -28,5 +28,5 @@ The alert system includes a mixin that allows you to access the alert service an
 Each alert can be customized with a message, title, and a delay.
 
 ```js
-this.alertService.showWarning('Message', 'Title', 10000)
+this.alertService.showWarning("Message", "Title", 10000);
 ```
