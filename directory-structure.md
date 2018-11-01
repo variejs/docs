@@ -1,24 +1,3 @@
-# Directory Structure
-
-- [Inside Root Directory](#inside-root-directory)
-  - [The `app` Directory](#the-app-directory)
-  - [The `config` Directory](#the-config-directory)
-  - [The `public` Directory](#the-public-directory)
-  - [The `resources` Directory](#the-resources-directory)
-  - [The `routes` Directory](#the-routes-directory)
-  - [The `store` Directory](#the-store-directory)
-  - [The `views` Directory](#the-views-directory)
-- [Inside App Directory](#inside-app-directory)
-  - [The `components` Directory](#the-components-directory)
-  - [The `directives` Directory](#the-directives-directory)
-  - [The `filters` Directory](#the-filters-directory)
-  - [The `middleware` Directory](#the-middleware-directory)
-  - [The `mixins` Directory](#the-mixins-directory)
-  - [The `models` Directory](#the-models-directory)
-  - [The `providers` Directory](#the-providers-directory)
-  - [The `rules` Directory](#the-rules-directory)
-  - [The `validators` Directory](#the-validators-directory)
-
 Varie ships with starting point for your application, feel free to change
 the structure to meet your needs.
 

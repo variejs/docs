@@ -1,10 +1,3 @@
-# Auto Registration
-
-- [Components](#components)
-- [Mixins](#mixins)
-- [Filters](#filters)
-- [Directives](#directives)
-
 Vue offers ways to have globals for multiple different types of files.
 Varie takes advantage of this to allow auto registration of these for you.
 

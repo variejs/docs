@@ -1,9 +1,3 @@
-# Views
-
-- [Layouts](#layouts)
-- [Directory Structure](#directory-structure)
-- [Component Dependency Injection](#component-dependency-injection)
-
 Your views are just vue components. But we do make a suggestion on how to organize your components with layouts and
 directory structures.
 

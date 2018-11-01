@@ -1,12 +1,6 @@
-# Contribution Guide
-
-- [Features / Bug Reports](#features--bug-reports)
-- [Setup](#setup)
-- [Coding Style](#coding-style)
-
 ## Features / Bug Reports
 
-Varie's sorce code is managed on GitHub and there are repositories for each of its elements
+Varie's source code is managed on GitHub and there are repositories for each of its elements
 
 - [Varie](https://github.com/variejs/varie)
 - [Varie CLI](https://github.com/variejs/varie-cli)

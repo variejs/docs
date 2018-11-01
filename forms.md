@@ -1,11 +1,3 @@
-# Forms
-
-- [Creating Forms](#creating-forms)
-- [Checking Dirty](#checking-for-dirty-forms)
-- [Reset The Form](#reset-form-data)
-- [Set Original Data](#setting-original-data)
-  // TODO - update links
-
 Forms allow you to organize your data, so that you can submit and validate to your backend.
 
 ### Creating Forms
@@ -52,7 +44,7 @@ To reset the data to its original form just use the reset function
 <button @click="form.reset()">Reset</button>
 ```
 
-Or you can use intial() to go back to the intial state when newing up the form
+Or you can use initial() to go back to the initial state when newing up the form
 
 ```html
 <button @click="form.intial()">Reset</button>
@@ -60,7 +52,7 @@ Or you can use intial() to go back to the intial state when newing up the form
 
 ### Set Original Data
 
-Setting the original data is useful after requests were made and you dont want your users to be able to reset the data to
+Setting the original data is useful after requests were made and you don't want your users to be able to reset the data to
 their previous values.
 
 ```js

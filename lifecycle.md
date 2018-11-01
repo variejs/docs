@@ -1,11 +1,3 @@
-# Lifecycle
-
-- [Entry](#entry)
-  - [Register Phase](#register-phase)
-  - [Boot Phase](#boot-phase)
-- [Finally Vue Takes Over](#finally-vue-takes-over)
-- [Its All About them Service Providers](#its-all-about-them-service-providers)
-
 By explaining the lifecycle we hope that it gives you a foundation on how
 Varie builds things together. This will help to conceptually understand
 when things load and how you can effectively build upon Varie.

@@ -1,8 +1,3 @@
-# Installation
-
-- [Installation](#installation)
-- [Configuration](#configuration)
-
 ## Installation
 
 To get started quickly, install the Varie CLI tool globally `$ npm install -g varie-cli` and create your application

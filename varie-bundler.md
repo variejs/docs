@@ -1,14 +1,3 @@
-# Varie Bundler
-
-- [Build](#build)
-- [Aliases](#aliaes)
-- [Adding Loaders](#adding-loaders)
-- [Adding Plugins](#adding-plugins)
-- [Adding Entries](#adding-entries)
-- [Environment Variables](#environment-variables)
-- [Analyzing Configuration](#analyzing-configuration)
-- [Inspecting Configuration](#inspecting-configuration)
-
 Varie comes with a bundler so you don't have to worry about configuration.
 It also comes with a fluent interface to help modify the webpack config,
 just in case you want to have more control over how your application is built.
@@ -75,7 +64,7 @@ This allows you to modify the bundler without having to change the bundler itsel
 
 ### Modifying The Config
 
-You should get yourself familar with the [webpack-chain API](https://github.com/mozilla-neutrino/webpack-chain#getting-started)
+You should get yourself familiar with the [webpack-chain API](https://github.com/mozilla-neutrino/webpack-chain#getting-started)
 as well as the source for [varie-bundler](https://github.com/variejs/varie-bundler)
 
 ```js

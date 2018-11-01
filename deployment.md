@@ -1,9 +1,3 @@
-# Deployment
-
-- [Server Configuration](#server-configuration) -[Nginx](#nginx) -[Apache](#apache)
-- [Environment Variables](#environment-variables)
-- [Deploying with CodePier](#deploying-with-codepier)
-
 When deploying Varie there are a few steps you must do before building the application.
 
 ## Server Configuration

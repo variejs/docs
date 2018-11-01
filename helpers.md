@@ -1,5 +1,3 @@
-# Helpers
-
 Varie has a few helpers that can help speed up your development.
 
 ### `app()`

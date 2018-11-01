@@ -1,9 +1,3 @@
-# What is Varie?
-
-- [Notable Features](#features)
-- [Whats In it](#whats-in-it)
-- [Why Use Varie](#why-use-varie-)
-
 Varie is a Typescript framework for rapidly building powerful and elegant Vue.js applications. Bringing
 in concepts from other languages to speed up your development. Whether working in
 a small / large teams.

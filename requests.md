@@ -1,9 +1,3 @@
-# Http Requests
-
-- [Requests](#requests)
-- [Request Middleware](#request-middleware)
-- [Unregister App Middleware for a route](#unregister-app-middleware-for-a-route)
-
 Varie uses [axios](https://github.com/axios/axios) as its default HTTP library,
 and can be easily configured to meet your needs in the config.
 
@@ -54,7 +48,7 @@ This allows you to customize the order of your middleware.
 
 ## Unregister App Middleware for a route
 
-To disable a app middleware for a particular route you can use the unregistere method
+To disable a app middleware for a particular route you can use the unregister method
 
 ```js
 import MiddlewareClass from "app/middleware/MiddlewareClass";

@@ -1,8 +1,3 @@
-# Alerts
-
-- [Creating a Alert](#creating-a-alert)
-- [Alert Types](#alert-types)
-
 Varie comes with built in alert system that includes base components that are ready to be customized.
 Alerts are useful for notifying HTTP errors, validation messages, and other events.
 

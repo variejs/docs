@@ -1,5 +1,3 @@
-# Release Notes
-
 [{.alert} Assume each minor version contains breaking versions until stable release!]
 
 ## 0.4.0 - 0.9.0 (Beta)

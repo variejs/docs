@@ -1,12 +1,3 @@
-# Validation
-
-- [Validating Forms](#validating-your-forms)
-  - [Attaching Errors To Inputs](#attaching-errors-to-inputs)
-  - [Available Validation Rules](#available-validation-rules)
-  - [Custom Error Messages](#custom-error-messages)
-  - [Custom Validation Rules](#custom-validation-rules)
-  - [Validation Language Files](#validation-language-files)
-
 ## Validating Your Forms
 
 You can easily validate your forms by adding [validation rules](#available-validation-rules).
@@ -109,7 +100,7 @@ To use custom error messages add a messages object :
 
 ## Custom Validation Rules
 
-To cretae custom validation rules use the varie cli tool which will place the new rule inside the `app/rules` folder :
+To create custom validation rules use the varie cli tool which will place the new rule inside the `app/rules` folder :
 
 `$varie make:rule NewRule`
 

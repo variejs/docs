@@ -1,16 +1,3 @@
-- [Introduction](#introduction)
-- [Installation](#installation)
-  - [Config](#installation)
-  - [Service Provider](#serviceProvider)
-- [Protecting Access](#installation)
-  - [Http](#installation)
-  - [Route Middleware](#installation)
-- [Drivers](#drivers)
-- [Store](#installation)
-- [Views](#installation)
-- [Route Middleware](#installation)
-- [Service](#installation)
-
 Varie provides an authentication plugin that helps you get auth working quickly.
 After publishing the auth package, you are able to use authentication immediately
 or you can tweak it to work with your previous auth system.
@@ -19,7 +6,7 @@ The system is made up of `guards` and `drivers`. These `guards` allow you to spe
 a user/request should be authenticated. You can have multiple `guards` to allow for more than
 one different authentication system to be used.
 
-A `driver` is the authenication workflow that each `guard` must follow to be correctly authenicated.
+A `driver` is the authentication workflow that each `guard` must follow to be correctly authenticated.
 Varie providers provides two authentication drivers:
 
 - Cookie Auth
@@ -50,8 +37,8 @@ providers: {
 }
 ```
 
-Once completed your able to start authenication right away, but you should define which driver you want to use for authenication in
-the `config.auth.ts`.
+Once completed your able to start authentication right away, but you should define which driver you want to use for authentication in
+the `config/auth.ts`.
 
 [{.info} You should read all authentication documentation to learn the internals and how to customize to your application.]
 
@@ -136,7 +123,7 @@ You can create custom drivers which allows you to define how to store your authe
 
 You should look into one of the provided drivers to see how they were built and build yours based on those drivers.
 
-## Store
+## Auth Store
 
 The published store gives you a basic layout of what you may need for your authentication system.
 
@@ -177,7 +164,7 @@ These views were placed in 'views/auth' and 'routes/authRoutes.ts'. Feel free to
 - Reset Password Page
 - Forgot Password Page
 
-## Service
+## Auth Service
 
 The auth service has some helpful functions to jump start your application.
 

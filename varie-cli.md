@@ -1,10 +1,5 @@
-# Varie CLI
-
-- [Installation](#installation)
-- [Usage](#usage)
-
 The Varie CLI helps you create repetitive tasks and templates to help
-radpily develop your applications.
+rapidly develop your applications.
 
 ## Installation
 

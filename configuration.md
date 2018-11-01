@@ -1,9 +1,3 @@
-# Environment Configuration
-
-- [Environment Variables](#environment-variables)
-- [Accessing the Configuration](#accessing-the-configuration)
-- [Path Aliases](#path-aliases)
-
 Most likely you will have multiple environments for the application `dev`, `qa`, `prod`.
 You may want to change some of configuration based on what type of environment your running in.
 

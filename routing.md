@@ -1,21 +1,3 @@
-# Routing
-
-- [Basic Routing](#basic-routing)
-  - [Views](#views)
-  - [Meta](#meta)
-  - [Aliaes](#aliases)
-  - [Redirects](#redirects)
-  - [Catch All](#catch-alls)
-- [Named Routes](#named-routes)
-- [Route Groups](#route-groups)
-  - [Prefixing](#prefixing)
-  - [Layouts](#layouts)
-  - [Areas](#areas)
-- [Route Middleware](#middleware)
-  - [Defining Middleware](#defining-middleware)
-  - [Registering Middleware](#registering-middleware)
-  - [Global Middleware](#global-middleware)
-
 ## Basic Routing
 
 To define a route you just need to define a path and a component
@@ -37,7 +19,7 @@ $router.route("/", {
 
 ### Meta
 
-Sometimes its needed to add addtional functionality to our routes, we can add metadata
+Sometimes its needed to add additional functionality to our routes, we can add metadata
 
 ```js
 $router.route("/admin/dashboard", AdminDashboard).setMeta({
