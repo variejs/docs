@@ -1,4 +1,4 @@
-Forms allow you to organize your data, so that you can submit and validate to your backend.
+Forms allow you to organize data, keep track of that data, and even validation.
 
 ### Creating Forms
 
@@ -26,28 +26,47 @@ form.isDirty();
 
 ### Filling Data
 
-// TODO
+Filling data allows you to add additional data than what the form started with.
+
+```js
+let form = new Form({ name : 'varie' })
+form.fill({ url : 'https://varie.io' });
+
+form.data() // OUTPUT
+{
+ name : 'varie',
+ url : 'https://varie.io'
+}
+```
 
 ### Merging Data
 
-// TODO
+Merging allows you to strip any data that you don't want in the object when filling.
+
+```js
+let form = new Form({ name : 'varie' })
+form.merge({ url : 'https://varie.io' });
+
+form.data() // OUTPUT
+{
+ name : 'varie',
+}
+```
 
 ### Removing Data
 
-// TODO
+When using forms, you have to use the `remove` method because of the [Vue lack of reactivity
+in some cases](https://vuejs.org/v2/guide/reactivity.html).
 
-### Reset Form Data
+```js
+let form = new Form({ name : 'varie' }, { url : 'https://varie.io' })
 
-To reset the data to its original form just use the reset function
+form.remove('url');
 
-```html
-<button @click="form.reset()">Reset</button>
-```
-
-Or you can use initial() to go back to the initial state when newing up the form
-
-```html
-<button @click="form.intial()">Reset</button>
+form.data() // OUTPUT
+{
+ name : 'varie',
+}
 ```
 
 ### Set Original Data
@@ -59,6 +78,35 @@ their previous values.
 form.setOriginaldata();
 ```
 
+### Reset Form Data
+
+To reset the data to its original form just use the reset function
+
+```js
+let form = new Form({ name : 'varie' })
+form.fill({ url : 'https://varie.io' });
+
+form.reset() // OUTPUT
+{
+ name : 'varie',
+}
+```
+
+Or you can use initial() to go back to the initial state when newing up the form
+
+```js
+let form = new Form({ name : 'varie' }, { url : 'https://varie.io' })
+form.fill({ name : 'varie is awesome!'});
+form.setOriginaldata();
+
+form.initial() // OUTPUT
+{
+ name : 'varie',
+ url : 'https://varie.io'
+}
+```
+
 ## Validation
 
-// TODO - go to validation docs
+The form class is directly connected to the validation service, make sure you include a validation service provider
+for the validation to work properly. To learn more, check out the [validation documentation](/docs/{{version}}/validation).
