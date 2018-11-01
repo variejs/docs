@@ -7,12 +7,13 @@ core intact to give you features to start building right away.
 
 ## Notable Features
 
+- CLI
 - Validation
-- CLI Plugin
 - Fluent Router
 - State Management
 - Request Middleware
 - Customizable Bundler
+- Authentication System
 - Dependency Injection System (DI)
 
 ## Whats In It
