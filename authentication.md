@@ -181,7 +181,7 @@ These views were placed in 'views/auth' and 'routes/authRoutes'. Feel free to cu
 
 The auth service has some helpful functions to jump start your application.
 
-### Getting the User
+### Getting the User Data from the API
 
 You can get the user for a guard by calling the `getUser`.
 
@@ -197,4 +197,14 @@ You can check if the user is currently logged in
 ```js
 this.authService.isloggedIn("guard");
 this.authService.isLoggedIn(); // uses the default guard
+```
+
+
+### Getting The User In Your Components
+
+To get the user in your components you should use the store getter `auth/user`.
+
+```js
+this.$store.getters['auth/user']('guardName')
+this.$store.getters['auth/user']() // uses the default guard
 ```
