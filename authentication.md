@@ -199,12 +199,11 @@ this.authService.isloggedIn("guard");
 this.authService.isLoggedIn(); // uses the default guard
 ```
 
-
 ### Getting The User In Your Components
 
 To get the user in your components you should use the store getter `auth/user`.
 
 ```js
-this.$store.getters['auth/user']('guardName')
-this.$store.getters['auth/user']() // uses the default guard
+this.$store.getters["auth/user"]("guardName");
+this.$store.getters["auth/user"](); // uses the default guard
 ```
