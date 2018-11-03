@@ -34,7 +34,7 @@ The boot method occurs after ALL service providers have been registered and have
 
 ## Registering Service Providers
 
-All service providers are registered in `config/app.ts`. This file contains other service providers already added to application. Just add your provider by adding it to the array.
+All service providers are registered in `config/app`. This file contains other service providers already added to application. Just add your provider by adding it to the array.
 
 ## Learn More
 

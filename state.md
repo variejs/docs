@@ -60,10 +60,10 @@ this.setName("user")
 Each store will contain 6 files to setup your store :
 
 ```tree
-actions.ts
-getters.ts
-StoreName.ts
-mutations.ts
-state.ts
-stateInterface.ts
+actions
+getters
+StoreName
+mutations
+state
+stateInterface
 ```

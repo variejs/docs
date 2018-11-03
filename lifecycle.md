@@ -4,7 +4,7 @@ when things load and how you can effectively build upon Varie.
 
 ## Entry
 
-First, the browser hits the `app/app.ts` file which imports the varie framework it self.
+First, the browser hits the `app/app` file which imports the varie framework it self.
 When then start to boot the application up, and register the application to
 one of its few global handlers `$app`.
 
@@ -28,7 +28,7 @@ Once those phases are completed, Vue finally gets to take over and act like any 
 ## Its All About them Service Providers
 
 The entire application is built upon this premise of these service providers. Take a look in
-the `config/app.ts` file and you can see how the application builds it self, the entire application is
+the `config/app` file and you can see how the application builds it self, the entire application is
 built from that list.
 
 This gives the you the developer greater control of the application and build it how you want.

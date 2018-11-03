@@ -27,8 +27,8 @@ To understand how to register and boot service providers, check out the
 
 If you wish to publish assets for your plugin you must do two things.
 
-1. Create a directory inside the root of your directory called `publish`
-2. Inside your `package.json` add a new property `variePublishable` and set it to true.
+1.  Create a directory inside the root of your directory called `publish`
+2.  Inside your `package.json` add a new property `variePublishable` and set it to true.
 
 ```js
     ...

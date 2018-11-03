@@ -268,7 +268,7 @@ You then can define how the validation passes, and the message that it will disp
 
 ### Validation Language Files
 
-If you would like change your phrasing of the errors you can change that inside your `resources/lang/xx/validation.ts` language file.
+If you would like change your phrasing of the errors you can change that inside your `resources/lang/xx/validation` language file.
 
 ## Models
 

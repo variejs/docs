@@ -37,8 +37,21 @@ providers: {
 }
 ```
 
-Once completed your able to start authentication right away, but you should define which driver you want to use for authentication in
-the `config/auth.ts`.
+Import and add the routes to your `routes` file :
+
+```js
+import authRoutes from './authRoutes'
+
+export default function($router: RouterInterface) {
+
+  ...
+
+  authRoutes($router);
+
+  ...
+```
+
+Update the configuration `config/auth` and update your `app/providers/AuthServiceProvider` to fit your needs.
 
 [{.info} You should read all authentication documentation to learn the internals and how to customize to your application.]
 
@@ -142,7 +155,7 @@ opportunity to handle with saving tokens, logging out procedures, etc.
 Each guard should have their own user state. This allows us to detect that they are logged in and
 can access pages across your app.
 
-`store/auth/state.ts`
+`store/auth/state`
 
 ```
  guards: {
@@ -156,7 +169,7 @@ can access pages across your app.
 ## Routes / Views
 
 When running the publish command it provided all the necessary routes and views to get auth up and running quickly.
-These views were placed in 'views/auth' and 'routes/authRoutes.ts'. Feel free to customize them as however you wish.
+These views were placed in 'views/auth' and 'routes/authRoutes'. Feel free to customize them as however you wish.
 
 - A Auth Area
 - Login Page

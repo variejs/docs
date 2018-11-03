@@ -47,7 +47,7 @@ Running `$ varie make:store user/alerts` creates a store in :
 
 ### `make:request-middleware {name}`
 
-Creates a new request middleware in the `app/request-middleware` directory.
+Creates a new request middleware in the `app/middleware` directory.
 
 ### `make:route-middleware {name}`
 

@@ -227,11 +227,11 @@ Start by using the Varie CLI
 `$ varie make:request-middleware your-middleware-name`
 
 You have availability to customize how you want the request / response and what the responseError should do if it does indeed fail.
-You can take a look at the included middleware `app/request-middleware/LoadingScreen.ts` for a example of what you might do.
+You can take a look at the included middleware `app/middleware/LoadingScreen` for a example of what you might do.
 
 ### Registering Middleware
 
-To register you will need to open the `index.ts` file inside the middleware folder and add it in the correct spot.
+To register you will need to open the `app/middleware/index` file inside the middleware folder and add it in the correct spot.
 This allows you to customize the order of your middleware.
 
 ## Unregister App Middleware for a route

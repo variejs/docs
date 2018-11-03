@@ -133,5 +133,5 @@ Run `$ varie make route-middleware`, which will create a new file for you to use
 
 ### Registering Middleware
 
-You should register your middleware inside the `router/middleware/index.ts` file so you can use
+You should register your middleware inside the `router/middleware/index` file so you can use
 them inside your routes file.
