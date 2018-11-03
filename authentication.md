@@ -25,13 +25,13 @@ You must then register the service provider
 You need to add the service provider to the `config/app.ts`
 
 ```js
-import AuthenticationServiceProvider from "@app/providers/AuthProvider";
+import AuthServiceProvider from "@app/providers/AuthServiceProvider";
 
 
 providers: {
   ...
 
-  AuthenticationServiceProvider
+  AuthServiceProvider,
 
   ...
 }
