@@ -85,97 +85,97 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 </div>
 
-### accepted
+#### accepted
 
 The field under validation must be yes, on, 1, or true.
 
-### after:date
+#### after:date
 
 The field under validation must be a date that's after the specified date (defaults to now).
 
-### after_or_equal:date
+#### after_or_equal:date
 
 The field under validation must be a date that's after or equal to the specified date (defaults to now).
 
-### alpha
+#### alpha
 
 The field under validation must contains only letters (a-zA-Z).
 
-### alpha_num
+#### alpha_num
 
 The field under validation must contains only letters and numbers.
 
-### array
+#### array
 
 The field under validation must be an array.
 
-### before:date
+#### before:date
 
 The field under validation must be a date that's before the specified date (defaults to now).
 
-### before_or_equal:date
+#### before_or_equal:date
 
 The field under validation must be a date that's before or equal to the specified date (defaults to now).
 
-### between:min,max
+#### between:min,max
 
 The field under validation must have a size between the given min and max. Strings, numerics, arrays, and files are evaluated in the same fashion as the size rule.
 
-### boolean
+#### boolean
 
 The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, "1", and "0".
 
-### confirmed
+#### confirmed
 
 The field under validation must have a matching field of fooConfirmation. For example, if the field under validation is password, a matching passwordConfirmation field must be present in the input.
 
-### date
+#### date
 
 The field under validation must be a valid date.
 
-### different:field
+#### different:field
 
 The field under validation must have a different value than field.
 
-### email
+#### email
 
 The field under validation must be a valid email.
 
-### image
+#### image
 
 The file under validation must be an image (jpg, jpeg, png, bmp, gif, or svg)
 
-### integer
+#### integer
 
 The field under validation must be an integer.
 
-### max:value
+#### max:value
 
 The field under validation must be less than or equal to a maximum value. Strings, numerics, arrays,
 and files are evaluated in the same fashion as the size rule.
 
-### mimetypes:text/plain,...
+#### mimetypes:text/plain,...
 
 The file under validation must match one of the given MIME types.
 
-### min:value
+#### min:value
 
 The field under validation must be greater than or equal to a minimum value. Strings, numerics, arrays,
 and files are evaluated in the same fashion as the size rule.
 
-### nullable
+#### nullable
 
 The field under validation may be null. This is particularly useful when validating primitive such as strings and integers that can contain null values.
 
-### numeric
+#### numeric
 
 The field under validation must be numeric.
 
-### regex:pattern
+#### regex:pattern
 
 The field under validation must match the given regular expression.
 
-### required
+#### required
 
 The field under validation must be present in the input data and not empty. A field is considered "empty" if one of the following conditions are true:
 
@@ -183,35 +183,35 @@ The field under validation must be present in the input data and not empty. A fi
     - The value is an empty string.
     - The value is an empty array or empty Countable object.
 
-### required_if:anotherField,value
+#### required_if:anotherField,value
 
 The field under validation must be present and not empty if the anotherfield field is equal to any value.
 
-### required_unless:anotherField,value
+#### required_unless:anotherField,value
 
 The field under validation must be present and not empty unless the anotherfield field is equal to any value.
 
-### required_with:foo,bar,...
+#### required_with:foo,bar,...
 
 The field under validation must be present and not empty only if any of the other specified fields are present.
 
-### required_with_all:foo,bar,...
+#### required_with_all:foo,bar,...
 
 The field under validation must be present and not empty only if all of the other specified fields are present.
 
-### required_without:foo,bar,...
+#### required_without:foo,bar,...
 
 The field under validation must be present and not empty only when any of the other specified fields are not present.
 
-### required_without_all:foo,bar,...
+#### required_without_all:foo,bar,...
 
 The field under validation must be present and not empty only when all of the other specified fields are not present.
 
-### same:field
+#### same:field
 
 The given field must match the field under validation.
 
-### size:value
+#### size:value
 
 The field under validation must have a size matching the given value.
 For string data, value corresponds to the number of characters.
@@ -219,11 +219,11 @@ For numeric data, value corresponds to a given integer value.
 For an array, size corresponds to the count of the array.
 For files, size corresponds to the file size in kilobytes.
 
-### string
+#### string
 
 The field under validation must be a string. If you would like to allow the field to also be null, you should assign the nullable rule to the field.
 
-### url
+#### url
 
 The field under validation must be a valid URL.
 

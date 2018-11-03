@@ -1,6 +1,6 @@
 Forms allow you to organize data, keep track of that data, and even validation.
 
-### Creating Forms
+## Creating Forms
 
 To create a form in your component you just need to call `createForm` inside your data property :
 
@@ -16,7 +16,7 @@ To create a form in your component you just need to call `createForm` inside you
     }
 ```
 
-### Checking for Dirty Forms
+## Checking for Dirty Forms
 
 You can check to see if the form is dirty by
 
@@ -24,7 +24,7 @@ You can check to see if the form is dirty by
 form.isDirty();
 ```
 
-### Filling Data
+## Filling Data
 
 Filling data allows you to add additional data than what the form started with.
 
@@ -39,7 +39,7 @@ form.data() // OUTPUT
 }
 ```
 
-### Merging Data
+## Merging Data
 
 Merging allows you to strip any data that you don't want in the object when filling.
 
@@ -53,7 +53,7 @@ form.data() // OUTPUT
 }
 ```
 
-### Removing Data
+## Removing Data
 
 When using forms, you have to use the `remove` method because of the [Vue lack of reactivity
 in some cases](https://vuejs.org/v2/guide/reactivity.html).
@@ -69,7 +69,7 @@ form.data() // OUTPUT
 }
 ```
 
-### Set Original Data
+## Set Original Data
 
 Setting the original data is useful after requests were made and you don't want your users to be able to reset the data to
 their previous values.
@@ -78,7 +78,7 @@ their previous values.
 form.setOriginaldata();
 ```
 
-### Reset Form Data
+## Reset Form Data
 
 To reset the data to its original form just use the reset function
 
