@@ -8,20 +8,20 @@ The alert system includes a mixin that allows you to access the alert service an
 ```js
     methods : {
     	shotAlerts() {
-    	    this.alertService.showInfo('info message', 'This is an Info Alert')
+    	    this.alertService.info('info message', 'This is an Info Alert')
     	}
     });
 ```
 
 ## Alert Types
 
-    - showInfo
-    - showError
-    - showSuccess
-    - showWarning
+    - info
+    - error
+    - success
+    - warning
 
 Each alert can be customized with a message, title, and a delay.
 
 ```js
-this.alertService.showWarning("Message", "Title", 10000);
+this.alertService.warning("Message", "Title", 10000);
 ```
