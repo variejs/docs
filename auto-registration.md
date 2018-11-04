@@ -17,7 +17,7 @@ Only components in the main directory are auto loaded, to allow you to create su
 
 Above structure will auto load the components `<left-nav></left-nav>` and `<alerts></alerts>`.
 
-[{.alert} While global components are handy, they can decrease the developer expierence and suggest to use it sparingly]
+[{.alert} While global components are handy, they can decrease the developer experience and suggest to use it sparingly]
 
 ## Mixins
 
