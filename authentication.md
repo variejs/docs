@@ -83,13 +83,17 @@ Example :
 To use this middleware add it to the groups middleware
 
 ```js
+import Auth from "./middleware/Auth";
+
 $router
   .prefix("/admin")
-  .middleware(middleware.Auth)
+  .middleware([Auth])
   .group(() => {
     $router.route("dashboard", Dashboard);
   });
 ```
+
+[{.info} The auth package also comes with another middleware called NoAuth to make sure authed users cannot access these areas.]
 
 ### HTTP Requests
 
