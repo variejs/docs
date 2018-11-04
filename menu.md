@@ -17,8 +17,8 @@
   - [Views](/docs/{{version}}/views)
   - [Routing](/docs/{{version}}/routing)
   - [Forms](/docs/{{version}}/forms)
-  - [HTTP Requests](/docs/{{version}}/requests)
   - [Validation](/docs/{{version}}/validation)
+  - [HTTP Requests](/docs/{{version}}/requests)
   - [State Management](/docs/{{version}}/state)
 - ### Plugins
   - [Alerts](/docs/{{version}}/alerts)
