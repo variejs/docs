@@ -93,7 +93,7 @@ $router
   });
 ```
 
-[{.info} The auth package also comes with another middleware called NoAuth to make sure authed users cannot access these areas.]
+[{.info} The auth package also comes with another middleware called `NoAuth` to make sure authenticated users cannot access these areas.]
 
 ### HTTP Requests
 
