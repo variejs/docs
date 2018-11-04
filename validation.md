@@ -1,5 +1,3 @@
-[{.alert} We are working on a different more robust version of validation, and will not be the same "string" api.]
-
 ## Validating Your Forms
 
 You can validate your forms by adding [validation rules](#available-validation-rules) to your form data.
