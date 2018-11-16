@@ -18,7 +18,7 @@ To get started, install the auth plugin `$ npm install varie-auth-plugin` and ru
 
 `$ varie publish:varie-auth-plugin`
 
-[{.info} You should have already installed the varie cli globally if not run "install --global varie-cli"]
+[{.info} You should have already installed the varie cli globally if not run "$ npm install --global varie-cli"]
 
 You must then register the service provider
 
