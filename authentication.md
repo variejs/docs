@@ -25,13 +25,13 @@ You must then register the service provider
 You need to add the service provider to the `config/app.ts`
 
 ```js
-import AuthenticationServiceProvider from "@app/providers/AuthProvider";
+import AuthServiceProvider from "@app/providers/AuthServiceProvider";
 
 
 providers: {
   ...
 
-  AuthenticationServiceProvider
+  AuthServiceProvider,
 
   ...
 }
@@ -83,13 +83,17 @@ Example :
 To use this middleware add it to the groups middleware
 
 ```js
+import Auth from "./middleware/Auth";
+
 $router
   .prefix("/admin")
-  .middleware(middleware.Auth)
+  .middleware([Auth])
   .group(() => {
     $router.route("dashboard", Dashboard);
   });
 ```
+
+[{.info} The auth package also comes with another middleware called `NoAuth` to make sure authenticated users cannot access these areas.]
 
 ### HTTP Requests
 
@@ -181,7 +185,7 @@ These views were placed in 'views/auth' and 'routes/authRoutes'. Feel free to cu
 
 The auth service has some helpful functions to jump start your application.
 
-### Getting the User
+### Getting the User Data from the API
 
 You can get the user for a guard by calling the `getUser`.
 
@@ -197,4 +201,13 @@ You can check if the user is currently logged in
 ```js
 this.authService.isloggedIn("guard");
 this.authService.isLoggedIn(); // uses the default guard
+```
+
+### Getting The User In Your Components
+
+To get the user in your components you should use the store getter `auth/user`.
+
+```js
+this.$store.getters["auth/user"]("guardName");
+this.$store.getters["auth/user"](); // uses the default guard
 ```
