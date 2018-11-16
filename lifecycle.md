@@ -13,7 +13,7 @@ There are two phases that happen while bootstrapping the application up.
 ### Register Phase
 
 During the register phase, each service provider is binding services
-to the application to make them available for $app to use.
+to the application to make them available for \$app to use.
 
 ### Boot Phase
 

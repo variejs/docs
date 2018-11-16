@@ -16,7 +16,7 @@ Varie providers provides two authentication drivers:
 
 To get started, install the auth plugin `$ npm install varie-auth-plugin` and run the publish command.
 
-`$ varie publish:varie-auth-plugin`
+`$ varie publish varie-auth-plugin`
 
 [{.info} You should have already installed the varie cli globally if not run "$ npm install --global varie-cli"]
 

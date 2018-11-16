@@ -25,10 +25,11 @@ You can validate your forms by adding [validation rules](#available-validation-r
 You can then use `form.isValid()` and `form.errors()` to add additional functionality to your forms
 
 ```vue
-    <pre>
+<pre>
         {{ form.errors() }}
-    </pre>
-    <button :disabled="!form.isValid()">Submit</button>
+    </pre
+>
+<button :disabled="!form.isValid()">Submit</button>
 ```
 
 ### Attaching Errors to inputs
@@ -36,11 +37,11 @@ You can then use `form.isValid()` and `form.errors()` to add additional function
 To attach errors to your inputs we can use the varie form directive along with what fields you wish to validate
 
 ```vue
-    <form v-form="form" @submit.prevent="doSomeAction()">
-        <input type="text" name="user.name" v-model="form.user.name" validate>
-        <input type="text" name="user.email" v-model="form.user.email" validate>
-        <button :disabled="!form.isValid()">Submit</button>
-    </form>
+<form v-form="form" @submit.prevent="doSomeAction();">
+  <input type="text" name="user.name" v-model="form.user.name" validate />
+  <input type="text" name="user.email" v-model="form.user.email" validate />
+  <button :disabled="!form.isValid()">Submit</button>
+</form>
 ```
 
 [{.alert} Important : you must map to your values location in the form by using the name attribute]
@@ -49,38 +50,38 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 <div class="collection-list">
 
-[accepted](#accepted)
-[after](#after)
-[after_or_equal](#after_or_equal)
-[alpha](#alpha)
-[alpha_num](#alpha-num)
-[array](#array)
-[before](#before)
-[before_or_equal](#before_or_equal)
-[between](#between)
-[boolean](#boolean)
-[confirmed](#confirmed)
-[date](#date)
-[different](#different)
-[email](#email)
-[image](#image)
-[integer](#integer)
-[max](#max)
-[mimetypes](#mimetypes)
-[min](#min)
-[nullable](#nullable)
-[numeric](#numeric)
-[regex](#regex)
-[required](#required)
-[required_if](#required_if)
-[required_unless](#required_unless)
-[required_with](#required_with)
-[required_with_all](#required_with_all)
-[required_without](#required_without)
-[required_without_all](#required_without_all)
-[same](#same)
-[size](#size)
-[string](#string)
+[accepted](#accepted)
+[after](#after)
+[after_or_equal](#after_or_equal)
+[alpha](#alpha)
+[alpha_num](#alpha-num)
+[array](#array)
+[before](#before)
+[before_or_equal](#before_or_equal)
+[between](#between)
+[boolean](#boolean)
+[confirmed](#confirmed)
+[date](#date)
+[different](#different)
+[email](#email)
+[image](#image)
+[integer](#integer)
+[max](#max)
+[mimetypes](#mimetypes)
+[min](#min)
+[nullable](#nullable)
+[numeric](#numeric)
+[regex](#regex)
+[required](#required)
+[required_if](#required_if)
+[required_unless](#required_unless)
+[required_with](#required_with)
+[required_with_all](#required_with_all)
+[required_without](#required_without)
+[required_without_all](#required_without_all)
+[same](#same)
+[size](#size)
+[string](#string)
 [url](#url)
 
 </div>
