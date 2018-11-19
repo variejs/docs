@@ -50,39 +50,79 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 <div class="collection-list">
 
-[accepted](#accepted)
-[after](#after)
-[after_or_equal](#after_or_equal)
-[alpha](#alpha)
-[alpha_num](#alpha-num)
-[array](#array)
-[before](#before)
-[before_or_equal](#before_or_equal)
-[between](#between)
-[boolean](#boolean)
-[confirmed](#confirmed)
-[date](#date)
-[different](#different)
-[email](#email)
-[image](#image)
-[integer](#integer)
-[max](#max)
-[mimetypes](#mimetypes)
-[min](#min)
-[nullable](#nullable)
-[numeric](#numeric)
-[regex](#regex)
-[required](#required)
-[required_if](#required_if)
-[required_unless](#required_unless)
-[required_with](#required_with)
-[required_with_all](#required_with_all)
-[required_without](#required_without)
-[required_without_all](#required_without_all)
-[same](#same)
-[size](#size)
-[string](#string)
-[url](#url)
+[accepted](#accepted)
+
+[after](#after)
+
+[after_or_equal](#after_or_equal)
+
+[alpha](#alpha)
+
+[alpha_num](#alpha-num)
+
+[array](#array)
+
+[before](#before)
+
+[before_or_equal](#before_or_equal)
+
+[between](#between)
+
+[boolean](#boolean)
+
+[confirmed](#confirmed)
+
+[date](#date)
+
+[different](#different)
+
+[email](#email)
+
+[image](#image)
+
+[integer](#integer)
+
+[max](#max)
+
+<#mimetypes>
+
+#### accept
+
+The field under valid
+
+#### after:date
+
+
+
+The field under
+
+#### after_or_equal:d
+
+The field under validation
+
+#### alpha
+
+The field under valid
+
+The field under validation must
+
+#### alpha_num
+
+The field under valid
+
+The field under validation must conta
+
+#### array
+
+The field under validation must
+
+The field und
+
+#### before:d
+
+The field under v
+
+#### before
 
 </div>
 
@@ -180,9 +220,11 @@ The field under validation must match the given regular expression.
 
 The field under validation must be present in the input data and not empty. A field is considered "empty" if one of the following conditions are true:
 
-    - The value is null.
-    - The value is an empty string.
-    - The value is an empty array or empty Countable object.
+```
+- The value is null.
+- The value is an empty string.
+- The value is an empty array or empty Countable object.
+```
 
 #### required_if:anotherField,value
 
