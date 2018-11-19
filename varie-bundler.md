@@ -6,6 +6,12 @@ just in case you want to have more control over how your application is built.
 
 This builds the webpack config to be used by webpack or your IDE.
 
+## Running the build
+
+To build your applicatyion you just need to run
+
+`$ npm run dev` or if you wish to build a modern build `$ npm run build -- --modern`
+
 ## Aliases
 
 We define some default path aliases for you already, but you can change these
@@ -123,3 +129,68 @@ To inspect your configuration just add the `inspect` flag to your npm build comm
 ```
 $ npm run dev -- --inspect`
 ```
+
+## Browser Comparability
+
+Varie provides ways to choose your browser capability with The `.browerlistrc` and the `babel.config.js`.
+
+### BrowserList
+
+The BrowserList file allows to specify which browsers should be compatible with your build. These configurations
+will be used by `autoprefixer` and `babel`.
+
+Varie uses `defaults` for its default which you can see on [browserl.ist](https://browserl.ist/)
+
+### Babel.config.js
+
+This config allows you to pass all options into `@babel/preset-env`, you can review those options (here)[https://babeljs.io/docs/en/babel-preset-env].
+
+### Polyfills
+
+```js
+// babel.config.js
+module.exports = {
+  presets: [
+    [
+      "varie-app",
+      {
+        polyfills: ["es6.symbol"]
+      }
+    ]
+  ]
+};
+```
+
+#### JSX
+
+To enable JSX pass `jsx` in the babel options.
+
+```js
+// babel.config.js
+module.exports = {
+  presets: [
+    [
+      "varie-app",
+      {
+        jsx: true
+      }
+    ]
+  ]
+};
+```
+
+#### BrowserList
+
+BrowserList is a way to manage what browsers you support. There is a file called `browserlistrc` which determines
+what features should be compatible with.
+
+### Modern Build
+
+The bundler supports a modern build configuration in which it will build two sets of assets. One that produces a
+legacy bundle for older browsers that do not support some of the newer features.
+
+- Browsers that support the `type` of `module` will download the modern build.
+- Legacy browsers will not download the modern build and instead will use the legacy build automatically
+  - The Safari 10 fix is automatically injected into the template
+
+[{.info} While the size may seem small, the code parsing and evaluation should improve overall performance of your app.]
