@@ -35,10 +35,10 @@ your applications, your way.
 ## Why Use Varie ?
 
 Things change over time, with javascript's ecosystem changing daily so should
-the way you write things. With Varie your able to focus on developing
+the way you write things. With Varie you're able to focus on developing
 skills that transfer across any project.
 
 Or maybe you don't like how a framework made a certain choice for you and
-your unable to change it. Varie gives the power to the developer, free to
+you're unable to change it. Varie gives the power to the developer, free to
 customize your application the way you need it. Don't like our validation system?
 Throw it out, and put in your own validation system with a Service Provider!
