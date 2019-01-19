@@ -115,19 +115,21 @@ $router
 ```
 
 ### Additional Data
+
 Sometimes you need to add some data to a group so it has access to that data.
 
-   $router
+$router
         .data({ subNavText : "Welcome Back!" })
         .group(() => {
             $router.route(":version?/:page?", Docs).setName("docs");
-        });
+});
 
 You then can access that data in the component inside the meta.
 
-```js 
-    let subNavText = this.$route.meta.data.subNavText
+```js
+let subNavText = this.$route.meta.data.subNavText;
 ```
+
 ## Middleware
 
 You can easily attach middleware to specific routes by attaching them on the group

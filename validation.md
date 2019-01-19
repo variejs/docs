@@ -27,8 +27,7 @@ You can then use `form.isValid()` and `form.errors()` to add additional function
 ```vue
 <pre>
         {{ form.errors() }}
-    </pre
->
+    </pre>
 <button :disabled="!form.isValid()">Submit</button>
 ```
 
@@ -37,7 +36,7 @@ You can then use `form.isValid()` and `form.errors()` to add additional function
 To attach errors to your inputs we can use the varie form directive along with what fields you wish to validate
 
 ```vue
-<form v-form="form" @submit.prevent="doSomeAction();">
+<form v-form="form" @submit.prevent="doSomeAction()">
   <input type="text" name="user.name" v-model="form.user.name" validate />
   <input type="text" name="user.email" v-model="form.user.email" validate />
   <button :disabled="!form.isValid()">Submit</button>
@@ -84,7 +83,35 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 [max](#max)
 
-<#mimetypes>
+[mimetypes](#mimetypes)
+
+[min](#min)
+
+[numeric](#numeric)
+
+[regex](#regex)
+
+[required](#required)
+
+[required_if](#required_if)
+
+[required_unless](#required_unless)
+
+[required_with](#required_with)
+
+[required_with_all](#required_with_all)
+
+[required_without_all](#required_without_all)
+
+[same](#same)
+
+[size](#size)
+
+[string](#string)
+
+[url](#url)
+
+</div>
 
 #### accepted
 
