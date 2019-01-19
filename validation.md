@@ -86,57 +86,17 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 <#mimetypes>
 
-#### accept
-
-The field under valid
-
-#### after:date
-
-
-
-The field under
-
-#### after_or_equal:d
-
-The field under validation
-
-#### alpha
-
-The field under valid
-
-The field under validation must
-
-#### alpha_num
-
-The field under valid
-
-The field under validation must conta
-
-#### array
-
-The field under validation must
-
-The field und
-
-#### before:d
-
-The field under v
-
-#### before
-
-</div>
-
 #### accepted
 
 The field under validation must be yes, on, 1, or true.
 
 #### after:date
 
-The field under validation must be a date that's after the specified date (defaults to now).
+The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's after the specified date (defaults to now).
 
 #### after_or_equal:date
 
-The field under validation must be a date that's after or equal to the specified date (defaults to now).
+The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's after or equal to the specified date (defaults to now).
 
 #### alpha
 
@@ -152,11 +112,11 @@ The field under validation must be an array.
 
 #### before:date
 
-The field under validation must be a date that's before the specified date (defaults to now).
+The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's before the specified date (defaults to now).
 
 #### before_or_equal:date
 
-The field under validation must be a date that's before or equal to the specified date (defaults to now).
+The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's before or equal to the specified date (defaults to now).
 
 #### between:min,max
 
