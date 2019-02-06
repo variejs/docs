@@ -20,7 +20,7 @@ customize some options, this is what is being used in our bundler :
 - [Image optimizations for JPEG / PNG / GIF](https://github.com/tcoopman/image-webpack-loader)
 - [Vue](https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only)
   - Uses runtime only
-  - To use the runtime and compiler checkout [Using Vue Runtime & Compiler](#using-vue-runtime-&-compiler).
+  - To use the runtime and compiler checkout [Using Vue Runtime & Compiler](#using-vue-runtime-compiler).
 
 #### Advanced Features
 
