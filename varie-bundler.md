@@ -243,6 +243,7 @@ legacy bundle for older browsers that do not support some of the newer features.
 
 To use the runtime and compiler you can pass in via the options parameter :
 
+
 ```js
 const path = require("path");
 const VarieBundler = require("varie-bundler");
