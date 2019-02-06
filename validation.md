@@ -87,6 +87,8 @@ To attach errors to your inputs we can use the varie form directive along with w
 
 [min](#min)
 
+[nullable](#nullable)
+
 [numeric](#numeric)
 
 [regex](#regex)
@@ -100,6 +102,8 @@ To attach errors to your inputs we can use the varie form directive along with w
 [required_with](#required_with)
 
 [required_with_all](#required_with_all)
+
+[required_without](#required_without)
 
 [required_without_all](#required_without_all)
 
@@ -119,11 +123,11 @@ The field under validation must be yes, on, 1, or true.
 
 #### after:date
 
-The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's after the specified date (defaults to now).
+The field under validation must be a date that's after the specified date (defaults to now).
 
 #### after_or_equal:date
 
-The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's after or equal to the specified date (defaults to now).
+The field under validation must be a date that's after or equal to the specified date (defaults to now).
 
 #### alpha
 
@@ -139,11 +143,11 @@ The field under validation must be an array.
 
 #### before:date
 
-The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's before the specified date (defaults to now).
+The field under validation must be a date that's before the specified date (defaults to now).
 
 #### before_or_equal:date
 
-The field under validation must be a date (JavaScripts `Date` / ISO8601 / RFC3339 format) that's before or equal to the specified date (defaults to now).
+The field under validation must be a date that's before or equal to the specified date (defaults to now).
 
 #### between:min,max
 
@@ -207,11 +211,9 @@ The field under validation must match the given regular expression.
 
 The field under validation must be present in the input data and not empty. A field is considered "empty" if one of the following conditions are true:
 
-```
-- The value is null.
-- The value is an empty string.
-- The value is an empty array or empty Countable object.
-```
+    - The value is null.
+    - The value is an empty string.
+    - The value is an empty array or empty Countable object.
 
 #### required_if:anotherField,value
 
