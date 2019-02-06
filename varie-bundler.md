@@ -174,7 +174,6 @@ To inspect your configuration just add the `inspect` flag to your npm build comm
 $ npm run dev -- --inspect`
 ```
 
-<<<<<<< HEAD
 ## Browser Comparability
 
 Varie provides ways to choose your browser capability with The `.browerlistrc` and the `babel.config.js`.
