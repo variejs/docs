@@ -2,9 +2,53 @@ Varie comes with a bundler so you don't have to worry about configuration.
 It also comes with a fluent interface to help modify the webpack config,
 just in case you want to have more control over how your application is built.
 
-## Build
+## Features
 
-This builds the webpack config to be used by webpack or your IDE.
+There is is quite a bit that goes into a webpack bundler. You may need to
+customize some options, this is what is being used in our bundler :
+
+- [Babel](https://github.com/babel/babel)
+- [SASS](https://github.com/webpack-contrib/sass-loader)
+- [HTML](https://github.com/webpack-contrib/html-loader)
+- [TypeScript](https://github.com/TypeStrong/ts-loader)
+- [Browsersync](https://www.browsersync.io/)
+- [Friendly Webpack Errors](https://github.com/geowarin/friendly-errors-webpack-plugin)
+- [Aggressive Code Splitting](https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting)
+- [Hot Module Reloading (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)
+- [Case Sensitivity Path Checks](https://github.com/Urthen/case-sensitive-paths-webpack-plugin)
+- [Automation of cleaning of old builds](https://github.com/johnagan/clean-webpack-plugin)
+- [Image optimizations for JPEG / PNG / GIF](https://github.com/tcoopman/image-webpack-loader)
+- [Vue](https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only)
+  - Uses runtime only
+  - To use the runtime and compiler checkout [Using Vue Runtime & Compiler](#using-vue-runtime-compiler).
+
+#### Advanced Features
+
+- [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+- Modern builds with legacy fallback
+
+### Basic Example
+
+```js
+const path = require("path");
+const VarieBundler = require("varie-bundler");
+
+module.exports = function(env, argv) {
+  return new VarieBundler(argv, __dirname)
+    .entry("app", ["app/app.ts", "resources/sass/app.scss"])
+    .aliases({
+      "@app": path.join(__dirname, "app"),
+      "@views": path.join(__dirname, "views"),
+      "@store": path.join(__dirname, "store"),
+      "@config": path.join(__dirname, "config"),
+      "@routes": path.join(__dirname, "routes"),
+      "@models": path.join(__dirname, "app/models"),
+      "@resources": path.join(__dirname, "resources"),
+      "@components": path.join(__dirname, "app/components")
+    })
+    .build();
+};
+```
 
 ## Running the build
 
@@ -194,3 +238,32 @@ legacy bundle for older browsers that do not support some of the newer features.
   - The Safari 10 fix is automatically injected into the template
 
 [{.info} While the size may seem small, the code parsing and evaluation should improve overall performance of your app.]
+
+## Using Vue Runtime & Compiler
+
+To use the runtime and compiler you can pass in via the options parameter :
+
+```js
+const path = require("path");
+const VarieBundler = require("varie-bundler");
+
+module.exports = function(env, argv) {
+  return new VarieBundler(argv, __dirname, {
+    vue: {
+      runtimeOnly: false
+    }
+  })
+    .entry("app", ["app/app.ts", "resources/sass/app.scss"])
+    .aliases({
+      "@app": path.join(__dirname, "app"),
+      "@views": path.join(__dirname, "views"),
+      "@store": path.join(__dirname, "store"),
+      "@config": path.join(__dirname, "config"),
+      "@routes": path.join(__dirname, "routes"),
+      "@models": path.join(__dirname, "app/models"),
+      "@resources": path.join(__dirname, "resources"),
+      "@components": path.join(__dirname, "app/components")
+    })
+    .build();
+};
+```
