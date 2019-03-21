@@ -221,7 +221,8 @@ as well as the source for [varie-bundler](https://github.com/variejs/varie-bundl
 You can analyze your bundle with [webpack analyse](https://github.com/webpack/analyse)
 
 ```
-$ npm run analyze
+$ npm run analyze-dev
+$ npm run analyze-prod
 ```
 
 ## Inspecting Configuration
@@ -229,7 +230,8 @@ $ npm run analyze
 To inspect your configuration add the `inspect` flag to your npm build command.
 
 ```
-$ npm run dev -- --inspect`
+$ npm run inspect-dev
+$ npm run inspect-prod
 ```
 
 ## Browser Comparability
@@ -294,6 +296,13 @@ legacy bundle for older browsers that do not support some of the newer features.
 - Browsers that support the `type` of `module` will download the modern build.
 - Legacy browsers will not download the modern build and instead will use the legacy build automatically
   - The Safari 10 fix is automatically injected into the template
+
+
+```
+$ npm run dev-modern
+$ npm run prod-modern
+```
+
 
 [{.info} While the size may seem small, the code parsing and evaluation should improve overall performance of your app.]
 
