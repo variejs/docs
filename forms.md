@@ -21,35 +21,35 @@ To create a form in your component you just need to call `createForm` inside you
 You can check to see if the form is dirty by
 
 ```js
-form.isDirty();
+form.$isDirty();
 ```
 
 ## Filling Data
 
-Filling data allows you to add additional data than what the form started with.
+Filling data strips any keys that were not there when the form was created.
 
 ```js
 let form = new Form({ name : 'varie' })
-form.fill({ url : 'https://varie.io' });
+form.$fill({ url : 'https://varie.io' });
 
-form.data() // OUTPUT
+form.$data() // OUTPUT
 {
  name : 'varie',
- url : 'https://varie.io'
 }
 ```
 
-## Merging Data
+## Setting Data
 
-Merging allows you to strip any data that you don't want in the object when filling.
+Setting data allows you to set data even if that key did not exist before.
 
 ```js
 let form = new Form({ name : 'varie' })
-form.merge({ url : 'https://varie.io' });
+form.$set({ url : 'https://varie.io' });
 
-form.data() // OUTPUT
+form.$data() // OUTPUT
 {
  name : 'varie',
+ url : 'https://varie.io'
 }
 ```
 
@@ -61,9 +61,9 @@ in some cases](https://vuejs.org/v2/guide/reactivity.html).
 ```js
 let form = new Form({ name : 'varie' }, { url : 'https://varie.io' })
 
-form.remove('url');
+form.$remove('url');
 
-form.data() // OUTPUT
+form.$data() // OUTPUT
 {
  name : 'varie',
 }
@@ -75,7 +75,22 @@ Setting the original data is useful after requests were made and you don't want 
 their previous values.
 
 ```js
-form.setOriginaldata();
+form.$setAsOriginalData();
+```
+
+```js
+let form = new Form({ name : 'varie' })
+form.$set({ url : 'https://varie.io' }).$setAsOriginalData();
+
+form.$fill({
+  name : 'varie is awesome!'
+})
+
+form.$reset().$data() // OUTPUT
+{
+ name : 'varie',
+ url : 'https://varie.io'
+}
 ```
 
 ## Reset Form Data
@@ -84,22 +99,23 @@ To reset the data to its original form just use the reset function
 
 ```js
 let form = new Form({ name : 'varie' })
-form.fill({ url : 'https://varie.io' });
+form.$set({ url : 'https://varie.io' });
 
-form.reset() // OUTPUT
+form.$reset().$data() // OUTPUT
 {
  name : 'varie',
 }
 ```
 
-Or you can use initial() to go back to the initial state when newing up the form
+Or you can use `$resetToInitial()` to go back to the initial state when newing up the form
 
 ```js
 let form = new Form({ name : 'varie' }, { url : 'https://varie.io' })
-form.fill({ name : 'varie is awesome!'});
-form.setOriginaldata();
+form.$fill({ name : 'varie is awesome!'});
 
-form.initial() // OUTPUT
+form.$set({ url : 'https://varie.io' }).$setAsOriginalData();
+
+form.$resetToInitial().$data() // OUTPUT
 {
  name : 'varie',
  url : 'https://varie.io'

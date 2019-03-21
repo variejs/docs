@@ -7,7 +7,7 @@ The alert system includes a mixin that allows you to access the alert service an
 
 ```js
     methods : {
-    	shotAlerts() {
+    	showAlert() {
     	    this.alertService.info('info message', 'This is an Info Alert')
     	}
     });
@@ -23,5 +23,8 @@ The alert system includes a mixin that allows you to access the alert service an
 Each alert can be customized with a message, title, and a delay.
 
 ```js
-this.alertService.warning("Message", "Title", 10000);
+this.alertService.info("Message", "Info", 3000);
+this.alertService.error("Message", "Error", 0);
+this.alertService.warning("Message", "Warning", 5000);
+this.alertService.success("Message", "Success", 3000);
 ```

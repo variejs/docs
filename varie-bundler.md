@@ -297,12 +297,10 @@ legacy bundle for older browsers that do not support some of the newer features.
 - Legacy browsers will not download the modern build and instead will use the legacy build automatically
   - The Safari 10 fix is automatically injected into the template
 
-
 ```
 $ npm run dev-modern
 $ npm run prod-modern
 ```
-
 
 [{.info} While the size may seem small, the code parsing and evaluation should improve overall performance of your app.]
 
