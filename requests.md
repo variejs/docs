@@ -209,7 +209,7 @@ The response comes back as a Promise so you can successful responses and handle 
 Each returns a promise so you can get the response :
 
 ```js
-httpService.get("url").then(response => {
+httpService.get("url").then((response) => {
   this.data = response.data;
 });
 ```
@@ -231,8 +231,7 @@ You can take a look at the included middleware `app/middleware/LoadingScreen` fo
 
 ### Registering Middleware
 
-To register you will need to open the `app/middleware/index` file inside the middleware folder and add it in the correct spot.
-This allows you to customize the order of your middleware.
+To register you will need to open the `app/middleware/index` and register the middleware in the order you wish them to run.
 
 ## Unregister App Middleware for a route
 
@@ -244,7 +243,7 @@ import MiddlewareClass from "app/middleware/MiddlewareClass";
 httpService
   .unregisterMiddleware(MiddlewareClass)
   .get("url")
-  .then(response => {
+  .then((response) => {
     this.data = response.data;
   });
 ```

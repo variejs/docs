@@ -11,7 +11,7 @@ You can pass environment variables through webpack
 
 ```js
     // webpack.config.js
-    .config({
+    .varieConfig({
         app : {
             someKey : "someValue"
         }
@@ -32,7 +32,7 @@ You can access the configuration values by using our helper `$config`
 let value = $config.get("app.name");
 ```
 
-You can also easily set the value
+You can also set the value:
 
 ```js
 $config.set("app.name", "My New App Name!");
@@ -44,16 +44,30 @@ Varie comes with some path aliases to help out with development.
 These are customizable but cannot be removed as internal and plugin providers may use these.
 
 ```js
- "@app": path.join(__dirname, "app"),
- "@routes": path.join(__dirname, "routes"),
- "@config": path.join(__dirname, "config"),
- "@store": path.join(__dirname, "app/store"),
- "@models": path.join(__dirname, "app/models"),
- "@resources": path.join(__dirname, "resources"),
- "@views": path.join(__dirname, "resources/views"),
- "@components": path.join(__dirname, "app/components")
+    {
+      "@app": "app",
+      "@views": "views",
+      "@store": "store",
+      "@config": "config",
+      "@routes": "routes",
+      "@models": "app/models",
+      "@resources": "resources",
+      "@components": "app/components",
+    }
 ```
 
 To customize the aliases, change the values in the `webpack.config.js` and `tsconfig.json` files.
 
 [{.alert} Currently our CLI cannot determine what paths you have set, if your using the CLI please do not change these values]
+
+## Custom Varie Path
+
+If your change the location of your Varie instance (ex. /resources/assets/js), inside `package.json` add a new key :
+
+```js
+  ...
+
+  "variePath": "resources/js",
+
+  ...
+```

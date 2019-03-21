@@ -1,6 +1,5 @@
-By explaining the lifecycle we hope that it gives you a foundation on how
-Varie builds things together. This will help to conceptually understand
-when things load and how you can effectively build upon Varie.
+This document gives a high overview on how Varie works. This will help you
+understand what happens each time someone hits your page for the first time.
 
 ## Entry
 
@@ -25,10 +24,7 @@ During this phase you have access all all services as they have been registered 
 
 Once those phases are completed, Vue finally gets to take over and act like any other VueJS application.
 
-## Its All About them Service Providers
+## Takeaway
 
 The entire application is built upon this premise of these service providers. Take a look in
-the `config/app` file and you can see how the application builds it self, the entire application is
-built from that list.
-
-This gives the you the developer greater control of the application and build it how you want.
+the `config/app` file and you can see how the application builds it self.

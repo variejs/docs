@@ -1,5 +1,5 @@
 Service providers allow to us to bind things to our application. In fact Varie it self uses service providers to boot all the necessary components to create the actual application.
-These providers are meant for registering things, such as services, middleware , constants, routes and more. Most of the application providers are deferred and are only loaded when actually called from the container.
+These providers are meant for registering services, middleware constants, routes and more. Most of the application providers are deferred and are only loaded when actually called from the container.
 
 ## Creating a Service Provider
 
@@ -11,7 +11,7 @@ The Varie CLI tool can generate a new service provider for you
 
 ### The Register Method
 
-The register method is meant to bind things to the service container. You can review how to bind things to the container in the [service container](/docs/{{version}}/container) documentation.
+The register method is meant to bind things to the service container. You can review how to bind things to the container in the [service container](/docs/{{version}}/service-container) documentation.
 
 ```js
     import { injectable } from "inversify";
@@ -21,7 +21,8 @@ The register method is meant to bind things to the service container. You can re
     @injectable()
     export default class DocumentationProvider extends ServiceProvider {
       public register() {
-        this.app.singleton("$documentationService", DocumentationService);
+        this.app.singleton("DocumentationService", DocumentationService);
+        this.app.singleton("DocumentationService", DocumentationService);
       }
     }
 ```
@@ -34,8 +35,25 @@ The boot method occurs after ALL service providers have been registered and have
 
 ## Registering Service Providers
 
-All service providers are registered in `config/app`. This file contains other service providers already added to application. Just add your provider by adding it to the array.
+All service providers are registered in `config/app`. This file contains other service providers already added to application.
 
-## Learn More
+```js
+ providers: {
+    /*
+     * Varie Framework Service Providers...
+     */
+    ConfigServiceProvider,
+    CookieServiceProvider,
+    StorageServiceProvider,
+    HttpServiceProvider,
+    StateServiceProvider,
+    RoutingServiceProvider,
+    ...
 
-[{.info} To learn more checkout [InversifyJS wiki](https://github.com/inversify/InversifyJS/blob/master/wiki/readme.md)]
+    DocumentationProvider,
+
+    ...
+
+
+  }
+```

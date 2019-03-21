@@ -1,4 +1,4 @@
-Your views are just vue components. But we do make a suggestion on how to organize your components with layouts and
+Your views are just Vue components. Varie makes a suggestion on how to organize your components with layouts and
 directory structures.
 
 [{.info} To learn more about components go to [Vue's Documentation](https://vuejs.org/v2/guide/components.html).]

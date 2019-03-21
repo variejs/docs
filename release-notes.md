@@ -1,13 +1,21 @@
 [{.alert} Assume each minor version contains breaking versions until stable release!]
 
+## 0.9.0 - 0.12.0 (Beta)
+
+- Alert Service API changed
+- Validation Fixes
+- Stubs are now included in the framework rather than the CLI
+- Route Fixes
+
+Breaking Changes :
+
+- Http Interfaces
+
+Look through all the updates made to the [varie repository](https://github.com/variejs/varie/compare/468c0c4d9c6a737316f50efed81b11041c6fcdeb...master)
+
 ## 0.4.0 - 0.9.0 (Beta)
 
 - The injection for `routerService` was renamed to `RouterService`
-- The injection for `storeService` was renamed to `StateService` across the entire application
-- Route middleware now expects the actual middleware class instead of the string
-- [Provider Import names were updated](https://github.com/variejs/varie/blob/75a772221171c86b3f4198e902c149e7fc6b46ce/config/app.ts)
-- Notifications was renamed to Alerts
-- The injection for `notificationService` was renamed to `AlertService`
 
 ## 0.3.0 (Beta)
 

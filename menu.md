@@ -20,6 +20,7 @@
   - [Validation](/docs/{{version}}/validation)
   - [HTTP Requests](/docs/{{version}}/requests)
   - [State Management](/docs/{{version}}/state)
+  - [Dependency Injection](/docs/{{version}}/dependency-injection)
 - ### Plugins
   - [Alerts](/docs/{{version}}/alerts)
   - [Authentication](/docs/{{version}}/authentication)

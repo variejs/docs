@@ -7,6 +7,7 @@ Varie's source code is managed on GitHub and there are repositories for each of 
 - [Varie Bundler](https://github.com/variejs/varie-bundler)
 - [Varie Framework](https://github.com/variejs/framework)
 - [Varie Auth Plugin](https://github.com/variejs/varie-auth-plugin)
+- [Varie Babel Preset](https://github.com/variejs/babel-preset-varie-app)
 
 ### Setup
 

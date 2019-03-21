@@ -4,7 +4,19 @@ The service container is a way to manage dependencies and performing dependency 
 
 You should for the most part always bind in a service provider, and we have provided one for you to get started in `app/providers`.
 
-### Basic Binding
+### Binding Interfaces to Implementations
+
+Binding a interface to an implementation allows us to inject its implementation just based on the interface we want to use.
+For instance, we have a `DocumentationInterface`. Then we have a implementation of that interface, lets say `VarieDocumentationService`.
+Now we can resolve `DocumentationService` to VarieDocumentationService.
+
+```js
+this.app.bind <
+  DocumentationInterface >
+  ("DocumentationService", VarieDocumentationService);
+```
+
+### Value Binding
 
 Within your service provider you have access to `this.app` which is your app instance and can bind things to it. We are able to bind and resolve with the `app` object.
 
@@ -24,41 +36,9 @@ this.app.singleton("$searchService", () => {
 });
 ```
 
-### Binding Interfaces to Implementations
-
-Binding a interface to an implementation allows us to inject its implementation just based on the interface we want to use.
-For instance, we have a `DocumentationInterface`. Then we have a implementation of that interface, lets say `VarieDocumentationService`. Now we can resolve `DocumentationService` to VarieDocumentationService.
-
-```js
-this.app.bind <
-  DocumentationInterface >
-  ("DocumentationService", VarieDocumentationService);
-```
-
-By doing this it allows us switch out implementations quickly without changing the rest of our application!
-
 ## Resolving Dependencies
 
-To resolve from the container, we just need to make a call from the app
-
-```js
-let documentationService = this.app.make("DocumentationService");
-```
-
-### Component Injection
-
-Its also important to note that you can do dependency injection within components :
-
-```js
- $inject: ["DocumentationService"]
-  computed : {
-    menu() {
-        return this.documentationService.getMenu();
-    }
-  }
-```
-
-This will bind `$http` to the component just like any other method.
+[Dependency Injection](/docs/{{version}}/dependency-injection) documentation.
 
 ### Framework Services Available
 

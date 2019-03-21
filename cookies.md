@@ -1,4 +1,4 @@
-Varie lets you interact with the cookies.
+Varie provides a service that interacts with cookies.
 
 ## Setting
 

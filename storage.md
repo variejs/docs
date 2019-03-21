@@ -1,4 +1,4 @@
-Varie lets you interact with the local storage.
+Varie provides a service that interacts with local storage.
 
 ## Setting
 

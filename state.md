@@ -2,7 +2,7 @@ Varie makes use of the Vuex system the only difference is the registration of th
 
 ## Creating Stores
 
-To create a new store use the Varie Cli to create it in the directory you wish to create it in
+To create a new store use the Varie Cli to create it in the directory you wish to create it in:
 
 `$ varie make:store <store-name>`
 
@@ -14,7 +14,7 @@ this.$store.registerStore(YourNewStore);
 
 ### Using Models
 
-Models help to organize and let our IDE how these models will look like and can be useful for displaying , validating,
+Models help to organize and let our IDE how these models will look like and can be useful for displaying, validating,
 reusability of the data.
 
 To create models by using

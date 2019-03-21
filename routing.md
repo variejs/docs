@@ -13,7 +13,7 @@ We can also setup named views
 ```js
 $router.route("/", {
   default: Welcome,
-  sideNav: SideNav
+  sideNav: SideNav,
 });
 ```
 
@@ -23,7 +23,7 @@ Sometimes its needed to add additional functionality to our routes, we can add m
 
 ```js
 $router.route("/admin/dashboard", AdminDashboard).setMeta({
-  requiresAuth: true
+  requiresAuth: true,
 });
 ```
 
@@ -73,7 +73,7 @@ Router groups allow you to nest your routes with prefixes, middleware, layouts, 
 
 ### Prefixing
 
-You can easily prefix a group by using the prefix
+You can prefix a group by using the prefix
 
 ```js
 $router.prefix("/docs").group(() => {
@@ -132,7 +132,7 @@ let subNavText = this.$route.meta.data.subNavText;
 
 ## Middleware
 
-You can easily attach middleware to specific routes by attaching them on the group
+You can attach middleware to specific routes by attaching them on the group
 
 ```js
 $router

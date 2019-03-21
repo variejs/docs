@@ -10,9 +10,10 @@ customize some options, this is what is being used in our bundler :
 - [Babel](https://github.com/babel/babel)
 - [SASS](https://github.com/webpack-contrib/sass-loader)
 - [HTML](https://github.com/webpack-contrib/html-loader)
+- [cssnano](https://cssnano.co/)
 - [TypeScript](https://github.com/TypeStrong/ts-loader)
 - [Browsersync](https://www.browsersync.io/)
-- [Friendly Webpack Errors](https://github.com/geowarin/friendly-errors-webpack-plugin)
+- [autoprefixer](https://github.com/postcss/autoprefixer)
 - [Aggressive Code Splitting](https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting)
 - [Hot Module Reloading (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)
 - [Case Sensitivity Path Checks](https://github.com/Urthen/case-sensitive-paths-webpack-plugin)
@@ -22,7 +23,7 @@ customize some options, this is what is being used in our bundler :
   - Uses runtime only
   - To use the runtime and compiler checkout [Using Vue Runtime & Compiler](#using-vue-runtime-compiler).
 
-#### Advanced Features
+### Advanced Features
 
 - [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - Modern builds with legacy fallback
@@ -30,21 +31,20 @@ customize some options, this is what is being used in our bundler :
 ### Basic Example
 
 ```js
-const path = require("path");
 const VarieBundler = require("varie-bundler");
 
-module.exports = function(env, argv) {
-  return new VarieBundler(argv, __dirname)
+module.exports = function(env) {
+  return new VarieBundler(env)
     .entry("app", ["app/app.ts", "resources/sass/app.scss"])
     .aliases({
-      "@app": path.join(__dirname, "app"),
-      "@views": path.join(__dirname, "views"),
-      "@store": path.join(__dirname, "store"),
-      "@config": path.join(__dirname, "config"),
-      "@routes": path.join(__dirname, "routes"),
-      "@models": path.join(__dirname, "app/models"),
-      "@resources": path.join(__dirname, "resources"),
-      "@components": path.join(__dirname, "app/components")
+      "@app": "app",
+      "@views": "views",
+      "@store": "store",
+      "@config": "config",
+      "@routes": "routes",
+      "@models": "app/models",
+      "@resources": "resources",
+      "@components": "app/components",
     })
     .build();
 };
@@ -54,7 +54,7 @@ module.exports = function(env, argv) {
 
 To build your applicatyion you just need to run
 
-`$ npm run dev` or if you wish to build a modern build `$ npm run build -- --modern`
+`$ npm run dev` or if you wish to build a modern build `$ npm run dev-modern`
 
 ## Aliases
 
@@ -63,18 +63,103 @@ to however you like
 
 ```js
   .aliases({
-      "@app": path.join(__dirname, "app"),
-      "@routes": path.join(__dirname, "routes"),
-      "@config": path.join(__dirname, "config"),
-      "@store": path.join(__dirname, "app/store"),
-      "@models": path.join(__dirname, "app/models"),
-      "@resources": path.join(__dirname, "resources"),
-      "@views": path.join(__dirname, "resources/views"),
-      "@components": path.join(__dirname, "app/components"),
+      "@app": "app",
+       "@views": "views",
+       "@store": "store",
+       "@config": "config",
+       "@routes": "routes",
+       "@models": "app/models",
+       "@resources": "resources",
+       "@components": "app/components",
     })
 ```
 
 [{.alert} The Varie-CLI does not know that these have been changed, and will not correctly put files in the correct locations!]
+
+## Adding Entries
+
+Adding a new entry consists of the name for the entry (the files output name),
+and an array of the entry.
+
+```js
+    .entry("admin", ["app/admin.ts", "resources/sass/admin.scss"])
+```
+
+## Aggressive Splitting
+
+Aggressive splitting splits your bundle into smaller chunks to allows the browser to leverage HTTP2. This should
+increase the loading performance of your application.
+
+```js
+    .aggressiveSplitting(minSize = 30000, maxSize = 50000)
+```
+
+## Copying Files
+
+To copy a directory / file you can multiple copy commands.
+
+```js
+    .copy(path.join('resources/assets/fonts')) // outputs to fonts
+    .copy(path.join('resources/assets/fonts'), 'resources/fonts') // outputs to resources/fonts
+```
+
+## Stopping Cleaning of Dist Folder
+
+Sometimes you don't want to clean the dist folder entirely.
+
+```js
+    .dontClean(path.join('public/index.php'))
+```
+
+## Environment Variables
+
+You may need to setup some variables that are needed per environment within your application.
+
+```js
+    .varieConfig({
+        app : {
+            someKey : "someValue"
+        }
+    })
+```
+
+You then can access them with the `$config` helper
+
+```js
+$config.get("app.someKey");
+```
+
+## Custom Varie Bundler Plugins
+
+You can add custom Varie plugins by sending the entire plugin to the bundler.
+
+```js
+   .plugin(MyCustomPlugin)
+```
+
+## proxy
+
+You may need to proxy your requests to your backend.
+
+```js
+  .proxy("/api", "http://varie.test")
+```
+
+## Web Workers
+
+If you have any web workers, you can enable the loader necessary for those to work correctly.
+
+```js
+  .webWorkers()
+```
+
+## browserSync
+
+If you wish to use browserSync :
+
+```js
+  .browserSync()
+```
 
 ## Webpack Chaining
 
@@ -82,6 +167,25 @@ The bundler is using [webpack-chain](https://github.com/mozilla-neutrino/webpack
 add / modify the webpack configuration file.
 
 This allows you to modify the bundler without having to change the bundler itself.
+
+### Modifying The Config
+
+You should get yourself familiar with the [webpack-chain API](https://github.com/mozilla-neutrino/webpack-chain#getting-started)
+as well as the source for [varie-bundler](https://github.com/variejs/varie-bundler)
+
+```js
+   .chainWebpack((config, env) => {
+        config.when(!env.isProduction, () => {
+             config.plugin("webpack-notifier").tap(args => {
+             return [
+               /* new args to pass to webpack-notifier's constructor */
+             ];
+           });
+       });
+    });
+```
+
+[{.info} Add in the inspect flag, `$ npm run dev -- --inspect`, should help diagnos how to modify the webpack config with webpack-chain.]
 
 ### Adding a Loader
 
@@ -105,70 +209,24 @@ This allows you to modify the bundler without having to change the bundler itsel
 ### Adding a Plugin
 
 ```js
-    .chainWebpack((config, env) => {
+    .chainWebpack((config) => {
         config.plugin('webpack-notifier')
             .use(WebpackNotifierPlugin, [argument1, argument2])
             .end()
     });
 ```
 
-### Modifying The Config
-
-You should get yourself familiar with the [webpack-chain API](https://github.com/mozilla-neutrino/webpack-chain#getting-started)
-as well as the source for [varie-bundler](https://github.com/variejs/varie-bundler)
-
-```js
-   .chainWebpack((config, env) => {
-        config.when(!env.isProduction, () => {
-             config.plugin("webpack-notifier").tap(args => {
-             return [
-               /* new args to pass to webpack-notifier's constructor */
-             ];
-           });
-       });
-    });
-```
-
-[{.info} Add in the inspect flag, `$ npm run dev -- --inspect`, should help diagnos how to modify the webpack config with webpack-chain.]
-
-## Adding Entries
-
-Adding a new entry consists of the name for the entry (the files output name),
-and an array of the entry.
-
-```js
-    .entry("admin", ["app/admin.ts", "resources/sass/admin.scss"])
-```
-
-## Environment Variables
-
-You may need to setup some variables that are needed per environment within your application.
-
-```js
-    .config({
-        app : {
-            someKey : "someValue"
-        }
-    })
-```
-
-You then can access them with the `$config` helper
-
-```js
-$config.get("app.someKey");
-```
-
 ## Analyzing Configuration
 
-To analyze your bundle with [webpack analyse](https://github.com/webpack/analyse), just add the `analyze` flag to your npm build command.
+You can analyze your bundle with [webpack analyse](https://github.com/webpack/analyse)
 
 ```
-$ npm run dev -- --analyze
+$ npm run analyze
 ```
 
 ## Inspecting Configuration
 
-To inspect your configuration just add the `inspect` flag to your npm build command.
+To inspect your configuration add the `inspect` flag to your npm build command.
 
 ```
 $ npm run dev -- --inspect`
@@ -198,10 +256,10 @@ module.exports = {
     [
       "varie-app",
       {
-        polyfills: ["es6.symbol"]
-      }
-    ]
-  ]
+        polyfills: ["es6.symbol"],
+      },
+    ],
+  ],
 };
 ```
 
@@ -216,10 +274,10 @@ module.exports = {
     [
       "varie-app",
       {
-        jsx: true
-      }
-    ]
-  ]
+        jsx: true,
+      },
+    ],
+  ],
 };
 ```
 
@@ -244,25 +302,24 @@ legacy bundle for older browsers that do not support some of the newer features.
 To use the runtime and compiler you can pass in via the options parameter :
 
 ```js
-const path = require("path");
 const VarieBundler = require("varie-bundler");
 
-module.exports = function(env, argv) {
-  return new VarieBundler(argv, __dirname, {
+module.exports = function(env) {
+  return new VarieBundler(env, {
     vue: {
-      runtimeOnly: false
-    }
+      runtimeOnly: false,
+    },
   })
     .entry("app", ["app/app.ts", "resources/sass/app.scss"])
     .aliases({
-      "@app": path.join(__dirname, "app"),
-      "@views": path.join(__dirname, "views"),
-      "@store": path.join(__dirname, "store"),
-      "@config": path.join(__dirname, "config"),
-      "@routes": path.join(__dirname, "routes"),
-      "@models": path.join(__dirname, "app/models"),
-      "@resources": path.join(__dirname, "resources"),
-      "@components": path.join(__dirname, "app/components")
+      "@app": "app",
+      "@views": "views",
+      "@store": "store",
+      "@config": "config",
+      "@routes": "routes",
+      "@models": "app/models",
+      "@resources": "resources",
+      "@components": "app/components",
     })
     .build();
 };

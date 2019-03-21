@@ -14,7 +14,7 @@ Which you may use a contract name to resolve the service from the container:
 $api = app.make("$documentationService");
 ```
 
-[{.alert} While this is possible, you should try to use the Dependency Injection where possible. ]
+[{.alert} While this is possible, you should use [dependency injection](/docs/{{version}}/dependency-injection) where possible.]
 
 ## `$config.get('app.name')`
 

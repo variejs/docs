@@ -35,6 +35,10 @@ Creates a model in the `app/models` directory
 
 Creates a new provider in the `app/providers` directory.
 
+### `make:service {name}`
+
+Creates a Service in the `app/services` directory.
+
 ### `make:store {name}`
 
 Creates a Vuex store / submodule in the store directory based on the path provided.

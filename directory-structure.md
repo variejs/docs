@@ -47,10 +47,6 @@ To learn more, check out the [HTTP requests documentation](/docs/{{version}}/req
 This directory should contain all your service providers for your application. These providers bootstrap your application by binding them to the service container.
 To learn more, check out the [service providers documentation](/docs/{{version}}/service-providers).
 
-#### The Models Directory
-
-Coming Soon!
-
 #### The Rules Directory
 
 This directory should contain any custom validation rules for your application. You can run `varie make:rule` to create a new custom rule.

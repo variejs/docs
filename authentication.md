@@ -7,6 +7,7 @@ a user/request should be authenticated. You can have multiple `guards` to allow 
 one different authentication system to be used.
 
 A `driver` is the authentication workflow that each `guard` must follow to be correctly authenticated.
+
 Varie providers provides two authentication drivers:
 
 - Cookie Auth
@@ -20,9 +21,7 @@ To get started, install the auth plugin `$ npm install varie-auth-plugin` and ru
 
 [{.info} You should have already installed the varie cli globally if not run "$ npm install --global varie-cli"]
 
-You must then register the service provider
-
-You need to add the service provider to the `config/app.ts`
+You must then register the service provider in `config/app.ts` :
 
 ```js
 import AuthServiceProvider from "@app/providers/AuthServiceProvider";
@@ -53,12 +52,9 @@ export default function($router: RouterInterface) {
 
 Update the configuration `config/auth` and update your `app/providers/AuthServiceProvider` to fit your needs.
 
-[{.info} You should read all authentication documentation to learn the internals and how to customize to your application.]
-
 ## Protecting Access
 
-There are two ways to protect access, Route Middleware and HTTP requests. If only using one guard you can neglect
-using the HTTP Requests as you skip directly into the Route Middleware.
+There are two ways to protect access HTTP middleware, route middleware.
 
 ### Route Middleware
 
@@ -95,9 +91,9 @@ $router
 
 [{.info} The auth package also comes with another middleware called `NoAuth` to make sure authenticated users cannot access these areas.]
 
-### HTTP Requests
+### HTTP Middleware
 
-HTTP request protection require you to specify which guard to use to access that authenticated route.
+HTTP middleware can be useful if you use two different guards.
 
 For example : If you have two guards "user", "admin". To access the request "disableUser" you may need to use
 different credentials than our default of "user". You're able to tell that request that it needs
@@ -111,7 +107,7 @@ This will tell our request to use the "admin" guard's authentication.
 
 ## Drivers
 
-Varie comes with two drivers, CookieDriver and JwtDriver.
+Varie comes with two drivers, Cookie Driver and JWT Driver.
 
 ### Cooke Driver
 
@@ -128,14 +124,22 @@ If it cannot fetch the user it will send them back to their login page.
 You can create custom drivers which allows you to define how to store your authentication and deal with certain responses from an action.
 
 ```js
-  loginResponse(response): Promise<any>;
-  logoutResponse(response);
-  isLoggedIn(guard: string): Promise<boolean>;
-  refreshResponse?(response): Promise<any>;
-  registerResponse(response): Promise<any>;
-  resetPasswordResponse(response): Promise<any>;
-  middlewareRequest(config): Promise<any>;
-  middlewareResponse(response): Promise<any>;
+  AuthDriverInterface {
+    loginResponse(response: HttpResponseInterface): Promise<any>;
+    logoutResponse(response: HttpResponseInterface): Promise<any>;
+    clearStorage?(guard: string): void;
+    isLoggedIn(guard: string): Promise<boolean>;
+    refreshResponse?(response: HttpResponseInterface): Promise<any>;
+    registerResponse(response: HttpResponseInterface): Promise<any>;
+    resetPasswordResponse(response: HttpResponseInterface): Promise<any>;
+    middlewareRequest(
+      config: HttpRequestConfigInterface,
+    ): Promise<HttpRequestConfigInterface>;
+    middlewareResponse(
+      response: HttpResponseInterface,
+    ): Promise<HttpResponseInterface>;
+  }
+
 ```
 
 You should look into one of the provided drivers to see how they were built and build yours based on those drivers.
@@ -167,8 +171,6 @@ can access pages across your app.
     // ...
   },
 ```
-
-[{.danger} The drivers shipped with the auth plugin rely on the guard state, and is required.]
 
 ## Routes / Views
 
