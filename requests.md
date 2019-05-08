@@ -209,7 +209,7 @@ The response comes back as a Promise so you can successful responses and handle 
 Each returns a promise so you can get the response :
 
 ```js
-httpService.get("url").then(response => {
+httpService.get("url").then((response) => {
   this.data = response.data;
 });
 ```
@@ -243,7 +243,7 @@ import MiddlewareClass from "app/middleware/MiddlewareClass";
 httpService
   .unregisterMiddleware(MiddlewareClass)
   .get("url")
-  .then(response => {
+  .then((response) => {
     this.data = response.data;
   });
 ```
