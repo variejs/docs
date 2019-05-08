@@ -41,12 +41,12 @@ import RestServiceClass from "@app/services/RestServiceClass";
 export default class NotificationProviderService extends RestServiceClass {
   constructor(
     @inject("HttpService") httpService,
-    @inject("ApiRouteService") apiRouteService,
+    @inject("ApiRouteService") apiRouteService
   ) {
     super(
       httpService,
       apiRouteService,
-      "AuthProvidersNotificationProvidersController",
+      "AuthProvidersNotificationProvidersController"
     );
   }
 }

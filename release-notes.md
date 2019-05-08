@@ -10,7 +10,7 @@
 Breaking Changes :
 
 - Http Interfaces
-- Forms have been re-written to fix some bugs 
+- Forms have been re-written to fix some bugs
 
 Look through all the updates made to the [varie repository](https://github.com/variejs/varie/compare/468c0c4d9c6a737316f50efed81b11041c6fcdeb...master)
 

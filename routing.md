@@ -13,7 +13,7 @@ We can also setup named views
 ```js
 $router.route("/", {
   default: Welcome,
-  sideNav: SideNav,
+  sideNav: SideNav
 });
 ```
 
@@ -23,7 +23,7 @@ Sometimes its needed to add additional functionality to our routes, we can add m
 
 ```js
 $router.route("/admin/dashboard", AdminDashboard).setMeta({
-  requiresAuth: true,
+  requiresAuth: true
 });
 ```
 

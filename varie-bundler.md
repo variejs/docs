@@ -44,7 +44,7 @@ module.exports = function(env) {
       "@routes": "routes",
       "@models": "app/models",
       "@resources": "resources",
-      "@components": "app/components",
+      "@components": "app/components"
     })
     .build();
 };
@@ -258,10 +258,10 @@ module.exports = {
     [
       "varie-app",
       {
-        polyfills: ["es6.symbol"],
-      },
-    ],
-  ],
+        polyfills: ["es6.symbol"]
+      }
+    ]
+  ]
 };
 ```
 
@@ -276,10 +276,10 @@ module.exports = {
     [
       "varie-app",
       {
-        jsx: true,
-      },
-    ],
-  ],
+        jsx: true
+      }
+    ]
+  ]
 };
 ```
 
@@ -314,8 +314,8 @@ const VarieBundler = require("varie-bundler");
 module.exports = function(env) {
   return new VarieBundler(env, {
     vue: {
-      runtimeOnly: false,
-    },
+      runtimeOnly: false
+    }
   })
     .entry("app", ["app/app.ts", "resources/sass/app.scss"])
     .aliases({
@@ -326,7 +326,7 @@ module.exports = function(env) {
       "@routes": "routes",
       "@models": "app/models",
       "@resources": "resources",
-      "@components": "app/components",
+      "@components": "app/components"
     })
     .build();
 };

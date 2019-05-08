@@ -1,6 +1,6 @@
 Varie has a few helpers that can help speed up your development.
 
-## `app()`
+## `app method`
 
 The `app` function returns the [service container](/docs/{{version}}/container) instance:
 
@@ -16,7 +16,7 @@ $api = app.make("$documentationService");
 
 [{.alert} While this is possible, you should use [dependency injection](/docs/{{version}}/dependency-injection) where possible.]
 
-## `$config.get('app.name')`
+## `$config method`
 
 The config function gets the value of a configuration variable.
 The configuration values may be accessed using "dot" syntax, which includes the name of the file and the option you wish to access.
