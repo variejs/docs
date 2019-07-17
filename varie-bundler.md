@@ -129,7 +129,7 @@ You then can access them with the `$config` helper
 $config.get("app.someKey");
 ```
 
-## Global SASS Sheets
+## Global Sass Sheets
 
 You can add global styles to all of your components.
 
