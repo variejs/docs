@@ -99,8 +99,8 @@ increase the loading performance of your application.
 To copy a directory / file you can multiple copy commands.
 
 ```js
-    .copy(path.join('resources/assets/fonts')) // outputs to fonts
-    .copy(path.join('resources/assets/fonts'), 'resources/fonts') // outputs to resources/fonts
+    .copy('resources/assets/fonts') // outputs to fonts
+    .copy('resources/assets/fonts', 'resources/fonts') // outputs to resources/fonts
 ```
 
 ## Stopping Cleaning of Dist Folder
@@ -108,7 +108,7 @@ To copy a directory / file you can multiple copy commands.
 Sometimes you don't want to clean the dist folder entirely.
 
 ```js
-    .dontClean(path.join('public/index.php'))
+    .dontClean('public/index.php')
 ```
 
 ## Environment Variables
@@ -116,7 +116,7 @@ Sometimes you don't want to clean the dist folder entirely.
 You may need to setup some variables that are needed per environment within your application.
 
 ```js
-    .varieConfig({
+  .varieConfig({
         app : {
             someKey : "someValue"
         }
@@ -127,6 +127,16 @@ You then can access them with the `$config` helper
 
 ```js
 $config.get("app.someKey");
+```
+
+## Global SASS Sheets
+
+You can add global styles to all of your components.
+
+```js
+    .globalSassIncludes([
+        "resources/sass/variables/index"
+    ])
 ```
 
 ## Custom Varie Bundler Plugins
