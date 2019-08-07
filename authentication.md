@@ -8,11 +8,6 @@ one different authentication system to be used.
 
 A `driver` is the authentication workflow that each `guard` must follow to be correctly authenticated.
 
-Varie providers provides two authentication drivers:
-
-- Cookie Auth
-- Json Web Tokens
-
 ## Installation
 
 To get started, install the auth plugin `$ npm install varie-auth-plugin` and run the publish command.
@@ -107,27 +102,18 @@ This will tell our request to use the "admin" guard's authentication.
 
 ## Drivers
 
-Each driver has there advantages and disadvantages.
-
-There are multiple drivers that Varie provides out of the box, both require additional backend configurations.
+Drivers provide a workflow for authentication.
 
 ### Cooke Driver
 
-The cookie driver is the preferred web driver. Varie will attempt to fetch the user, if the fetch fails
+The cookie driver will attempt to fetch the user, if the fetch fails
 the application knows they are not logged in and will send them back to their login page.
 
 Never expose the full JWT to Javascript, instead separate into two cookies one with the signature (HTTP only) and the header/payload. This can allow you to detect your user scopes and if your user is logged in.
 
 To learn more you can visit the [OWASP organzations website](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet#Local_Storage).
 
-[{.warn} Varie does not provide security for your cookies, please use best practices to prevent CSRF attacks.]
-
-### Jwt Driver
-
-The JWT driver should only be in isolated applications that will uses local storage to keep track of authentication, this allow to check if the token is there and try to fetch the user.
-If it cannot fetch the user it will send them back to their login page.
-
-[{.info} If you choose to use this for you web application you are susceptible to XSS attacks.]
+[{.info} Varie does not provide security for your cookies, please use best practices to prevent CSRF attacks.]
 
 ### Custom Drivers
 
