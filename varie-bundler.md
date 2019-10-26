@@ -85,13 +85,13 @@ and an array of the entry.
     .entry("admin", ["app/admin.ts", "resources/sass/admin.scss"])
 ```
 
-## Aggressive Splitting
+## Aggressive Vendor Splitting
 
-Aggressive splitting splits your bundle into smaller chunks to allows the browser to leverage HTTP2. This should
+Aggressive vendor splitting splits all of your vendors into individual bundles to leverage HTTP2. This should
 increase the loading performance of your application.
 
 ```js
-    .aggressiveSplitting(minSize = 30000, maxSize = 50000)
+    .aggressiveVendorSplitting()
 ```
 
 ## Copying Files
@@ -129,9 +129,17 @@ You then can access them with the `$config` helper
 $config.get("app.someKey");
 ```
 
+## ESLint
+
+Enables ESLint in your project.
+
+```js
+  .eslint()
+```
+
 ## Global Sass Sheets
 
-You can add global styles to all of your components.
+You can add global styles to your Vue components.
 
 ```js
     .globalSassIncludes([
@@ -274,6 +282,24 @@ module.exports = {
   ],
 };
 ```
+
+### Purge CSS
+
+To remove unused CSS from your application, you can use the `.purgeCss` method to scan all files for those classes.
+
+```js
+   .purgeCss([
+     'app',
+     'views',
+     'node_modules/varie'
+   ], {
+       whiteListPatterns: [],
+       whitelistSelectors: [],
+     whitelistPatternsChildren: [],
+})
+```
+
+To Learn more about white listing please visit the PurgeCSS webpack plugin's documentation [https://github.com/FullHuman/purgecss-webpack-plugin](https://github.com/FullHuman/purgecss-webpack-plugin).
 
 #### JSX
 
