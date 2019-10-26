@@ -293,9 +293,9 @@ To remove unused CSS from your application, you can use the `.purgeCss` method t
      'views',
      'node_modules/varie'
    ], {
-       whiteListPatterns: [],
-       whitelistSelectors: [],
-     whitelistPatternsChildren: [],
+    whiteListPatterns: [],
+    whitelistSelectors: [],
+    whitelistPatternsChildren: [],
 })
 ```
 
