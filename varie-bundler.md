@@ -25,20 +25,21 @@ customize some options, this is what is being used in our bundler :
 
 ### Advanced Features
 
+- Custom Bundlers
 - [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - Modern builds with legacy fallback
 
 ### Basic Example
 
 ```js
-const VarieBundler = require("varie-bundler");
+import { WebBundler } from "varie-bundler";
 
-module.exports = function(env) {
-  return new VarieBundler(env)
+export default function(env) {
+  return new WebBundler(env)
     .entry("app", ["app/app.ts", "resources/sass/app.scss"])
     .aliases({
       "@app": "app",
-      "@views": "views",
+      "@views": "views",aliases
       "@store": "store",
       "@config": "config",
       "@routes": "routes",
@@ -52,7 +53,7 @@ module.exports = function(env) {
 
 ## Running the build
 
-To build your applicatyion you just need to run
+To build your application you just need to run
 
 `$ npm run dev` or if you wish to build a modern build `$ npm run dev-modern`
 
@@ -131,7 +132,7 @@ $config.get("app.someKey");
 
 ## ESLint
 
-Enables ESLint in your project.
+To enable EsLint checking
 
 ```js
   .eslint()
@@ -147,6 +148,24 @@ You can add global styles to your Vue components.
     ])
 ```
 
+## Loading HTML files
+
+If your application needs to parse through html files you can add the html loader
+
+```js
+  .html()
+```
+
+## HTML Variables
+
+If you want to add some variables to your index.html such as a version number or envrioment variable
+
+```js
+    .htmlVariables({
+        VERSION : '1.0'
+    })
+```
+
 ## Custom Varie Bundler Plugins
 
 You can add custom Varie plugins by sending the entire plugin to the bundler.
@@ -155,12 +174,24 @@ You can add custom Varie plugins by sending the entire plugin to the bundler.
    .plugin(MyCustomPlugin)
 ```
 
-## proxy
+An example plugin is [Varie Tailwindcss Plugin](https://github.com/variejs/tailwincss-builder-plugin)
+
+## Proxying Requests
 
 You may need to proxy your requests to your backend.
 
+This example will proxy anything that is `http://localhost/api*` to `http://varie.test/api/*` :
+
 ```js
   .proxy("/api", "http://varie.test")
+```
+
+## PurgeCss
+
+To purge unused CSS you can easily add the purge css plugin
+
+```js
+  .purgeCss(["app", "views", "node_modules/varie"])
 ```
 
 ## Web Workers
@@ -224,7 +255,7 @@ as well as the source for [varie-bundler](https://github.com/variejs/varie-bundl
     });
 ```
 
-### Adding a Plugin
+### Adding a Loader / Plugin using Webpack Chain
 
 ```js
     .chainWebpack((config) => {
@@ -271,7 +302,7 @@ This config allows you to pass all options into `@babel/preset-env`, you can rev
 
 ```js
 // babel.config.js
-module.exports = {
+export default {
   presets: [
     [
       "varie-app",
@@ -307,7 +338,7 @@ To enable JSX pass `jsx` in the babel options.
 
 ```js
 // babel.config.js
-module.exports = {
+export default {
   presets: [
     [
       "varie-app",
@@ -345,10 +376,10 @@ $ npm run prod-modern
 To use the runtime and compiler you can pass in via the options parameter :
 
 ```js
-const VarieBundler = require("varie-bundler");
+import { WebBundler } from "varie-bundler";
 
-module.exports = function(env) {
-  return new VarieBundler(env, {
+export default function(env) {
+  return new WebBundler(env, {
     vue: {
       runtimeOnly: false,
     },
@@ -365,5 +396,63 @@ module.exports = function(env) {
       "@components": "app/components",
     })
     .build();
-};
+}
+```
+
+## UMD Bundler
+
+If you need to build a UMD modules for you application use the `UmdBundler`
+
+```js
+import { WebBundler, UmdBundler, multiCompiler } from "varie-bundler";
+
+export default function(env) {
+  let configs = {};
+
+  configs["web"] = new WebBundler(env).entry("app", [
+    "app/app.ts",
+    "resources/sass/app.scss",
+  ]);
+
+  configs["some-plugin"] = new UmdBundler(
+    env,
+    "PluginName",
+    "plugin/some-plugin.ts",
+  );
+
+  return multiCompiler(configs);
+}
+```
+
+[{.alert} The `multiCompiler` function is only required when using multiple bundlers!]
+
+## Custom Bundlers
+
+Since we are using typescript it is easy to create your own bundlers based on the Varie Bundler.
+
+A good starting point is just to look at one of the bundlers we provide such as the `WebBundler`:
+
+```js
+export default class WebBundler extends AbstractBundler {
+  constructor(
+    mode: EnvironmentTypes = EnvironmentTypes.Development,
+    config: DeepPartial<BundlerConfig> = {},
+  ) {
+    super(mode, config);
+
+    new loaders.Vue(this, this.config.vue);
+
+    new loaders.Sass(this, {
+      hashType: this.config.hashType,
+    });
+
+    new loaders.Fonts(this);
+    new loaders.Images(this);
+
+    new plugins.Html(this);
+    new plugins.Clean(this, this.config.plugins.clean);
+  }
+}
+
+[{.alert} Your custom bundler should include entries to allow webpack to parse the data!]
 ```
